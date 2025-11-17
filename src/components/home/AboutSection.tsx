@@ -31,7 +31,7 @@ export function AboutSection() {
           <Link
             href="/about"
             underline={false}
-            className="inline-flex items-center text-base font-semibold text-brand-orange transition hover:text-[#E55A2A]"
+            className="inline-flex min-h-[44px] items-center text-base font-semibold text-brand-orange transition hover:text-[#E55A2A]"
             aria-label="了解更多關於虎山林業"
           >
             了解更多 →

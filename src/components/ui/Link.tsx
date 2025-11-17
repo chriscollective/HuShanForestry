@@ -49,11 +49,14 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     children,
     ...props
   }, ref) => {
+    const showDefaultUnderline = variant !== 'nav';
+
     const linkClasses = cn(
       // 基礎樣式
-      'inline-flex items-center gap-1',
+      'flex items-center gap-1 rounded-md',
+      'touch-manipulation',
       'transition-colors duration-200',
-      'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange',
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-orange',
 
       // 變體樣式
       {
@@ -61,7 +64,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         'text-brand-orange hover:text-[#E55A2A]': variant === 'default',
 
         // Nav: 導航列樣式
-        'text-brand-black hover:text-brand-orange font-medium': variant === 'nav',
+        'relative text-brand-black hover:text-brand-orange font-medium px-3 py-2 min-h-[44px] no-underline after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-[2px] after:w-0 after:bg-brand-orange after:rounded-full after:transition-all after:duration-200 after:ease-out hover:after:w-full focus-visible:after:w-full':
+          variant === 'nav',
 
         // Footer: 頁尾樣式（淺色文字）
         'text-brand-white hover:text-brand-orange': variant === 'footer',
@@ -69,8 +73,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
       // 下底線樣式
       {
-        'underline underline-offset-4': underline,
-        'hover:underline hover:underline-offset-4': !underline,
+        'underline underline-offset-4': underline && showDefaultUnderline,
+        'hover:underline hover:underline-offset-4': !underline && showDefaultUnderline,
       },
 
       className

@@ -14,7 +14,7 @@ export interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden sm:h-56">
         <Image
           src={service.image}
           alt={service.imageAlt}
@@ -24,8 +24,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col px-6 py-6">
-        <h3 className="text-xl font-semibold text-brand-black">{service.title}</h3>
+      <div className="flex flex-1 flex-col px-6 py-6 sm:px-8 sm:py-8">
+        <h3 className="text-xl font-semibold text-brand-black">
+          {service.title}
+        </h3>
         <p className="mt-3 flex-1 text-base text-gray-600">
           {service.description}
         </p>
@@ -33,7 +35,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <Link
           href={service.link}
           underline={false}
-          className="mt-6 inline-flex items-center text-sm font-semibold text-brand-orange transition group-hover:text-[#E55A2A]"
+          className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-orange transition group-hover:text-[#E55A2A]"
           aria-label={`了解更多${service.title}服務`}
         >
           了解更多

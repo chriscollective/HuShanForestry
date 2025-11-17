@@ -48,24 +48,24 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(
           // 基礎樣式
-          'inline-flex items-center justify-center',
-          'font-medium rounded-lg',
-          'transition-all duration-200',
-          'focus:outline-none focus:ring-2 focus:ring-offset-2',
+          'inline-flex items-center justify-center rounded-lg font-medium',
+          'min-h-[44px] touch-manipulation',
+          'transition-all duration-200 ease-out active:scale-[0.98]',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
           'disabled:opacity-50 disabled:cursor-not-allowed',
 
           // 變體樣式
           {
             // Primary: 品牌橘色背景
-            'bg-brand-orange text-brand-white hover:bg-[#E55A2A] focus:ring-brand-orange':
+            'bg-brand-orange text-brand-white hover:bg-[#E55A2A] focus-visible:ring-brand-orange active:bg-[#D9541E]':
               variant === 'primary',
 
             // Secondary: 白底黑框
-            'bg-brand-white text-brand-black border-2 border-brand-black hover:bg-gray-50 focus:ring-brand-black':
+            'bg-brand-white text-brand-black border-2 border-brand-black hover:bg-gray-50 focus-visible:ring-brand-black active:bg-gray-100':
               variant === 'secondary',
 
             // Ghost: 透明背景
-            'bg-transparent text-brand-black hover:bg-gray-100 focus:ring-gray-300':
+            'bg-transparent text-brand-black hover:bg-gray-100 focus-visible:ring-gray-300 active:bg-gray-200':
               variant === 'ghost',
           },
 
