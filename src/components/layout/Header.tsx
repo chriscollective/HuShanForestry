@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { Link } from '@/components/ui/Link';
 import { navigationItems } from '@/config/navigation';
@@ -40,13 +41,27 @@ export function Header({ className }: HeaderProps) {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" variant="nav" className="hover:no-underline">
-                <span className="text-xl font-bold text-brand-black">
-                  虎山林業
-                </span>
-                <span className="ml-2 hidden text-sm text-gray-600 sm:inline">
-                  Since 2022
-                </span>
+              <Link
+                href="/"
+                variant="nav"
+                className="items-center gap-3 hover:no-underline"
+                aria-label="返回虎山林業首頁"
+              >
+                <Image
+                  src="/icons/icon.jpg"
+                  alt="虎山林業 Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full object-cover"
+                />
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold text-brand-black">
+                    虎山林業
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-gray-500">
+                    Since 2022
+                  </span>
+                </div>
               </Link>
             </div>
 
