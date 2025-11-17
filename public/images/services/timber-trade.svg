@@ -1,0 +1,19 @@
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="timberTrade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F5539" />
+      <stop offset="100%" stop-color="#B08968" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="16" fill="url(#timberTrade)" />
+  <g stroke="#F7E4D0" stroke-width="6" stroke-linecap="round">
+    <line x1="80" y1="90" x2="320" y2="90" />
+    <line x1="80" y1="130" x2="320" y2="130" />
+    <line x1="80" y1="170" x2="320" y2="170" />
+  </g>
+  <g fill="#F7E4D0">
+    <circle cx="110" cy="200" r="14" />
+    <circle cx="190" cy="200" r="14" />
+    <circle cx="270" cy="200" r="14" />
+  </g>
+</svg>

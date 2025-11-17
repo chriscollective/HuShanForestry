@@ -1,0 +1,16 @@
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="forestHarvest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332" />
+      <stop offset="100%" stop-color="#2D6A4F" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="16" fill="url(#forestHarvest)" />
+  <g fill="#A4C3B2">
+    <rect x="60" y="120" width="20" height="90" rx="8" />
+    <rect x="120" y="80" width="20" height="130" rx="8" />
+    <rect x="180" y="100" width="20" height="110" rx="8" />
+    <rect x="240" y="70" width="20" height="140" rx="8" />
+    <rect x="300" y="110" width="20" height="100" rx="8" />
+  </g>
+</svg>

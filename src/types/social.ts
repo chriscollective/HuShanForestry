@@ -1,4 +1,9 @@
-export type SocialPlatform = "facebook" | "instagram" | "youtube";
+export type SocialPlatform =
+  | "facebook"
+  | "instagram"
+  | "youtube"
+  | "line"
+  | "email";
 
 export interface SocialLink {
   platform: SocialPlatform;

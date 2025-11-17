@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { SocialLink, SocialPlatform } from '@/types/social';
 import { cn } from '@/lib/utils';
 
@@ -5,7 +6,7 @@ export interface SocialLinksProps {
   /**
    * 社群媒體連結陣列
    */
-  links: SocialLink[];
+  links: ReadonlyArray<SocialLink>;
 
   /**
    * 圖示尺寸
