@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(specify --help:*)"
+      "Bash(specify --help:*)",
+      "Bash(mkdir:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(test:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nPhase 1 完成：Next.js 14 專案初始化 (T001-T007)\n\n成功建立虎山林業官方網站的 Next.js 14 開發環境\n\n完成任務：\n- T001 ✅ 初始化 Next.js 14 專案（App Router + TypeScript）\n- T002 ✅ 建立專案目錄結構（src/app, components, config, lib, types, public）\n- T003 ✅ 配置 Tailwind CSS 品牌色彩系統\n- T004 ✅ 配置 Next.js 靜態生成 (output: ''export'')\n- T005 ✅ 配置 TypeScript（strict mode + 路徑別名 @/*）\n- T006 ✅ 建立全域樣式（globals.css + Tailwind 導入）\n- T007 ✅ 安裝專案依賴（clsx）\n\n技術堆疊：\n- Next.js 16.0.3 (App Router)\n- React 19.2.0\n- TypeScript 5.9.3\n- Tailwind CSS 4.1.17\n\n品牌色彩配置：\n- brand.orange (#FF6B35) - CTA 按鈕\n- brand.black (#000000) - 文字標題\n- brand.white (#FFFFFF) - 背景\n- forest.dark (#2D5016) - 森林深處\n- forest.green (#7CB342) - 新生綠意\n- forest.brown (#8D6E63) - 木質感\n- forest.sky (#4FC3F7) - 清新感\n\n專案結構：\n- src/app/ - Next.js App Router 頁面\n- src/components/ - React 元件（layout, home, ui, shared）\n- src/config/ - 配置檔案\n- src/lib/ - 工具函式\n- src/types/ - TypeScript 型別定義\n- public/ - 靜態資源（images, icons）\n\n配置檔案：\n- next.config.ts - 靜態生成配置\n- tailwind.config.ts - 品牌色彩主題\n- tsconfig.json - TypeScript 配置（strict + 路徑別名）\n- .eslintrc.json - ESLint 配置\n\n開發指令：\n- npm run dev - 啟動開發伺服器 (http://localhost:3000)\n- npm run build - 建置生產版本\n- npm run start - 啟動生產伺服器\n- npm run lint - 執行 ESLint 檢查\n\n測試結果：\n✅ 開發伺服器成功啟動 (Ready in 1594ms)\n✅ Tailwind 品牌色彩可正常使用\n✅ TypeScript 編譯無錯誤\n\n下一步：Phase 2 - Foundational (T008-T015)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
