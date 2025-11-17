@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///c:/Users/Chris/Desktop/HuShanForestry/src/app/layout.tsx"],"sourcesContent":["import type { Metadata } from \"next\";\nimport \"./globals.css\";\n\nexport const metadata: Metadata = {\n  title: \"虎山林業 | 台灣專業林業服務 | 森林收穫、原木買賣、經營規劃\",\n  description: \"虎山林業由六位熱愛森林的青年於 2022 年創立，提供森林收穫、原木買賣、森林經營規劃、鏈鋸教育訓練等專業林業服務\",\n  keywords: \"台灣林業, 森林收穫, 伐木服務, 原木買賣, 森林經營規劃, 鏈鋸訓練\",\n};\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"zh-TW\">\n      <body className=\"antialiased\">\n        {children}\n      </body>\n    </html>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;AAGO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;IACb,UAAU;AACZ;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGR;IACA,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;YAAK,WAAU;sBACb;;;;;;;;;;;AAIT"}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file:///c:/Users/Chris/Desktop/HuShanForestry/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-rsc']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}
