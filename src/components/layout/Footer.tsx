@@ -25,9 +25,16 @@ export function Footer({ className }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`bg-forest-dark text-brand-white ${className || ''}`}>
+    <footer className={`relative overflow-hidden bg-brand-black text-brand-white ${className || ''}`}>
+      <div className="pointer-events-none absolute inset-0 opacity-60" aria-hidden="true">
+        <div className="absolute left-0 top-0 h-3/4 w-1/3 bg-[rgba(255,255,255,0.05)]" />
+        <div className="absolute right-[-10%] top-[15%] h-2/3 w-1/2 -rotate-3 bg-[rgba(255,255,255,0.08)]" />
+        <div className="absolute left-[25%] bottom-[-20%] h-[55%] w-[40%] rotate-6 bg-[rgba(255,255,255,0.03)]" />
+        <div className="absolute right-[15%] bottom-[10%] h-[30%] w-[25%] rotate-12 bg-[rgba(255,255,255,0.06)]" />
+        <div className="absolute left-[60%] top-[-10%] h-[45%] w-[20%] -rotate-6 bg-[rgba(255,255,255,0.04)]" />
+      </div>
       {/* 主要內容區 */}
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
           {/* 公司資訊 */}
           <div>
@@ -97,8 +104,8 @@ export function Footer({ className }: FooterProps) {
       </div>
 
       {/* 版權聲明 */}
-      <div className="border-t border-forest-green/30">
-        <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+      <div className="relative z-10 border-t border-white/10">
+        <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
             <p className="text-sm text-gray-400">
               © {currentYear} {siteConfig.name}. All rights reserved.

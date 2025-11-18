@@ -35,12 +35,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["forwardRef"])(({ className, href, external = false, variant = 'default', underline = false, children, ...props }, ref)=>{
     const linkClasses = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(// 基礎樣式
-    'inline-flex items-center gap-1', 'transition-colors duration-200', 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange', // 變體樣式
+    'inline-flex items-center gap-1 rounded-md', 'touch-manipulation', 'transition-colors duration-200', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-orange', // 變體樣式
     {
         // Default: 品牌橘色連結
         'text-brand-orange hover:text-[#E55A2A]': variant === 'default',
         // Nav: 導航列樣式
-        'text-brand-black hover:text-brand-orange font-medium': variant === 'nav',
+        'text-brand-black hover:text-brand-orange font-medium px-3 py-2 min-h-[44px]': variant === 'nav',
         // Footer: 頁尾樣式（淺色文字）
         'text-brand-white hover:text-brand-orange': variant === 'footer'
     }, // 下底線樣式
@@ -64,13 +64,13 @@ const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$n
                     children: "(在新視窗開啟)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/Link.tsx",
-                    lineNumber: 91,
+                    lineNumber: 92,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ui/Link.tsx",
-            lineNumber: 82,
+            lineNumber: 83,
             columnNumber: 9
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -83,7 +83,7 @@ const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$n
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/Link.tsx",
-        lineNumber: 98,
+        lineNumber: 99,
         columnNumber: 7
     }, ("TURBOPACK compile-time value", void 0));
 });
@@ -106,14 +106,14 @@ const Button = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         ref: ref,
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(// 基礎樣式
-        'inline-flex items-center justify-center', 'font-medium rounded-lg', 'transition-all duration-200', 'focus:outline-none focus:ring-2 focus:ring-offset-2', 'disabled:opacity-50 disabled:cursor-not-allowed', // 變體樣式
+        'inline-flex items-center justify-center rounded-lg font-medium', 'min-h-[44px] touch-manipulation', 'transition-all duration-200 ease-out active:scale-[0.98]', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2', 'disabled:opacity-50 disabled:cursor-not-allowed', // 變體樣式
         {
             // Primary: 品牌橘色背景
-            'bg-brand-orange text-brand-white hover:bg-[#E55A2A] focus:ring-brand-orange': variant === 'primary',
+            'bg-brand-orange text-brand-white hover:bg-[#E55A2A] focus-visible:ring-brand-orange active:bg-[#D9541E]': variant === 'primary',
             // Secondary: 白底黑框
-            'bg-brand-white text-brand-black border-2 border-brand-black hover:bg-gray-50 focus:ring-brand-black': variant === 'secondary',
+            'bg-brand-white text-brand-black border-2 border-brand-black hover:bg-gray-50 focus-visible:ring-brand-black active:bg-gray-100': variant === 'secondary',
             // Ghost: 透明背景
-            'bg-transparent text-brand-black hover:bg-gray-100 focus:ring-gray-300': variant === 'ghost'
+            'bg-transparent text-brand-black hover:bg-gray-100 focus-visible:ring-gray-300 active:bg-gray-200': variant === 'ghost'
         }, // 尺寸樣式
         {
             'px-3 py-1.5 text-sm': size === 'sm',

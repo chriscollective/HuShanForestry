@@ -64,19 +64,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["forwardRef"])(({ className, href, external = false, variant = 'default', underline = false, children, ...props }, ref)=>{
+    const showDefaultUnderline = variant !== 'nav';
     const linkClasses = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["cn"])(// 基礎樣式
-    'inline-flex items-center gap-1', 'transition-colors duration-200', 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange', // 變體樣式
+    'flex items-center gap-1 rounded-md', 'touch-manipulation', 'transition-colors duration-200', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-orange', // 變體樣式
     {
         // Default: 品牌橘色連結
         'text-brand-orange hover:text-[#E55A2A]': variant === 'default',
         // Nav: 導航列樣式
-        'text-brand-black hover:text-brand-orange font-medium': variant === 'nav',
+        'relative text-brand-black hover:text-brand-orange font-medium px-3 py-2 min-h-[44px] no-underline after:content-[""] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-[2px] after:w-0 after:bg-brand-orange after:rounded-full after:transition-all after:duration-200 after:ease-out hover:after:w-full focus-visible:after:w-full': variant === 'nav',
         // Footer: 頁尾樣式（淺色文字）
         'text-brand-white hover:text-brand-orange': variant === 'footer'
     }, // 下底線樣式
     {
-        'underline underline-offset-4': underline,
-        'hover:underline hover:underline-offset-4': !underline
+        'underline underline-offset-4': underline && showDefaultUnderline,
+        'hover:underline hover:underline-offset-4': !underline && showDefaultUnderline
     }, className);
     // 外部連結
     if (external) {
@@ -94,13 +95,13 @@ const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$n
                     children: "(在新視窗開啟)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/Link.tsx",
-                    lineNumber: 91,
+                    lineNumber: 95,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ui/Link.tsx",
-            lineNumber: 82,
+            lineNumber: 86,
             columnNumber: 9
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -113,7 +114,7 @@ const Link = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$n
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/Link.tsx",
-        lineNumber: 98,
+        lineNumber: 102,
         columnNumber: 7
     }, ("TURBOPACK compile-time value", void 0));
 });
@@ -155,12 +156,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
                     d: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 53,
+                    lineNumber: 54,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 52,
+                lineNumber: 53,
                 columnNumber: 9
             }, this);
         case 'instagram':
@@ -172,12 +173,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
                     d: "M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 58,
+                lineNumber: 59,
                 columnNumber: 9
             }, this);
         case 'youtube':
@@ -189,12 +190,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
                     d: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 65,
+                    lineNumber: 66,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 64,
+                lineNumber: 65,
                 columnNumber: 9
             }, this);
         case 'line':
@@ -206,12 +207,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
                     d: "M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 71,
+                    lineNumber: 72,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 70,
+                lineNumber: 71,
                 columnNumber: 9
             }, this);
         case 'email':
@@ -223,12 +224,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
                     d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 77,
+                    lineNumber: 78,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 76,
+                lineNumber: 77,
                 columnNumber: 9
             }, this);
     }
@@ -256,17 +257,17 @@ function SocialLinks({ links, size = 'md', theme = 'light', className }) {
                     children: getPlatformIcon(link.platform)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                    lineNumber: 125,
+                    lineNumber: 126,
                     columnNumber: 11
                 }, this)
             }, link.platform, false, {
                 fileName: "[project]/src/components/ui/SocialLinks.tsx",
-                lineNumber: 112,
+                lineNumber: 113,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/ui/SocialLinks.tsx",
-        lineNumber: 110,
+        lineNumber: 111,
         columnNumber: 5
     }, this);
 }
@@ -347,7 +348,7 @@ const services = [
         id: "forest-harvest",
         title: "森林收穫",
         description: "專業伐木、架線集材、運輸整堆服務，確保森林資源永續利用",
-        image: "/images/services/forest-harvest.jpg",
+        image: "/images/services/forest-harvest.svg",
         imageAlt: "森林收穫服務 - 專業伐木與集材作業",
         link: "/services/forest-harvest"
     },
@@ -355,7 +356,7 @@ const services = [
         id: "timber-trade",
         title: "原木買賣",
         description: "提供優質原木買賣服務，多種木材規格滿足您的需求",
-        image: "/images/services/timber-trade.jpg",
+        image: "/images/services/timber-trade.svg",
         imageAlt: "原木買賣服務 - 多種木材規格供應",
         link: "/services/timber-trade"
     },
@@ -363,7 +364,7 @@ const services = [
         id: "forest-planning",
         title: "森林經營規劃",
         description: "專業森林經營與伐採收穫規劃，協助您的森林永續發展",
-        image: "/images/services/forest-planning.jpg",
+        image: "/images/services/forest-planning.svg",
         imageAlt: "森林經營規劃服務 - 專業規劃與諮詢",
         link: "/services/forest-planning"
     },
@@ -371,7 +372,7 @@ const services = [
         id: "chainsaw-training",
         title: "鏈鋸教育訓練",
         description: "專業鏈鋸操作訓練課程，安全、實用、取得證照",
-        image: "/images/services/chainsaw-training.jpg",
+        image: "/images/services/chainsaw-training.svg",
         imageAlt: "鏈鋸教育訓練 - 專業安全操作課程",
         link: "/services/chainsaw-training"
     }
@@ -402,14 +403,14 @@ function Footer({ className }) {
         className: `bg-forest-dark text-brand-white ${className || ''}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container mx-auto px-4 sm:px-6 lg:px-8 py-12",
+                className: "container mx-auto px-4 py-16 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8",
+                    className: "grid grid-cols-1 gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-4",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-bold mb-4",
+                                    className: "mb-4 text-lg font-bold",
                                     children: "虎山林業"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Footer.tsx",
@@ -417,7 +418,7 @@ function Footer({ className }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-sm text-gray-300 mb-4",
+                                    className: "mb-4 text-sm text-gray-300",
                                     children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Footer.tsx",
@@ -444,7 +445,7 @@ function Footer({ className }) {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-bold mb-4",
+                                    className: "mb-4 text-lg font-bold",
                                     children: "快速連結"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Footer.tsx",
@@ -457,7 +458,7 @@ function Footer({ className }) {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Link$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Link"], {
                                                 href: item.href,
                                                 variant: "footer",
-                                                className: "text-sm hover:no-underline",
+                                                className: "inline-flex min-h-[44px] items-center text-sm hover:no-underline",
                                                 "aria-label": item.ariaLabel,
                                                 children: item.label
                                             }, void 0, false, {
@@ -484,7 +485,7 @@ function Footer({ className }) {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-bold mb-4",
+                                    className: "mb-4 text-lg font-bold",
                                     children: "服務項目"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Footer.tsx",
@@ -497,7 +498,7 @@ function Footer({ className }) {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Link$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Link"], {
                                                 href: `/services#${service.id}`,
                                                 variant: "footer",
-                                                className: "text-sm hover:no-underline",
+                                                className: "inline-flex min-h-[44px] items-center text-sm hover:no-underline",
                                                 children: service.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/Footer.tsx",
@@ -521,9 +522,10 @@ function Footer({ className }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-bold mb-4",
+                                    className: "text-lg font-bold",
                                     children: "聯絡我們"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Footer.tsx",
@@ -531,7 +533,7 @@ function Footer({ className }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "space-y-3 mb-4",
+                                    className: "space-y-3",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-sm text-gray-300",
                                         children: "追蹤我們的社群媒體，了解最新林業資訊"
@@ -574,9 +576,9 @@ function Footer({ className }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "border-t border-forest-green/30",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "container mx-auto px-4 sm:px-6 lg:px-8 py-6",
+                    className: "container mx-auto px-4 py-6 sm:px-6 lg:px-8",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col md:flex-row justify-between items-center gap-4",
+                        className: "flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm text-gray-400",
@@ -598,7 +600,7 @@ function Footer({ className }) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Link$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Link"], {
                                         href: "/privacy",
                                         variant: "footer",
-                                        className: "text-sm hover:no-underline",
+                                        className: "inline-flex min-h-[44px] items-center text-sm hover:no-underline",
                                         children: "隱私權政策"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/Footer.tsx",
@@ -608,7 +610,7 @@ function Footer({ className }) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Link$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Link"], {
                                         href: "/terms",
                                         variant: "footer",
-                                        className: "text-sm hover:no-underline",
+                                        className: "inline-flex min-h-[44px] items-center text-sm hover:no-underline",
                                         children: "服務條款"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/Footer.tsx",

@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Link } from '@/components/ui/Link';
-import { SocialLinks } from '@/components/ui/SocialLinks';
 import { siteConfig } from '@/config/site';
 
 const heroImages = [
@@ -165,10 +164,6 @@ export function HeroSection() {
           </Link>
         </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-gray-300">
-          <span className="font-semibold text-white">追蹤虎山林業</span>
-          <SocialLinks size="sm" theme="dark" />
-        </div>
       </div>
     </section>
   );

@@ -42,10 +42,6 @@ export function ServicesSection() {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
             />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/20 transition group-hover:from-black/90"
-              aria-hidden="true"
-            />
             <div className="relative z-10 flex h-full flex-col justify-end gap-4 p-6 text-left text-white">
               <span className="text-xs uppercase tracking-[0.5em] text-white/70">
                 0{index + 1}

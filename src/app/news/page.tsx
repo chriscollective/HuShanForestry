@@ -74,8 +74,18 @@ export default function NewsPage() {
 
   return (
     <div className="bg-gray-50">
-      <section className="bg-forest-dark py-16 text-center text-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-brand-black py-16 text-center text-white">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-70"
+          aria-hidden="true"
+        >
+          <div className="absolute left-0 top-0 h-3/4 w-1/3 bg-[rgba(255,255,255,0.05)]" />
+          <div className="absolute right-[-5%] top-[10%] h-2/3 w-1/2 rotate-6 bg-[rgba(255,255,255,0.08)]" />
+          <div className="absolute left-[20%] bottom-[-15%] h-[60%] w-[45%] -rotate-3 bg-[rgba(255,255,255,0.03)]" />
+          <div className="absolute right-[20%] bottom-[5%] h-[35%] w-[25%] rotate-[12deg] bg-[rgba(255,255,255,0.05)]" />
+          <div className="absolute left-[60%] top-[-10%] h-[50%] w-[20%] -rotate-6 bg-[rgba(255,255,255,0.04)]" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-orange">
             news
           </p>
