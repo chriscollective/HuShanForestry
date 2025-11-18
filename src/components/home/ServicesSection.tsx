@@ -116,23 +116,23 @@ export function ServicesSection() {
               msOverflowStyle: 'none',
             }}
           >
-            <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
+            <div className="flex gap-12 pb-6" style={{ width: 'max-content' }}>
               {services.map((service, index) => (
                 <article
                   key={service.id}
-                  className="group relative w-80 flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                  className="group relative w-[640px] flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                 >
                   {/* 卡片頂部裝飾條 */}
-                  <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-orange via-forest-green to-brand-orange opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-brand-orange via-forest-green to-brand-orange opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   {/* 圖片區域 */}
-                  <div className="relative h-56 overflow-hidden bg-gray-100">
+                  <div className="relative h-[448px] overflow-hidden bg-gray-100">
                     <Image
                       src={service.image}
                       alt={service.imageAlt}
                       fill
                       className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
-                      sizes="320px"
+                      sizes="640px"
                       priority={index < 2}
                     />
 
@@ -140,38 +140,38 @@ export function ServicesSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-40" />
 
                     {/* 編號徽章 */}
-                    <div className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/30 bg-black/30 backdrop-blur-md">
-                      <span className="text-lg font-bold text-white">
+                    <div className="absolute right-6 top-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/30 bg-black/30 backdrop-blur-md">
+                      <span className="text-2xl font-bold text-white">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
                   </div>
 
                   {/* 內容區域 */}
-                  <div className="relative p-6">
+                  <div className="relative p-10">
                     {/* 分類標籤 */}
                     {service.category && (
-                      <span className="inline-block rounded-full bg-forest-green/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-forest-green">
+                      <span className="inline-block rounded-full bg-forest-green/10 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-forest-green">
                         {service.category}
                       </span>
                     )}
 
                     {/* 標題 */}
-                    <h3 className="mt-3 text-xl font-bold text-brand-black transition-colors duration-300 group-hover:text-brand-orange">
+                    <h3 className="mt-5 text-3xl font-bold text-brand-black transition-colors duration-300 group-hover:text-brand-orange">
                       {service.title}
                     </h3>
 
                     {/* 描述 */}
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600 line-clamp-3">
+                    <p className="mt-4 text-base leading-relaxed text-gray-600 line-clamp-3">
                       {service.description}
                     </p>
 
                     {/* 特色列表 */}
                     {service.features && service.features.length > 0 && (
-                      <ul className="mt-4 space-y-1.5">
+                      <ul className="mt-6 space-y-3">
                         {service.features.slice(0, 3).map((feature, fIndex) => (
-                          <li key={fIndex} className="flex items-center gap-2 text-xs text-gray-700">
-                            <svg className="h-4 w-4 flex-shrink-0 text-forest-green" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                          <li key={fIndex} className="flex items-center gap-3 text-sm text-gray-700">
+                            <svg className="h-6 w-6 flex-shrink-0 text-forest-green" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <span>{feature}</span>
@@ -181,15 +181,15 @@ export function ServicesSection() {
                     )}
 
                     {/* 了解更多按鈕 */}
-                    <div className="mt-5">
+                    <div className="mt-8">
                       <Link
                         href={service.link}
-                        className="group/link inline-flex items-center gap-2 text-sm font-semibold text-brand-orange transition-gap duration-300 hover:gap-3"
+                        className="group/link inline-flex items-center gap-3 text-base font-semibold text-brand-orange transition-gap duration-300 hover:gap-4"
                         aria-label={`了解更多關於${service.title}`}
                       >
                         <span>了解更多</span>
                         <svg
-                          className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1"
+                          className="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1"
                           fill="none"
                           viewBox="0 0 24 24"
                           strokeWidth="2"
@@ -202,7 +202,7 @@ export function ServicesSection() {
                   </div>
 
                   {/* 底部裝飾線 */}
-                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-brand-orange to-forest-green transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-2 w-0 bg-gradient-to-r from-brand-orange to-forest-green transition-all duration-500 group-hover:w-full" />
                 </article>
               ))}
             </div>
