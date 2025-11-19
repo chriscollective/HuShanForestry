@@ -35,52 +35,42 @@ export function Footer({ className }: FooterProps) {
       </div>
 
       {/* 森林剪影裝飾 - 左下方 */}
-      <div className="pointer-events-none absolute left-0 bottom-0 opacity-15" aria-hidden="true">
-        <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMax meet">
+      <div className="pointer-events-none absolute left-0 bottom-0 opacity-20" aria-hidden="true">
+        <svg width="500" height="100" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMax meet">
           <g fill="white">
-            {/* 第一棵樹 - 高大的松樹 */}
-            <path d="M 20 120 L 20 50 L 15 50 L 30 20 L 45 50 L 40 50 L 40 120 Z" />
-            <path d="M 30 45 L 20 60 L 40 60 Z" opacity="0.8" />
-            <path d="M 30 65 L 15 85 L 45 85 Z" opacity="0.6" />
+            {/* 第一棵 - 高聳針葉樹 */}
+            <path d="M 25 100 L 25 30 L 10 50 L 15 50 L 5 65 L 10 65 L 0 80 L 25 80 L 25 30 L 50 80 L 40 80 L 35 65 L 40 65 L 30 50 L 35 50 Z" />
 
-            {/* 第二棵樹 - 中等針葉樹 */}
-            <path d="M 70 120 L 70 70 L 65 70 L 75 45 L 85 70 L 80 70 L 80 120 Z" />
-            <path d="M 75 60 L 67 75 L 83 75 Z" opacity="0.7" />
+            {/* 第二棵 - 矮松樹 */}
+            <path d="M 75 100 L 75 60 L 65 70 L 70 70 L 60 85 L 90 85 L 80 70 L 85 70 Z" />
 
-            {/* 第三棵樹 - 矮樹叢 */}
-            <ellipse cx="115" cy="105" rx="20" ry="15" />
-            <ellipse cx="125" cy="100" rx="18" ry="18" opacity="0.8" />
-            <ellipse cx="105" cy="100" rx="15" ry="13" opacity="0.7" />
+            {/* 第三棵 - 圓頂闊葉樹 */}
+            <path d="M 120 100 L 120 75 Q 105 60 105 50 Q 105 35 120 25 Q 135 35 135 50 Q 135 60 120 75 Z" />
 
-            {/* 第四棵樹 - 高松樹 */}
-            <path d="M 155 120 L 155 40 L 150 40 L 165 10 L 180 40 L 175 40 L 175 120 Z" />
-            <path d="M 165 35 L 155 50 L 175 50 Z" opacity="0.8" />
-            <path d="M 165 55 L 150 75 L 180 75 Z" opacity="0.6" />
-            <path d="M 165 80 L 145 95 L 185 95 Z" opacity="0.5" />
+            {/* 第四棵 - 細高針葉樹 */}
+            <path d="M 165 100 L 165 25 L 155 45 L 160 45 L 150 60 L 155 60 L 145 75 L 165 75 L 185 75 L 175 60 L 180 60 L 170 45 L 175 45 Z" />
 
-            {/* 第五棵樹 - 圓形樹冠 */}
-            <rect x="200" y="90" width="8" height="30" />
-            <circle cx="204" cy="85" r="20" opacity="0.9" />
-            <circle cx="210" cy="75" r="15" opacity="0.7" />
-            <circle cx="198" cy="75" r="15" opacity="0.7" />
+            {/* 第五棵 - 蓬鬆圓樹 */}
+            <circle cx="220" cy="55" r="30" />
+            <rect x="215" y="75" width="10" height="25" />
 
-            {/* 第六棵樹 - 中型針葉樹 */}
-            <path d="M 245 120 L 245 65 L 240 65 L 252 35 L 264 65 L 259 65 L 259 120 Z" />
-            <path d="M 252 55 L 243 70 L 261 70 Z" opacity="0.7" />
-            <path d="M 252 75 L 238 90 L 266 90 Z" opacity="0.6" />
+            {/* 第六棵 - 中型針葉樹 */}
+            <path d="M 270 100 L 270 40 L 260 55 L 265 55 L 255 70 L 285 70 L 275 55 L 280 55 Z" />
 
-            {/* 第七棵樹 - 矮灌木 */}
-            <path d="M 290 120 L 290 100 Q 285 95 285 90 Q 285 85 290 80 Q 295 85 295 90 Q 295 95 290 100 Z" />
-            <ellipse cx="295" cy="105" rx="12" ry="10" opacity="0.7" />
+            {/* 第七棵 - 灌木叢 */}
+            <ellipse cx="320" cy="85" rx="25" ry="18" />
+            <ellipse cx="310" cy="90" rx="15" ry="12" />
+            <ellipse cx="330" cy="90" rx="15" ry="12" />
 
-            {/* 第八棵樹 - 小松樹 */}
-            <path d="M 325 120 L 325 75 L 320 75 L 330 50 L 340 75 L 335 75 L 335 120 Z" />
-            <path d="M 330 68 L 323 80 L 337 80 Z" opacity="0.7" />
+            {/* 第八棵 - 高大松樹 */}
+            <path d="M 370 100 L 370 20 L 360 40 L 365 40 L 355 55 L 360 55 L 350 70 L 355 70 L 345 85 L 370 85 L 395 85 L 385 70 L 390 70 L 380 55 L 385 55 L 375 40 L 380 40 Z" />
 
-            {/* 第九棵樹 - 最右側的高樹 */}
-            <path d="M 370 120 L 370 55 L 365 55 L 378 25 L 391 55 L 386 55 L 386 120 Z" />
-            <path d="M 378 50 L 370 65 L 386 65 Z" opacity="0.8" />
-            <path d="M 378 70 L 365 88 L 391 88 Z" opacity="0.6" />
+            {/* 第九棵 - 小圓樹 */}
+            <circle cx="430" cy="75" r="20" />
+            <rect x="426" y="85" width="8" height="15" />
+
+            {/* 第十棵 - 最右側針葉樹 */}
+            <path d="M 475 100 L 475 45 L 465 60 L 470 60 L 460 75 L 465 75 L 455 90 L 495 90 L 485 75 L 490 75 L 480 60 L 485 60 Z" />
           </g>
         </svg>
       </div>
