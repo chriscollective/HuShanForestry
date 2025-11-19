@@ -33,6 +33,36 @@ export function Footer({ className }: FooterProps) {
         <div className="absolute right-[15%] bottom-[10%] h-[30%] w-[25%] rotate-12 bg-[rgba(255,255,255,0.06)]" />
         <div className="absolute left-[60%] top-[-10%] h-[45%] w-[20%] -rotate-6 bg-[rgba(255,255,255,0.04)]" />
       </div>
+
+      {/* 幾何樹木裝飾 - 左下方 */}
+      <div className="pointer-events-none absolute left-8 bottom-8 opacity-15" aria-hidden="true">
+        <svg width="120" height="180" viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            {/* 樹幹 */}
+            <line x1="60" y1="180" x2="60" y2="90" />
+
+            {/* 第一層樹枝（最下層，最寬） */}
+            <line x1="60" y1="140" x2="30" y2="155" />
+            <line x1="60" y1="140" x2="90" y2="155" />
+
+            {/* 第二層樹枝 */}
+            <line x1="60" y1="120" x2="35" y2="132" />
+            <line x1="60" y1="120" x2="85" y2="132" />
+
+            {/* 第三層樹枝 */}
+            <line x1="60" y1="100" x2="42" y2="110" />
+            <line x1="60" y1="100" x2="78" y2="110" />
+
+            {/* 樹冠 - 三角形幾何結構 */}
+            <path d="M 60 20 L 30 90 L 60 75 L 90 90 Z" />
+            <path d="M 60 20 L 40 70 L 60 60 L 80 70 Z" />
+            <path d="M 60 20 L 45 55 L 60 48 L 75 55 Z" />
+
+            {/* 樹頂星形裝飾 */}
+            <circle cx="60" cy="20" r="3" fill="white" />
+          </g>
+        </svg>
+      </div>
       {/* 主要內容區 */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
