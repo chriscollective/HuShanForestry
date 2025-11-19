@@ -23,8 +23,8 @@ export default function AboutPage() {
         </div>
 
         {/* 森林線條圖樣 */}
-        <div className="absolute inset-0 opacity-[0.08]" aria-hidden="true">
-          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             {/* 左側樹木群 */}
             <g stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
               {/* 樹木 1 - 最左 */}
@@ -253,8 +253,8 @@ export default function AboutPage() {
         </div>
 
         {/* 森林線條圖樣 */}
-        <div className="absolute inset-0 opacity-[0.06]" aria-hidden="true">
-          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <div className="absolute inset-0 opacity-15" aria-hidden="true">
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             {/* 簡化的樹木剪影 */}
             <g stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
               {/* 左側樹林 */}
