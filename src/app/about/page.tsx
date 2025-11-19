@@ -14,9 +14,12 @@ export default function AboutPage() {
   return (
     <div className="bg-brand-white">
       {/* Hero Section */}
-      <section className="relative bg-forest-dark text-brand-white">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest-green/30 to-transparent" />
+      <section className="relative bg-brand-black text-brand-white overflow-hidden">
+        {/* 背景裝飾元素 */}
+        <div className="absolute inset-0 opacity-30" aria-hidden="true">
+          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-brand-orange/20 blur-3xl" />
+          <div className="absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute right-[30%] top-[20%] h-[300px] w-[300px] rounded-full bg-brand-orange/10 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -145,7 +148,7 @@ export default function AboutPage() {
                           className="flex items-center gap-2 text-sm text-gray-600"
                         >
                           <svg
-                            className="h-5 w-5 flex-shrink-0 text-forest-green"
+                            className="h-5 w-5 flex-shrink-0 text-brand-orange"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="2"
@@ -170,8 +173,14 @@ export default function AboutPage() {
       </section>
 
       {/* 團隊價值觀 Section */}
-      <section className="bg-forest-dark py-16 text-brand-white sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-brand-black py-16 text-brand-white sm:py-20 overflow-hidden">
+        {/* 背景裝飾元素 */}
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <div className="absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-orange/15 blur-3xl" />
+          <div className="absolute left-[40%] top-[30%] h-[350px] w-[350px] rounded-full bg-white/5 blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               {values.title}
@@ -182,7 +191,7 @@ export default function AboutPage() {
             {values.items.map((value, index) => (
               <div
                 key={index}
-                className="group flex flex-col items-center rounded-2xl border-2 border-white/20 bg-white/5 px-8 py-6 backdrop-blur-sm transition-all hover:border-brand-orange hover:bg-white/10"
+                className="group flex flex-col items-center rounded-2xl border-2 border-white/20 bg-white/5 px-8 py-6 backdrop-blur-sm transition-all hover:border-brand-orange hover:bg-brand-orange/10"
               >
                 <div className="text-2xl font-bold">{value.label}</div>
                 <div className="mt-2 text-sm text-gray-300">
@@ -197,26 +206,33 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-br from-forest-dark to-forest-green p-12 text-center text-brand-white shadow-xl">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              一起為台灣林業努力
-            </h2>
-            <p className="mt-4 text-lg text-gray-200">
-              如果您認同我們的理念，歡迎與我們聯繫，讓我們攜手守護台灣的森林資源
-            </p>
-            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-xl bg-brand-orange px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[#E55A2A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
-              >
-                立即聯絡我們
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-white bg-transparent px-8 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                了解我們的服務
-              </a>
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-black via-gray-900 to-brand-black p-12 text-center text-brand-white shadow-xl">
+            {/* 背景裝飾 */}
+            <div className="absolute inset-0 opacity-30" aria-hidden="true">
+              <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-brand-orange/30 blur-3xl" />
+              <div className="absolute left-0 bottom-0 h-[250px] w-[250px] rounded-full bg-white/10 blur-3xl" />
+            </div>
+            <div className="relative">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                一起為台灣林業努力
+              </h2>
+              <p className="mt-4 text-lg text-gray-200">
+                如果您認同我們的理念，歡迎與我們聯繫，讓我們攜手守護台灣的森林資源
+              </p>
+              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-xl bg-brand-orange px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[#E55A2A] hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
+                >
+                  立即聯絡我們
+                </a>
+                <a
+                  href="/services"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-white bg-transparent px-8 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-brand-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  了解我們的服務
+                </a>
+              </div>
             </div>
           </div>
         </div>
