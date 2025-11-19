@@ -34,46 +34,6 @@ export function Footer({ className }: FooterProps) {
         <div className="absolute left-[60%] top-[-10%] h-[45%] w-[20%] -rotate-6 bg-[rgba(255,255,255,0.04)]" />
       </div>
 
-      {/* 森林剪影裝飾 - 左下方 */}
-      <div className="pointer-events-none absolute left-0 bottom-0 opacity-20" aria-hidden="true">
-        <svg width="500" height="100" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMax meet">
-          <g fill="white">
-            {/* 第一棵 - 高聳針葉樹 */}
-            <path d="M 25 100 L 25 30 L 10 50 L 15 50 L 5 65 L 10 65 L 0 80 L 25 80 L 25 30 L 50 80 L 40 80 L 35 65 L 40 65 L 30 50 L 35 50 Z" />
-
-            {/* 第二棵 - 矮松樹 */}
-            <path d="M 75 100 L 75 60 L 65 70 L 70 70 L 60 85 L 90 85 L 80 70 L 85 70 Z" />
-
-            {/* 第三棵 - 圓頂闊葉樹 */}
-            <path d="M 120 100 L 120 75 Q 105 60 105 50 Q 105 35 120 25 Q 135 35 135 50 Q 135 60 120 75 Z" />
-
-            {/* 第四棵 - 細高針葉樹 */}
-            <path d="M 165 100 L 165 25 L 155 45 L 160 45 L 150 60 L 155 60 L 145 75 L 165 75 L 185 75 L 175 60 L 180 60 L 170 45 L 175 45 Z" />
-
-            {/* 第五棵 - 蓬鬆圓樹 */}
-            <circle cx="220" cy="55" r="30" />
-            <rect x="215" y="75" width="10" height="25" />
-
-            {/* 第六棵 - 中型針葉樹 */}
-            <path d="M 270 100 L 270 40 L 260 55 L 265 55 L 255 70 L 285 70 L 275 55 L 280 55 Z" />
-
-            {/* 第七棵 - 灌木叢 */}
-            <ellipse cx="320" cy="85" rx="25" ry="18" />
-            <ellipse cx="310" cy="90" rx="15" ry="12" />
-            <ellipse cx="330" cy="90" rx="15" ry="12" />
-
-            {/* 第八棵 - 高大松樹 */}
-            <path d="M 370 100 L 370 20 L 360 40 L 365 40 L 355 55 L 360 55 L 350 70 L 355 70 L 345 85 L 370 85 L 395 85 L 385 70 L 390 70 L 380 55 L 385 55 L 375 40 L 380 40 Z" />
-
-            {/* 第九棵 - 小圓樹 */}
-            <circle cx="430" cy="75" r="20" />
-            <rect x="426" y="85" width="8" height="15" />
-
-            {/* 第十棵 - 最右側針葉樹 */}
-            <path d="M 475 100 L 475 45 L 465 60 L 470 60 L 460 75 L 465 75 L 455 90 L 495 90 L 485 75 L 490 75 L 480 60 L 485 60 Z" />
-          </g>
-        </svg>
-      </div>
       {/* 主要內容區 */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
