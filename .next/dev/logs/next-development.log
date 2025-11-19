@@ -53,3 +53,23 @@ Check the top-level render call using <li>. See https://react.dev/link/warning-k
 Check the top-level render call using <ul>. 
 [00:18:22.622] Browser ERROR   uncaughtError: Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
 Open your browser's console to view the Component stack trace.
+[00:19:39.310] Server  ERROR   Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <li>. See https://react.dev/link/warning-keys for more information.
+[00:19:39.315] Server  ERROR   C:\Users\Chris\Desktop\HuShanForestry\.next\dev\server\chunks\ssr\node_modules_da7ce3cf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:19:39.317] Server  ERROR    ⨯ Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
+[00:19:39.590] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the top-level render call using <ul>. 
+[00:19:39.590] Browser ERROR   uncaughtError: Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
+Open your browser's console to view the Component stack trace.
+[00:20:02.290] Server  ERROR   Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <li>. See https://react.dev/link/warning-keys for more information.
+[00:20:02.297] Server  ERROR   C:\Users\Chris\Desktop\HuShanForestry\.next\dev\server\chunks\ssr\node_modules_da7ce3cf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:20:02.298] Server  ERROR    ⨯ Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
+[00:20:02.581] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the top-level render call using <ul>. 
+[00:20:02.581] Browser ERROR   uncaughtError: Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
+Open your browser's console to view the Component stack trace.

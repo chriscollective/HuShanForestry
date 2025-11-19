@@ -51,18 +51,37 @@ export function Footer({ className }: FooterProps) {
           <div>
             <h3 className="mb-4 text-lg font-bold">快速連結</h3>
             <ul className="space-y-2">
-              {navigationItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    variant="footer"
-                    className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
-                    aria-label={item.ariaLabel}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navigationItems.map((item) => {
+                // 如果有子選單，顯示所有子項目
+                if (item.subItems && item.subItems.length > 0) {
+                  return item.subItems.map((subItem) => (
+                    <li key={subItem.href}>
+                      <Link
+                        href={subItem.href}
+                        variant="footer"
+                        className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
+                        aria-label={subItem.ariaLabel}
+                      >
+                        {subItem.label}
+                      </Link>
+                    </li>
+                  ));
+                }
+
+                // 沒有子選單的一般項目
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href!}
+                      variant="footer"
+                      className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
+                      aria-label={item.ariaLabel}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
