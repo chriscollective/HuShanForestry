@@ -75,11 +75,12 @@ export function Header({ className }: HeaderProps) {
 
             {/* 桌面版導航選單 */}
             <div className="hidden md:flex md:items-center md:gap-6 lg:gap-10">
-              {navigationItems.map((item) => {
-                // 有子選單的項目
-                if (item.subItems && item.subItems.length > 0) {
-                  return (
-                    <div key={item.label} className="group relative">
+              {navigationItems.map((item, index) => (
+                <div key={item.href || item.label} className="flex items-center gap-6 lg:gap-10">
+                  {/* 導航項目 */}
+                  {item.subItems && item.subItems.length > 0 ? (
+                    // 有子選單的項目
+                    <div className="group relative">
                       <button
                         className={cn(
                           'relative flex items-center gap-1 rounded-md px-3 py-2 text-brand-black font-medium',
@@ -123,22 +124,27 @@ export function Header({ className }: HeaderProps) {
                         </div>
                       </div>
                     </div>
-                  );
-                }
+                  ) : (
+                    // 沒有子選單的一般項目
+                    <Link
+                      href={item.href!}
+                      variant="nav"
+                      className="hover:no-underline"
+                      aria-label={item.ariaLabel}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
 
-                // 沒有子選單的一般項目
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href!}
-                    variant="nav"
-                    className="hover:no-underline"
-                    aria-label={item.ariaLabel}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
+                  {/* 分隔線（最後一項不顯示） */}
+                  {index < navigationItems.length - 1 && (
+                    <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
+                  )}
+                </div>
+              ))}
+
+              {/* 分隔線（在 CTA 前） */}
+              <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
 
               {/* CTA 按鈕 */}
               <Link href="/contact" variant="nav" aria-label="前往聯絡我們頁面">
