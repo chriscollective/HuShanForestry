@@ -25,8 +25,16 @@ export interface HeaderProps {
  */
 export function Header({ className }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
 
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setExpandedMobileItem(null);
+  };
+
+  const toggleMobileSubMenu = (label: string) => {
+    setExpandedMobileItem(expandedMobileItem === label ? null : label);
+  };
 
   return (
     <>
@@ -67,17 +75,70 @@ export function Header({ className }: HeaderProps) {
 
             {/* 桌面版導航選單 */}
             <div className="hidden md:flex md:items-center md:gap-6 lg:gap-10">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  variant="nav"
-                  className="hover:no-underline"
-                  aria-label={item.ariaLabel}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navigationItems.map((item) => {
+                // 有子選單的項目
+                if (item.subItems && item.subItems.length > 0) {
+                  return (
+                    <div key={item.label} className="group relative">
+                      <button
+                        className={cn(
+                          'relative flex items-center gap-1 rounded-md px-3 py-2 text-brand-black font-medium',
+                          'min-h-[44px] transition-colors duration-200',
+                          'hover:text-brand-orange',
+                          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-orange'
+                        )}
+                        aria-label={item.ariaLabel}
+                        aria-haspopup="true"
+                      >
+                        <span>{item.label}</span>
+                        <svg
+                          className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                      </button>
+
+                      {/* 下拉選單 */}
+                      <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div className="rounded-xl border border-gray-200 bg-white py-2 shadow-xl min-w-[200px]">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className={cn(
+                                'block px-4 py-3 text-sm text-brand-black',
+                                'hover:bg-brand-orange/10 hover:text-brand-orange',
+                                'transition-colors duration-200',
+                                'focus-visible:outline-none focus-visible:bg-brand-orange/10'
+                              )}
+                              aria-label={subItem.ariaLabel}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
+                // 沒有子選單的一般項目
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href!}
+                    variant="nav"
+                    className="hover:no-underline"
+                    aria-label={item.ariaLabel}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
 
               {/* CTA 按鈕 */}
               <Link href="/contact" variant="nav" aria-label="前往聯絡我們頁面">
@@ -154,22 +215,80 @@ export function Header({ className }: HeaderProps) {
             className="relative h-full overflow-y-auto bg-brand-white px-4 py-6 shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
           >
             <div className="space-y-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  variant="nav"
-                  className={cn(
-                    'w-full rounded-xl border border-gray-100 bg-white text-lg font-medium',
-                    'px-4 py-3 hover:bg-brand-orange/10 hover:border-brand-orange/30 hover:no-underline',
-                    'focus-visible:border-brand-orange/40 focus-visible:bg-brand-orange/10'
-                  )}
-                  aria-label={item.ariaLabel}
-                  onClick={closeMobileMenu}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navigationItems.map((item) => {
+                // 有子選單的項目
+                if (item.subItems && item.subItems.length > 0) {
+                  const isExpanded = expandedMobileItem === item.label;
+                  return (
+                    <div key={item.label} className="space-y-1">
+                      <button
+                        onClick={() => toggleMobileSubMenu(item.label)}
+                        className={cn(
+                          'flex w-full items-center justify-between rounded-xl border border-gray-100 bg-white text-lg font-medium',
+                          'px-4 py-3 hover:bg-brand-orange/10 hover:border-brand-orange/30',
+                          'focus-visible:border-brand-orange/40 focus-visible:bg-brand-orange/10',
+                          isExpanded && 'bg-brand-orange/5 border-brand-orange/20'
+                        )}
+                        aria-expanded={isExpanded}
+                        aria-label={item.ariaLabel}
+                      >
+                        <span className="text-brand-black">{item.label}</span>
+                        <svg
+                          className={cn(
+                            'h-5 w-5 text-brand-black transition-transform duration-200',
+                            isExpanded && 'rotate-180'
+                          )}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                      </button>
+
+                      {/* 子選單 */}
+                      {isExpanded && (
+                        <div className="ml-4 space-y-1">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className={cn(
+                                'block rounded-lg border border-gray-100 bg-gray-50 px-4 py-2.5 text-base',
+                                'text-brand-black hover:bg-brand-orange/10 hover:border-brand-orange/20',
+                                'focus-visible:border-brand-orange/30 focus-visible:bg-brand-orange/10'
+                              )}
+                              aria-label={subItem.ariaLabel}
+                              onClick={closeMobileMenu}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                // 沒有子選單的一般項目
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href!}
+                    variant="nav"
+                    className={cn(
+                      'w-full rounded-xl border border-gray-100 bg-white text-lg font-medium',
+                      'px-4 py-3 hover:bg-brand-orange/10 hover:border-brand-orange/30 hover:no-underline',
+                      'focus-visible:border-brand-orange/40 focus-visible:bg-brand-orange/10'
+                    )}
+                    aria-label={item.ariaLabel}
+                    onClick={closeMobileMenu}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
 
               <Link
                 href="/contact"

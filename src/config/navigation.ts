@@ -13,12 +13,34 @@ export const navigationItems: NavigationItem[] = [
   },
   {
     label: "關於我們",
-    href: "/about",
-    ariaLabel: "前往關於我們頁面",
+    ariaLabel: "關於虎山林業",
+    subItems: [
+      {
+        label: "公司情報",
+        href: "/about",
+        ariaLabel: "了解虎山林業公司情報",
+      },
+      {
+        label: "機具展示",
+        href: "/equipment",
+        ariaLabel: "查看林業機具設備",
+      },
+    ],
   },
   {
     label: "服務項目",
-    href: "/services",
-    ariaLabel: "前往服務項目頁面",
+    ariaLabel: "查看服務項目",
+    subItems: [
+      {
+        label: "林業服務",
+        href: "/services",
+        ariaLabel: "查看林業服務項目",
+      },
+      {
+        label: "教育活動",
+        href: "/education",
+        ariaLabel: "查看教育活動與訓練課程",
+      },
+    ],
   },
 ];
