@@ -21,6 +21,77 @@ export default function AboutPage() {
           <div className="absolute left-0 bottom-0 h-[400px] w-[400px] rounded-full bg-white/10 blur-3xl" />
           <div className="absolute right-[30%] top-[20%] h-[300px] w-[300px] rounded-full bg-brand-orange/10 blur-3xl" />
         </div>
+
+        {/* 森林線條圖樣 */}
+        <div className="absolute inset-0 opacity-[0.08]" aria-hidden="true">
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            {/* 左側樹木群 */}
+            <g stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              {/* 樹木 1 - 最左 */}
+              <path d="M 50 400 L 50 250" />
+              <path d="M 50 280 L 30 320 L 50 300 L 70 320 Z" />
+              <path d="M 50 250 L 25 300 L 50 270 L 75 300 Z" />
+
+              {/* 樹木 2 */}
+              <path d="M 120 400 L 120 220" />
+              <path d="M 120 260 L 95 310 L 120 280 L 145 310 Z" />
+              <path d="M 120 220 L 90 280 L 120 240 L 150 280 Z" />
+
+              {/* 樹木 3 */}
+              <path d="M 200 400 L 200 240" />
+              <path d="M 200 280 L 175 330 L 200 300 L 225 330 Z" />
+              <path d="M 200 240 L 170 300 L 200 260 L 230 300 Z" />
+            </g>
+
+            {/* 中央樹木群 */}
+            <g stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              {/* 樹木 4 */}
+              <path d="M 45% 400 L 45% 200" />
+              <path d="M 45% 250 L 42% 310 L 45% 270 L 48% 310 Z" />
+              <path d="M 45% 200 L 41% 270 L 45% 220 L 49% 270 Z" />
+
+              {/* 樹木 5 - 最高 */}
+              <path d="M 52% 400 L 52% 180" />
+              <path d="M 52% 240 L 48% 300 L 52% 260 L 56% 300 Z" />
+              <path d="M 52% 180 L 47% 260 L 52% 200 L 57% 260 Z" />
+
+              {/* 樹木 6 */}
+              <path d="M 60% 400 L 60% 220" />
+              <path d="M 60% 270 L 56% 330 L 60% 290 L 64% 330 Z" />
+              <path d="M 60% 220 L 55% 290 L 60% 240 L 65% 290 Z" />
+            </g>
+
+            {/* 右側樹木群 */}
+            <g stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              {/* 樹木 7 */}
+              <path d="M 85% 400 L 85% 230" />
+              <path d="M 85% 270 L 82% 330 L 85% 290 L 88% 330 Z" />
+              <path d="M 85% 230 L 81% 300 L 85% 250 L 89% 300 Z" />
+
+              {/* 樹木 8 */}
+              <path d="M 92% 400 L 92% 260" />
+              <path d="M 92% 300 L 89% 350 L 92% 320 L 95% 350 Z" />
+              <path d="M 92% 260 L 88% 320 L 92% 280 L 96% 320 Z" />
+
+              {/* 樹木 9 - 最右 */}
+              <path d="M 97% 400 L 97% 280" />
+              <path d="M 97% 320 L 95% 360 L 97% 340 L 99% 360 Z" />
+              <path d="M 97% 280 L 94% 340 L 97% 300 L 100% 340 Z" />
+            </g>
+
+            {/* 地平線與小草 */}
+            <g stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round">
+              <path d="M 0 400 L 100% 400" opacity="0.3" />
+              {/* 小草點綴 */}
+              <path d="M 15% 400 L 15% 385" opacity="0.4" />
+              <path d="M 18% 400 L 18% 390" opacity="0.4" />
+              <path d="M 35% 400 L 35% 388" opacity="0.4" />
+              <path d="M 38% 400 L 38% 392" opacity="0.4" />
+              <path d="M 70% 400 L 70% 387" opacity="0.4" />
+              <path d="M 73% 400 L 73% 391" opacity="0.4" />
+            </g>
+          </svg>
+        </div>
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -179,6 +250,41 @@ export default function AboutPage() {
           <div className="absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-white/10 blur-3xl" />
           <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-orange/15 blur-3xl" />
           <div className="absolute left-[40%] top-[30%] h-[350px] w-[350px] rounded-full bg-white/5 blur-3xl" />
+        </div>
+
+        {/* 森林線條圖樣 */}
+        <div className="absolute inset-0 opacity-[0.06]" aria-hidden="true">
+          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            {/* 簡化的樹木剪影 */}
+            <g stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              {/* 左側樹林 */}
+              <path d="M 10% 100% L 10% 40%" />
+              <path d="M 10% 55% L 6% 75% L 10% 60% L 14% 75% Z" />
+              <path d="M 10% 40% L 5% 65% L 10% 45% L 15% 65% Z" />
+
+              <path d="M 22% 100% L 22% 50%" />
+              <path d="M 22% 65% L 18% 80% L 22% 68% L 26% 80% Z" />
+              <path d="M 22% 50% L 17% 70% L 22% 53% L 27% 70% Z" />
+
+              {/* 中央樹林 */}
+              <path d="M 48% 100% L 48% 30%" />
+              <path d="M 48% 50% L 43% 70% L 48% 53% L 53% 70% Z" />
+              <path d="M 48% 30% L 42% 55% L 48% 35% L 54% 55% Z" />
+
+              <path d="M 65% 100% L 65% 45%" />
+              <path d="M 65% 60% L 60% 78% L 65% 63% L 70% 78% Z" />
+              <path d="M 65% 45% L 59% 68% L 65% 48% L 71% 68% Z" />
+
+              {/* 右側樹林 */}
+              <path d="M 82% 100% L 82% 35%" />
+              <path d="M 82% 52% L 77% 72% L 82% 55% L 87% 72% Z" />
+              <path d="M 82% 35% L 76% 60% L 82% 38% L 88% 60% Z" />
+
+              <path d="M 93% 100% L 93% 55%" />
+              <path d="M 93% 68% L 89% 82% L 93% 70% L 97% 82% Z" />
+              <path d="M 93% 55% L 88% 73% L 93% 58% L 98% 73% Z" />
+            </g>
+          </svg>
         </div>
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
