@@ -1,0 +1,143 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
+import { newsItems, categoryLabelMap } from "@/config/news";
+import { ArrowLeft } from "lucide-react";
+
+export default function NewsDetailPage() {
+  const params = useParams();
+  const router = useRouter();
+  const newsId = params.id as string;
+
+  // 尋找對應的新聞
+  const newsItem = newsItems.find((item) => item.id === newsId);
+
+  // 如果找不到新聞,顯示 404
+  if (!newsItem) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-brand-black">404</h1>
+          <p className="mt-4 text-gray-600">找不到此新聞</p>
+          <Link
+            href="/news"
+            className="mt-6 inline-block rounded-full bg-brand-orange px-6 py-3 text-white transition hover:bg-brand-orange/90"
+          >
+            返回新聞列表
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-gray-50">
+      {/* 頂部橫幅 - 保留 NEWS 頁面風格 */}
+      <section className="relative overflow-hidden bg-brand-black py-16 text-center text-white">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-70"
+          aria-hidden="true"
+        >
+          <div className="absolute left-0 top-0 h-3/4 w-1/3 bg-[rgba(255,255,255,0.05)]" />
+          <div className="absolute right-[-5%] top-[10%] h-2/3 w-1/2 rotate-6 bg-[rgba(255,255,255,0.08)]" />
+          <div className="absolute left-[20%] bottom-[-15%] h-[60%] w-[45%] -rotate-3 bg-[rgba(255,255,255,0.03)]" />
+          <div className="absolute right-[20%] bottom-[5%] h-[35%] w-[25%] rotate-[12deg] bg-[rgba(255,255,255,0.05)]" />
+          <div className="absolute left-[60%] top-[-10%] h-[50%] w-[20%] -rotate-6 bg-[rgba(255,255,255,0.04)]" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-orange">
+            news
+          </p>
+          <h1 className="mt-4 text-3xl font-bold sm:text-4xl">
+            {newsItem.title}
+          </h1>
+          <div className="mt-4 flex items-center justify-center gap-4 text-white/80">
+            <span className="font-mono text-sm tracking-wider">
+              {newsItem.date}
+            </span>
+            <span className="text-white/50">•</span>
+            <span className="text-sm">
+              {categoryLabelMap[newsItem.category] || "消息"}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* 主要內容區 */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        {/* 返回按鈕 */}
+        <button
+          onClick={() => router.push("/news")}
+          className="mb-8 flex items-center gap-2 text-gray-600 transition hover:text-brand-orange"
+        >
+          <ArrowLeft size={20} />
+          <span>返回新聞列表</span>
+        </button>
+
+        {/* 雜誌風格版面：左圖右文 */}
+        <article className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg">
+          <div className="flex flex-col gap-8 p-6 sm:flex-row sm:p-10">
+            {/* 左側圖片區 */}
+            <div className="relative h-96 w-full shrink-0 overflow-hidden rounded-xl sm:h-[600px] sm:w-[480px]">
+              <Image
+                src={newsItem.image}
+                alt={newsItem.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 480px"
+                priority
+              />
+            </div>
+
+            {/* 右側內容區 */}
+            <div className="flex flex-1 flex-col gap-6">
+              {/* 標籤與日期 */}
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="font-mono text-sm tracking-wider text-gray-500">
+                  {newsItem.date}
+                </span>
+                <span className="rounded-full bg-brand-orange/10 px-4 py-1 text-sm font-semibold text-brand-orange">
+                  {categoryLabelMap[newsItem.category] || "消息"}
+                </span>
+              </div>
+
+              {/* 標題 */}
+              <h2 className="text-3xl font-bold text-brand-black sm:text-4xl">
+                {newsItem.title}
+              </h2>
+
+              {/* 內文 */}
+              <div className="prose prose-lg max-w-none">
+                <p className="leading-relaxed text-gray-700">
+                  {newsItem.content}
+                </p>
+              </div>
+
+              {/* 分隔線 */}
+              <div className="my-4 border-t border-gray-200" />
+
+              {/* 底部動作區 */}
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/news"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-white transition hover:bg-brand-orange/90"
+                >
+                  <ArrowLeft size={18} />
+                  返回新聞列表
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-gray-700 transition hover:border-brand-orange hover:text-brand-orange"
+                >
+                  聯絡我們
+                </Link>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  );
+}
