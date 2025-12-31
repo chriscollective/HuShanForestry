@@ -11,3 +11,26 @@
 [00:11:45.284] Server  LOG     📰 News query result: []
 [00:11:45.284] Server  LOG     📰 News count: 0
 [00:11:46.022] Server  LOG     🔍 All docs: []
+[00:14:42.444] Server  LOG     🔧 Sanity Config: {}
+[00:14:42.849] Server  LOG     📰 News query result: [{...}]
+[00:14:42.850] Server  LOG     📰 News count: 1
+[00:14:57.020] Server  LOG     🔧 Sanity Config: {}
+[00:14:57.333] Server  LOG     📰 News query result: [{...}]
+[00:14:57.333] Server  LOG     📰 News count: 1
+[00:14:59.009] Server  LOG     🔧 Sanity Config: {}
+[00:14:59.291] Server  LOG     📰 News query result: [{...}]
+[00:14:59.291] Server  LOG     📰 News count: 1
+[00:14:59.499] Server  LOG     🔧 Sanity Config: {}
+[00:14:59.827] Server  LOG     📰 News query result: [{...}]
+[00:14:59.828] Server  LOG     📰 News count: 1
+[00:15:03.450] Server  LOG     🔧 Sanity Config: {}
+[00:15:03.750] Server  LOG     📰 News query result: [{...}]
+[00:15:03.750] Server  LOG     📰 News count: 1
+[00:15:43.132] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:15:43.383] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:15:43.608] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:15:43.824] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:15:44.705] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:16:05.740] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[00:16:06.740] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[00:17:53.141] Server  LOG     ✓ Compiled in 50ms

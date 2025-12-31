@@ -22,10 +22,23 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'author',
+      title: '作者',
+      type: 'string',
+      initialValue: '虎山林業',
+    }),
+    defineField({
       name: 'date',
       title: '發布日期',
       type: 'datetime',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: '實際發布時間',
+      type: 'datetime',
+      description: '文章實際發布的時間（自動記錄）',
+      readOnly: true,
     }),
     defineField({
       name: 'category',
