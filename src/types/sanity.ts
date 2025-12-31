@@ -17,13 +17,12 @@ export interface News {
   slug: {
     current: string
   }
-  excerpt: string
-  mainImage?: SanityImage
-  imageUrl?: string
-  category?: 'company' | 'industry' | 'project' | 'event'
-  content: any[] // Block content
+  excerpt?: string
+  image?: SanityImage
+  category?: '森林收穫' | '原木買賣' | '經營規劃' | '企業活動' | '人才招募' | '教育活動'
+  content?: any[] // Block content
   author?: string
-  publishedAt: string
+  date: string
   featured?: boolean
 }
 

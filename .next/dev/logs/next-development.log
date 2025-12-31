@@ -43,3 +43,28 @@
 [00:27:59.324] Browser WARN    styled-components: it looks like an unknown prop "flex" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
 [00:27:59.324] Browser WARN    styled-components: it looks like an unknown prop "position" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
 [00:31:11.007] Server  LOG     ✓ Compiled in 129ms
+[00:33:08.518] Browser WARN    Building schema for synchronization took more than 1 second (116306.29999998212ms)
+[00:35:15.265] Server  LOG     🔧 Sanity Config: {}
+[00:35:15.621] Server  LOG     📰 News query result: [{...},{...}]
+[00:35:15.621] Server  LOG     📰 News count: 2
+[00:36:44.335] Server  LOG     🔧 Sanity Config: {}
+[00:36:44.686] Server  LOG     📰 News query result: [{...},{...}]
+[00:36:44.687] Server  LOG     📰 News count: 2
+[00:37:07.234] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:37:07.433] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:37:07.632] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:37:07.816] Browser WARN    DataTransfer with kind="string" is currently not supported
+[00:37:16.381] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[00:37:16.910] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[00:38:07.751] Server  LOG     🔧 Sanity Config: {}
+[00:38:08.110] Server  LOG     📰 News query result: [{...},{...}]
+[00:38:08.110] Server  LOG     📰 News count: 2
+[00:42:27.565] Server  LOG     ✓ Compiled in 44ms
+[00:42:28.550] Server  LOG     ✓ Compiled in 179ms
+[00:42:29.243] Server  LOG     ✓ Compiled in 43ms
+[00:43:22.527] Browser WARN    Building schema for synchronization took more than 1 second (2350.2999999821186ms)
+[00:43:54.882] Server  LOG     ✓ Compiled in 121ms
+[00:43:55.660] Server  LOG     ✓ Compiled in 41ms
+[00:43:56.531] Server  LOG     ✓ Compiled in 45ms
+[00:43:57.434] Server  LOG     ✓ Compiled in 43ms
+[00:43:58.383] Server  LOG     ✓ Compiled in 55ms

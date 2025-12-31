@@ -9,17 +9,21 @@ import { urlFor } from "@/lib/sanity/client"
 
 const categories = [
   { id: "all", label: "全部" },
-  { id: "company", label: "公司新聞" },
-  { id: "industry", label: "產業動態" },
-  { id: "project", label: "專案成果" },
-  { id: "event", label: "活動公告" },
+  { id: "森林收穫", label: "森林收穫" },
+  { id: "原木買賣", label: "原木買賣" },
+  { id: "經營規劃", label: "經營規劃" },
+  { id: "企業活動", label: "企業活動" },
+  { id: "人才招募", label: "人才招募" },
+  { id: "教育活動", label: "教育活動" },
 ] as const
 
 const categoryLabelMap: Record<string, string> = {
-  company: "公司新聞",
-  industry: "產業動態",
-  project: "專案成果",
-  event: "活動公告",
+  "森林收穫": "森林收穫",
+  "原木買賣": "原木買賣",
+  "經營規劃": "經營規劃",
+  "企業活動": "企業活動",
+  "人才招募": "人才招募",
+  "教育活動": "教育活動",
 }
 
 interface NewsClientProps {
@@ -93,10 +97,10 @@ export default function NewsClient({ newsItems }: NewsClientProps) {
               <Link key={item._id} href={`/news/${item.slug.current}`}>
                 <article className="flex flex-col gap-5 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:p-6">
                   {/* 左側圖片區 */}
-                  {item.imageUrl && (
+                  {item.image && (
                     <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-xl sm:h-32 sm:w-48">
                       <Image
-                        src={item.imageUrl}
+                        src={urlFor(item.image).width(384).height(256).url()}
                         alt={item.title}
                         fill
                         className="object-cover"
@@ -110,7 +114,7 @@ export default function NewsClient({ newsItems }: NewsClientProps) {
                     {/* 標籤與日期 */}
                     <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
                       <span className="font-mono text-xs tracking-wider">
-                        {new Date(item.publishedAt).toLocaleDateString('zh-TW')}
+                        {new Date(item.date).toLocaleDateString('zh-TW')}
                       </span>
                       {item.category && (
                         <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">

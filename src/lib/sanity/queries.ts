@@ -2,14 +2,15 @@ import { groq } from 'next-sanity'
 
 // 取得所有新聞文章（依日期排序）
 export const newsListQuery = groq`
-  *[_type == "news"] | order(publishedAt desc) {
+  *[_type == "news"] | order(date desc) {
     _id,
     title,
     slug,
     excerpt,
-    publishedAt,
-    "imageUrl": mainImage.asset->url,
-    category
+    date,
+    image,
+    category,
+    featured
   }
 `
 
@@ -21,31 +22,36 @@ export const newsDetailQuery = groq`
     slug,
     excerpt,
     content,
-    publishedAt,
-    "imageUrl": mainImage.asset->url,
+    date,
+    image,
     category,
-    author
+    author,
+    featured
   }
 `
 
 // 取得首頁畫廊圖片
 export const homeGalleryQuery = groq`
-  *[_type == "homeGallery" && enabled == true] | order(order asc) {
+  *[_type == "galleryImage" && active == true] | order(order asc) {
     _id,
     title,
-    "imageUrl": image.asset->url,
+    image,
+    alt,
+    caption,
+    category,
     order
   }
 `
 
 // 取得最新 N 篇新聞
 export const latestNewsQuery = groq`
-  *[_type == "news"] | order(publishedAt desc) [0...$limit] {
+  *[_type == "news"] | order(date desc) [0...$limit] {
     _id,
     title,
     slug,
     excerpt,
-    publishedAt,
-    "imageUrl": mainImage.asset->url
+    date,
+    image,
+    category
   }
 `

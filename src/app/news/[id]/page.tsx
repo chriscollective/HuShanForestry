@@ -1,24 +1,37 @@
-import Image from "next/image";
-import Link from "next/link";
-import { newsItems, categoryLabelMap } from "@/config/news";
-import { ArrowLeft } from "lucide-react";
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+import { client, urlFor } from "@/lib/sanity/client"
+import { newsDetailQuery, newsListQuery } from "@/lib/sanity/queries"
+import { News } from "@/types/sanity"
+import { PortableText } from "@portabletext/react"
+
+const categoryLabelMap: Record<string, string> = {
+  "森林收穫": "森林收穫",
+  "原木買賣": "原木買賣",
+  "經營規劃": "經營規劃",
+  "企業活動": "企業活動",
+  "人才招募": "人才招募",
+  "教育活動": "教育活動",
+}
 
 // 為靜態匯出生成所有新聞頁面
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const newsItems: News[] = await client.fetch(newsListQuery)
   return newsItems.map((item) => ({
-    id: item.id,
-  }));
+    id: item.slug.current,
+  }))
 }
 
 export default async function NewsDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string }>
 }) {
-  const { id: newsId } = await params;
+  const { id: slug } = await params
 
-  // 尋找對應的新聞
-  const newsItem = newsItems.find((item) => item.id === newsId);
+  // 從 Sanity 取得新聞資料
+  const newsItem: News = await client.fetch(newsDetailQuery, { slug })
 
   // 如果找不到新聞,顯示 404
   if (!newsItem) {
@@ -27,10 +40,6 @@ export default async function NewsDetailPage({
         <div className="text-center">
           <h1 className="text-4xl font-bold text-brand-black">404</h1>
           <p className="mt-4 text-gray-600">找不到此新聞</p>
-          <p className="mt-2 text-sm text-gray-500">搜尋的 ID: {newsId}</p>
-          <p className="mt-1 text-sm text-gray-500">
-            可用的 ID: {newsItems.map((item) => item.id).join(", ")}
-          </p>
           <Link
             href="/news"
             className="mt-6 inline-block rounded-full bg-brand-orange px-6 py-3 text-white transition hover:bg-brand-orange/90"
@@ -39,7 +48,7 @@ export default async function NewsDetailPage({
           </Link>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -65,11 +74,11 @@ export default async function NewsDetailPage({
           </h1>
           <div className="mt-4 flex items-center justify-center gap-4 text-white/80">
             <span className="font-mono text-sm tracking-wider">
-              {newsItem.date}
+              {new Date(newsItem.date).toLocaleDateString('zh-TW')}
             </span>
             <span className="text-white/50">•</span>
             <span className="text-sm">
-              {categoryLabelMap[newsItem.category] || "消息"}
+              {newsItem.category ? categoryLabelMap[newsItem.category] || "消息" : "消息"}
             </span>
           </div>
         </div>
@@ -89,27 +98,29 @@ export default async function NewsDetailPage({
         {/* 雜誌風格版面：左圖右文，直接在頁面上 */}
         <article className="flex flex-col gap-12 sm:flex-row sm:gap-16">
           {/* 左側圖片區 */}
-          <div className="relative h-[500px] w-full shrink-0 overflow-hidden sm:h-[700px] sm:w-[500px]">
-            <Image
-              src={newsItem.image}
-              alt={newsItem.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 500px"
-              priority
-            />
-          </div>
+          {newsItem.image && (
+            <div className="relative h-[500px] w-full shrink-0 overflow-hidden sm:h-[700px] sm:w-[500px]">
+              <Image
+                src={urlFor(newsItem.image).width(1000).height(1400).url()}
+                alt={newsItem.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 500px"
+                priority
+              />
+            </div>
+          )}
 
           {/* 右側內容區 */}
           <div className="flex flex-1 flex-col gap-8">
             {/* 標籤與日期 */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="font-mono text-sm tracking-wider text-gray-500">
-                {newsItem.date}
+                {new Date(newsItem.date).toLocaleDateString('zh-TW')}
               </span>
               <span className="text-gray-400">•</span>
               <span className="text-sm font-semibold text-brand-orange">
-                {categoryLabelMap[newsItem.category] || "消息"}
+                {newsItem.category ? categoryLabelMap[newsItem.category] || "消息" : "消息"}
               </span>
             </div>
 
@@ -120,9 +131,13 @@ export default async function NewsDetailPage({
 
             {/* 內文 */}
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed text-gray-700">
-                {newsItem.content}
-              </p>
+              {newsItem.content && newsItem.content.length > 0 ? (
+                <PortableText value={newsItem.content} />
+              ) : (
+                <p className="text-lg leading-relaxed text-gray-700">
+                  {newsItem.excerpt || "內容尚未提供"}
+                </p>
+              )}
             </div>
           </div>
         </article>
