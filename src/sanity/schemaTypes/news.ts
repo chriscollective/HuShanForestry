@@ -34,13 +34,6 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'publishedAt',
-      title: '實際發布時間',
-      type: 'datetime',
-      description: '文章實際發布的時間（自動記錄）',
-      readOnly: true,
-    }),
-    defineField({
       name: 'category',
       title: '分類',
       type: 'string',

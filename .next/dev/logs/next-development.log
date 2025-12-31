@@ -34,3 +34,6 @@
 [00:16:05.740] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
 [00:16:06.740] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
 [00:17:53.141] Server  LOG     ✓ Compiled in 50ms
+[00:20:08.526] Browser WARN    Building schema for synchronization took more than 1 second (134119.90000000596ms)
+[00:20:53.343] Server  LOG     ✓ Compiled in 44ms
+[00:21:08.516] Browser WARN    Building schema for synchronization took more than 1 second (13933.90000000596ms)
