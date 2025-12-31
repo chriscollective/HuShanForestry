@@ -37,3 +37,9 @@
 [00:20:08.526] Browser WARN    Building schema for synchronization took more than 1 second (134119.90000000596ms)
 [00:20:53.343] Server  LOG     ✓ Compiled in 44ms
 [00:21:08.516] Browser WARN    Building schema for synchronization took more than 1 second (13933.90000000596ms)
+[00:23:50.143] Server  LOG     🔧 Sanity Config: {}
+[00:23:50.489] Server  LOG     📰 News query result: [{...},{...}]
+[00:23:50.489] Server  LOG     📰 News count: 2
+[00:27:59.324] Browser WARN    styled-components: it looks like an unknown prop "flex" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+[00:27:59.324] Browser WARN    styled-components: it looks like an unknown prop "position" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+[00:31:11.007] Server  LOG     ✓ Compiled in 129ms

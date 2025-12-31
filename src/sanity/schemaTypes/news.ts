@@ -43,6 +43,8 @@ export default defineType({
           { title: '原木買賣', value: '原木買賣' },
           { title: '經營規劃', value: '經營規劃' },
           { title: '企業活動', value: '企業活動' },
+          { title: '人才招募', value: '人才招募' },
+          { title: '教育活動', value: '教育活動' },
         ],
       },
       validation: (rule) => rule.required(),
