@@ -1,15 +1,16 @@
 import { Link } from '@/components/ui/Link';
-import { newsItems } from '@/config/news';
+import { News } from '@/types/sanity';
 
-// 取最新的 3 則新聞
-const latestNews = newsItems.slice(0, 3);
+interface NewsTickerProps {
+  newsItems: News[];
+}
 
 /**
  * NewsTicker
  *
- * 最新消息布告欄（暫用假資料）
+ * 最新消息布告欄（從 Sanity CMS 獲取資料）
  */
-export function NewsTicker() {
+export function NewsTicker({ newsItems }: NewsTickerProps) {
   return (
     <section
       aria-labelledby="news-ticker-title"
@@ -55,41 +56,51 @@ export function NewsTicker() {
           </div>
 
           <ul className="mt-6 divide-y divide-brand-black/10">
-            {latestNews.map((news) => (
-              <li
-                key={news.id}
-                className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between"
-              >
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-                  <span className="inline-flex items-center border border-brand-black/30 px-4 py-1 font-mono text-xs tracking-[0.4em] text-brand-black/60">
-                    {news.date}
-                  </span>
-                  <p className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black">
-                    {news.title}
-                  </p>
-                </div>
-
-                <Link
-                  href={`/news/${news.id}`}
-                  underline={false}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition hover:text-brand-orange"
-                  aria-label={`瞭解更多：${news.title}`}
+            {newsItems.length > 0 ? (
+              newsItems.map((news) => (
+                <li
+                  key={news._id}
+                  className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between"
                 >
-                  詳細內容
-                  <svg
-                    className="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                    <span className="inline-flex items-center border border-brand-black/30 px-4 py-1 font-mono text-xs tracking-[0.4em] text-brand-black/60">
+                      {new Date(news.date).toLocaleDateString('zh-TW', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                      })}
+                    </span>
+                    <p className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black">
+                      {news.title}
+                    </p>
+                  </div>
+
+                  <Link
+                    href={`/news/${news.slug.current}`}
+                    underline={false}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition hover:text-brand-orange"
+                    aria-label={`瞭解更多：${news.title}`}
                   >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                    詳細內容
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </li>
+              ))
+            ) : (
+              <li className="py-8 text-center text-sm text-brand-black/60">
+                目前沒有最新消息
               </li>
-            ))}
+            )}
           </ul>
         </div>
       </div>
