@@ -111,8 +111,8 @@ export function Header({ className }: HeaderProps) {
                               key={subItem.href}
                               href={subItem.href}
                               className={cn(
-                                'block px-4 py-3 text-sm text-brand-black',
-                                'hover:bg-brand-orange/10 hover:text-brand-orange',
+                                'block px-4 py-3 text-sm !text-brand-black',
+                                'hover:bg-brand-orange/10 hover:!text-brand-orange',
                                 'transition-colors duration-200',
                                 'focus-visible:outline-none focus-visible:bg-brand-orange/10'
                               )}
@@ -262,7 +262,7 @@ export function Header({ className }: HeaderProps) {
                               href={subItem.href}
                               className={cn(
                                 'block rounded-lg border border-gray-100 bg-gray-50 px-4 py-2.5 text-base',
-                                'text-brand-black hover:bg-brand-orange/10 hover:border-brand-orange/20',
+                                '!text-brand-black hover:bg-brand-orange/10 hover:border-brand-orange/20 hover:!text-brand-orange',
                                 'focus-visible:border-brand-orange/30 focus-visible:bg-brand-orange/10'
                               )}
                               aria-label={subItem.ariaLabel}

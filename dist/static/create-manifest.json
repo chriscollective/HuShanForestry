@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "createdAt": "2025-12-31T15:10:22.095Z",
+  "workspaces": [
+    {
+      "name": "default",
+      "title": "虎山林業 CMS",
+      "basePath": "/admin",
+      "projectId": "0xg3o3qi",
+      "dataset": "production",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" rx=\"2\" fill=\"#2927aa\"></rect><text x=\"50%\" y=\"50%\" text-anchor=\"middle\" alignment-baseline=\"middle\" fill=\"hsla(241, 63%, 81%, 1)\" style=\"font-family:Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Liberation Sans&quot;, Helvetica, Arial, system-ui, sans-serif;font-weight:500;font-size:13px;transform:translateY(1px)\">虎C</text></svg>",
+      "mediaLibrary": {
+        "enabled": false
+      },
+      "schema": "f5923110.create-schema.json",
+      "tools": "ba47da56.create-tools.json"
+    }
+  ],
+  "studioVersion": "4.22.0"
+}

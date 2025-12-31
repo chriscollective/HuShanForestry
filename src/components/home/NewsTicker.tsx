@@ -1,22 +1,8 @@
 import { Link } from '@/components/ui/Link';
+import { newsItems } from '@/config/news';
 
-const mockNews = [
-  {
-    id: 'news-001',
-    title: '虎山林業完成2024年度森林收穫計畫，提升木材回收率12%',
-    date: '2024-11-02',
-  },
-  {
-    id: 'news-002',
-    title: '與台東林管處合作，啟動高山林道安全巡檢計畫',
-    date: '2024-10-21',
-  },
-  {
-    id: 'news-003',
-    title: '鏈鋸教育訓練12月梯次開放報名，名額有限',
-    date: '2024-10-12',
-  },
-] as const;
+// 取最新的 3 則新聞
+const latestNews = newsItems.slice(0, 3);
 
 /**
  * NewsTicker
@@ -69,7 +55,7 @@ export function NewsTicker() {
           </div>
 
           <ul className="mt-6 divide-y divide-brand-black/10">
-            {mockNews.map((news) => (
+            {latestNews.map((news) => (
               <li
                 key={news.id}
                 className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between"
@@ -84,7 +70,7 @@ export function NewsTicker() {
                 </div>
 
                 <Link
-                  href="/news"
+                  href={`/news/${news.id}`}
                   underline={false}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition hover:text-brand-orange"
                   aria-label={`瞭解更多：${news.title}`}
