@@ -60,39 +60,22 @@ export function NewsTicker({ newsItems }: NewsTickerProps) {
               newsItems.map((news) => (
                 <li
                   key={news._id}
-                  className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:gap-6"
                 >
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-                    <span className="inline-flex items-center border border-brand-black/30 px-4 py-1 font-mono text-xs tracking-[0.4em] text-brand-black/60">
-                      {new Date(news.date).toLocaleDateString('zh-TW', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                      })}
-                    </span>
-                    <p className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black">
-                      {news.title}
-                    </p>
-                  </div>
-
+                  <span className="inline-flex items-center border border-brand-black/30 px-4 py-1 font-mono text-xs tracking-[0.4em] text-brand-black/60">
+                    {new Date(news.date).toLocaleDateString('zh-TW', {
+                      year: 'numeric',
+                      month: '2-digit',
+                      day: '2-digit',
+                    })}
+                  </span>
                   <Link
                     href={`/news/${news.slug.current}`}
                     underline={false}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition hover:text-brand-orange"
-                    aria-label={`瞭解更多：${news.title}`}
+                    className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black transition-transform duration-200 hover:scale-105"
+                    aria-label={`查看新聞：${news.title}`}
                   >
-                    詳細內容
-                    <svg
-                      className="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M9 5l7 7-7 7" />
-                    </svg>
+                    {news.title}
                   </Link>
                 </li>
               ))
