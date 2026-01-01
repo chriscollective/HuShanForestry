@@ -72,7 +72,7 @@ export function NewsTicker({ newsItems }: NewsTickerProps) {
                   <Link
                     href={`/news/${news.slug.current}`}
                     underline={false}
-                    className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black transition-transform duration-200 hover:scale-105"
+                    className="text-lg font-semibold uppercase tracking-[0.08em] text-brand-black transition-all duration-200 hover:scale-105 hover:text-brand-orange"
                     aria-label={`查看新聞：${news.title}`}
                   >
                     {news.title}
