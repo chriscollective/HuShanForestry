@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 /**
  * VideoSection
@@ -14,30 +14,30 @@ export function VideoSection() {
   // YouTube 影片列表（支援完整 URL 或影片 ID）
   const videos = [
     {
-      url: 'https://www.youtube.com/watch?v=ZeJmz53T3tg', // 貼上完整 YouTube 連結
-      title: '虎山林業服務介紹',
+      url: "https://www.youtube.com/watch?v=AQXReYjELZ0", // 貼上完整 YouTube 連結
+      title: "木曜四超玩:一日伐木工",
     },
     {
-      url: 'https://www.youtube.com/watch?v=VIDEO_ID_2', // 或直接貼影片 ID
-      title: '專業林木修剪示範',
+      url: "https://www.youtube.com/watch?v=VIDEO_ID_2", // 或直接貼影片 ID
+      title: "專業林木修剪示範",
     },
     {
-      url: 'VIDEO_ID_3', // 也可以只貼影片 ID
-      title: '林地管理經驗分享',
+      url: "VIDEO_ID_3", // 也可以只貼影片 ID
+      title: "林地管理經驗分享",
     },
   ];
 
   // 從 URL 提取影片 ID
   const getVideoId = (urlOrId: string): string => {
     // 如果是完整 URL
-    if (urlOrId.includes('youtube.com') || urlOrId.includes('youtu.be')) {
+    if (urlOrId.includes("youtube.com") || urlOrId.includes("youtu.be")) {
       const url = new URL(urlOrId);
       // youtube.com/watch?v=VIDEO_ID
-      if (url.searchParams.has('v')) {
-        return url.searchParams.get('v') || '';
+      if (url.searchParams.has("v")) {
+        return url.searchParams.get("v") || "";
       }
       // youtu.be/VIDEO_ID
-      if (url.hostname === 'youtu.be') {
+      if (url.hostname === "youtu.be") {
         return url.pathname.slice(1);
       }
     }
@@ -64,7 +64,10 @@ export function VideoSection() {
       className="relative overflow-hidden bg-brand-black py-20 text-white"
     >
       {/* 背景裝飾 */}
-      <div className="pointer-events-none absolute inset-0 opacity-30" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30"
+        aria-hidden="true"
+      >
         <div className="absolute left-[-10%] top-[20%] h-[40%] w-[30%] rotate-12 bg-brand-orange/20 blur-3xl" />
         <div className="absolute right-[-5%] bottom-[10%] h-[50%] w-[35%] -rotate-6 bg-brand-orange/15 blur-3xl" />
       </div>
@@ -98,8 +101,18 @@ export function VideoSection() {
             className="absolute left-0 top-1/2 z-10 -translate-x-4 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:-translate-x-20"
             aria-label="上一部影片"
           >
-            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            <svg
+              className="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
             </svg>
           </button>
 
@@ -109,15 +122,28 @@ export function VideoSection() {
             className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:translate-x-20"
             aria-label="下一部影片"
           >
-            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            <svg
+              className="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
             </svg>
           </button>
 
           {/* 影片播放器 - 放大尺寸 */}
           <div className="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm shadow-2xl">
             {/* YouTube Embed - 使用更大的 aspect ratio */}
-            <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+            <div
+              className="relative w-full overflow-hidden"
+              style={{ aspectRatio: "16/9" }}
+            >
               <iframe
                 src={`https://www.youtube.com/embed/${videoId}`}
                 title={currentVideo.title}
@@ -147,8 +173,8 @@ export function VideoSection() {
                       onClick={() => setCurrentIndex(index)}
                       className={`h-2 rounded-full transition-all ${
                         index === currentIndex
-                          ? 'w-8 bg-brand-orange'
-                          : 'w-2 bg-white/30 hover:bg-white/50'
+                          ? "w-8 bg-brand-orange"
+                          : "w-2 bg-white/30 hover:bg-white/50"
                       }`}
                       aria-label={`切換到影片 ${index + 1}`}
                     />
@@ -169,12 +195,8 @@ export function VideoSection() {
             aria-label="前往虎山林業 YouTube 頻道觀看更多影片"
           >
             觀看更多影片
-            <svg
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
           </a>
         </div>

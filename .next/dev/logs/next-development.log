@@ -94,3 +94,11 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:20:21.845] Server  LOG     ✓ Compiled in 96ms
 [00:20:42.780] Browser WARN    Image with src "/images/services/forest-planning.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:25:20.336] Server  LOG     ✓ Compiled in 128ms
+[00:29:19.679] Server  LOG     ✓ Compiled in 126ms
+[00:29:31.152] Server  LOG     ✓ Compiled in 821ms
+[00:29:38.870] Server  LOG     ✓ Compiled in 41ms
+[00:29:58.145] Server  LOG     ✓ Compiled in 46ms
+[00:30:09.073] Server  LOG     ✓ Compiled in 44ms
+[00:30:40.003] Server  LOG     ✓ Compiled in 65ms
+[00:31:15.132] Server  LOG     ✓ Compiled in 296ms

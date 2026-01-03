@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Link } from '@/components/ui/Link';
 import { navigationItems } from '@/config/navigation';
 import { cn } from '@/lib/utils';
@@ -24,6 +25,7 @@ export interface HeaderProps {
  * - 行動版（<768px）：漢堡選單
  */
 export function Header({ className }: HeaderProps) {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
 
@@ -34,6 +36,22 @@ export function Header({ className }: HeaderProps) {
 
   const toggleMobileSubMenu = (label: string) => {
     setExpandedMobileItem(expandedMobileItem === label ? null : label);
+  };
+
+  // 滾動到頂部
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  // 處理首頁/Logo 點擊
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      scrollToTop();
+    }
   };
 
   return (
@@ -54,6 +72,7 @@ export function Header({ className }: HeaderProps) {
                 variant="nav"
                 className="items-center gap-4 hover:no-underline"
                 aria-label="返回虎山林業首頁"
+                onClick={handleHomeClick}
               >
                 <Image
                   src="/icons/icon.jpg"
@@ -131,6 +150,7 @@ export function Header({ className }: HeaderProps) {
                       variant="nav"
                       className="hover:no-underline"
                       aria-label={item.ariaLabel}
+                      onClick={item.href === '/' ? handleHomeClick : undefined}
                     >
                       {item.label}
                     </Link>
@@ -289,7 +309,12 @@ export function Header({ className }: HeaderProps) {
                       'focus-visible:border-brand-orange/40 focus-visible:bg-brand-orange/10'
                     )}
                     aria-label={item.ariaLabel}
-                    onClick={closeMobileMenu}
+                    onClick={(e) => {
+                      closeMobileMenu();
+                      if (item.href === '/') {
+                        handleHomeClick(e);
+                      }
+                    }}
                   >
                     {item.label}
                   </Link>
