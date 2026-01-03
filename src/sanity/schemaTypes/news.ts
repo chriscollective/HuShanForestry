@@ -16,10 +16,18 @@ export default defineType({
       title: '網址代稱',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'date',
         maxLength: 96,
+        slugify: (input: string) => {
+          // 將發布日期轉換為 YYYY-MM-DD 格式作為 slug
+          const date = new Date(input);
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          const day = String(date.getDate()).padStart(2, '0');
+          return `${year}-${month}-${day}`;
+        },
       },
-      validation: (rule) => rule.required(),
+      description: '請手動輸入網址代稱，建議格式：YYYY-MM-DD（如：2026-01-03）',
     }),
     defineField({
       name: 'author',

@@ -582,3 +582,15 @@ Import traces:
 [00:47:33.290] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:52:54.428] Server  LOG     ✓ Compiled in 87ms
+[01:07:36.330] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[01:07:36.870] Browser WARN    `configContext.client` is deprecated and will be removed in the next release! Use `context.getClient({apiVersion: "2021-06-07"})` instead
+[01:07:50.760] Browser WARN    styled-components: it looks like an unknown prop "flex" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+[01:07:50.760] Browser WARN    styled-components: it looks like an unknown prop "position" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+[01:12:57.580] Server  LOG     ✓ Compiled in 2.1s
+[01:13:11.794] Server  LOG     ✓ Compiled in 126ms
+[01:13:21.046] Browser WARN    Building schema for synchronization took more than 1 second (5698.100000023842ms)
+[01:17:12.267] Server  LOG     ✓ Compiled in 78ms
+[01:24:42.631] Server  LOG     ✓ Compiled in 51ms
+[01:26:24.899] Server  LOG     ✓ Compiled in 43ms
+[01:27:17.045] Browser WARN    Building schema for synchronization took more than 1 second (153135.69999998808ms)
+[01:27:17.046] Browser WARN    Building schema for synchronization took more than 1 second (50993.80000001192ms)
