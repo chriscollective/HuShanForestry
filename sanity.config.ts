@@ -14,7 +14,8 @@ export default defineConfig({
 
   plugins: [
     structureTool(),
-    visionTool(),
+    // 只在開發環境顯示 Vision 工具，正式環境隱藏（客戶不需要看到）
+    ...(process.env.NODE_ENV === 'development' ? [visionTool()] : []),
   ],
 
   schema,

@@ -7,3 +7,6 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [01:55:17.074] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [01:59:44.178] Server  LOG     ✓ Compiled in 272ms
+[05:49:21.560] Browser ERROR   {}
+[33:34:35.579] Browser ERROR   {}
+[43:35:35.188] Browser ERROR   Failed to fetch version for package (using tag=latest) sanity Error: {}
