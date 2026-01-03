@@ -19,13 +19,4 @@ export default defineConfig({
   ],
 
   schema,
-
-  // 自訂 Sanity Studio Logo
-  icon: () => (
-    <img
-      src="/icons/icon2.jpg"
-      alt="虎山林業"
-      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
-    />
-  ),
 })

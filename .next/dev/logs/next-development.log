@@ -221,3 +221,363 @@ Import traces:
     ./sanity.config.ts [Client Component SSR]
     ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
     ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:12.669] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:12.669] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:37.782] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:38.265] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:38.528] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:38.777] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:40.551] Browser ERROR   uncaughtError: Error: ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+
+[00:45:40.567] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:40.722] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:41.053] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:45:41.053] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:46:08.266] Browser ERROR   uncaughtError: Error: ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+
+[00:46:08.292] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:46:08.416] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:46:09.046] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:46:09.046] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon2.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+[00:47:10.417] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:47:10.473] Server  LOG     ✓ Compiled in 50ms
+[00:47:33.290] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
