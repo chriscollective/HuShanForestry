@@ -1838,6 +1838,10 @@
     background-color: var(--color-gray-100);
   }
 
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
+  }
+
   .bg-green-400 {
     background-color: var(--color-green-400);
   }
@@ -3135,6 +3139,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-gray-400:hover {
+      background-color: var(--color-gray-400);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-white:hover {
       background-color: var(--color-white);
     }
@@ -3316,6 +3326,10 @@
 
   .focus\:ring-offset-brand-black:focus {
     --tw-ring-offset-color: var(--color-brand-black);
+  }
+
+  .focus\:ring-offset-white:focus {
+    --tw-ring-offset-color: var(--color-white);
   }
 
   .focus\:outline-none:focus {

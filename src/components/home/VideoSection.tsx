@@ -61,18 +61,18 @@ export function VideoSection() {
   return (
     <section
       aria-labelledby="video-section-title"
-      className="relative overflow-hidden bg-brand-black py-20 text-white"
+      className="relative overflow-hidden bg-white py-20 text-brand-black"
     >
-      {/* 背景裝飾 - 灰白不規則幾何矩形 */}
+      {/* 背景裝飾 - 不同階層的灰色幾何矩形 */}
       <div
         className="pointer-events-none absolute inset-0 opacity-70"
         aria-hidden="true"
       >
-        <div className="absolute left-0 top-0 h-1/2 w-1/3 bg-white/5" />
-        <div className="absolute right-[-5%] top-[10%] h-2/3 w-1/2 rotate-6 bg-white/8" />
-        <div className="absolute left-[20%] bottom-[-15%] h-[60%] w-[45%] -rotate-3 bg-white/12" />
-        <div className="absolute right-[20%] bottom-[5%] h-[35%] w-[25%] rotate-[8deg] bg-white/4" />
-        <div className="absolute left-[60%] top-[-10%] h-[55%] w-[22%] rotate-2 bg-white/10" />
+        <div className="absolute left-0 top-0 h-1/2 w-1/3 bg-[rgba(0,0,0,0.05)]" />
+        <div className="absolute right-[-5%] top-[10%] h-2/3 w-1/2 rotate-6 bg-[rgba(0,0,0,0.08)]" />
+        <div className="absolute left-[20%] bottom-[-15%] h-[60%] w-[45%] -rotate-3 bg-[rgba(0,0,0,0.12)]" />
+        <div className="absolute right-[20%] bottom-[5%] h-[35%] w-[25%] rotate-[8deg] bg-[rgba(0,0,0,0.04)]" />
+        <div className="absolute left-[60%] top-[-10%] h-[55%] w-[22%] rotate-2 bg-[rgba(0,0,0,0.1)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -80,18 +80,18 @@ export function VideoSection() {
         <div className="mb-12 space-y-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="h-10 w-1 rounded-full bg-brand-orange" />
-            <p className="font-mono text-xs uppercase tracking-[0.5em] text-white/60">
+            <p className="font-mono text-xs uppercase tracking-[0.5em] text-brand-black/60">
               Video Gallery
             </p>
             <span className="h-10 w-1 rounded-full bg-brand-orange" />
           </div>
           <h2
             id="video-section-title"
-            className="text-4xl font-black uppercase tracking-[0.08em] sm:text-5xl"
+            className="text-4xl font-black uppercase tracking-[0.08em] text-brand-black sm:text-5xl"
           >
             影音專區
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-white/70">
+          <p className="mx-auto max-w-2xl text-lg text-brand-black/70">
             透過影片深入了解虎山林業的專業服務與實際案例
           </p>
         </div>
@@ -101,7 +101,7 @@ export function VideoSection() {
           {/* 左側切換按鈕 */}
           <button
             onClick={handlePrevious}
-            className="absolute left-0 top-1/2 z-10 -translate-x-4 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:-translate-x-20"
+            className="absolute left-0 top-1/2 z-10 -translate-x-4 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-white lg:-translate-x-20"
             aria-label="上一部影片"
           >
             <svg
@@ -122,7 +122,7 @@ export function VideoSection() {
           {/* 右側切換按鈕 */}
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:translate-x-20"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-white lg:translate-x-20"
             aria-label="下一部影片"
           >
             <svg
@@ -157,13 +157,13 @@ export function VideoSection() {
             </div>
 
             {/* 影片資訊 */}
-            <div className="bg-white/5 p-8">
+            <div className="bg-gray-50 p-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold tracking-wide text-white">
+                  <h3 className="text-2xl font-bold tracking-wide text-brand-black">
                     {currentVideo.title}
                   </h3>
-                  <p className="mt-2 text-sm text-white/60">
+                  <p className="mt-2 text-sm text-brand-black/60">
                     {currentIndex + 1} / {videos.length}
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export function VideoSection() {
                       className={`h-2 rounded-full transition-all ${
                         index === currentIndex
                           ? "w-8 bg-brand-orange"
-                          : "w-2 bg-white/30 hover:bg-white/50"
+                          : "w-2 bg-gray-300 hover:bg-gray-400"
                       }`}
                       aria-label={`切換到影片 ${index + 1}`}
                     />
@@ -191,10 +191,10 @@ export function VideoSection() {
         {/* 更多影片按鈕 */}
         <div className="mt-12 text-center">
           <a
-            href="https://www.youtube.com/@YOUR_CHANNEL" // 請替換為實際的 YouTube 頻道網址
+            href="https://www.youtube.com/@%E8%99%8E%E5%B1%B1%E6%9E%97%E6%A5%AD" // 請替換為實際的 YouTube 頻道網址
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center justify-center gap-2 border-2 border-brand-orange bg-transparent px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all hover:bg-brand-orange hover:text-brand-black"
+            className="inline-flex min-h-[44px] items-center justify-center gap-2 border-2 border-brand-orange bg-transparent px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-black transition-all hover:bg-brand-orange hover:text-white"
             aria-label="前往虎山林業 YouTube 頻道觀看更多影片"
           >
             觀看更多影片
