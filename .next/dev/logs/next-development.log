@@ -110,3 +110,26 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:37:30.014] Server  LOG     ✓ Compiled in 169ms
 [00:37:42.654] Server  LOG     ✓ Compiled in 117ms
 [00:37:56.579] Server  LOG     ✓ Compiled in 132ms
+[00:43:28.090] Server  LOG     ✓ Compiled in 51ms
+[00:43:28.199] Browser ERROR   ./sanity.config.ts:26:7
+Parsing ecmascript source code failed
+  24 |   icon: () => (
+  25 |     <img
+> 26 |       src="/icons/icon.jpg"
+     |       ^^^
+  27 |       alt="虎山林業"
+  28 |       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '3px' }}
+  29 |     />
+
+Expected '>', got 'src'
+
+Import traces:
+  Client Component Browser:
+    ./sanity.config.ts [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component Browser]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity.config.ts [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Client Component SSR]
+    ./src/app/admin/[[...tool]]/page.tsx [Server Component]

@@ -3,5 +3,6 @@
   "/admin/[[...tool]]/page": "app/admin/[[...tool]]/page.js",
   "/contact/page": "app/contact/page.js",
   "/news/page": "app/news/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/services/page": "app/services/page.js"
 }

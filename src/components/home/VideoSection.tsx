@@ -191,7 +191,7 @@ export function VideoSection() {
         {/* 更多影片按鈕 */}
         <div className="mt-12 text-center">
           <a
-            href="https://www.youtube.com/@%E8%99%8E%E5%B1%B1%E6%9E%97%E6%A5%AD" // 請替換為實際的 YouTube 頻道網址
+            href="https://www.youtube.com/@%E8%99%8E%E5%B1%B1%E6%9E%97%E6%A5%AD" // 虎山林業 YouTube 頻道網址
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex min-h-[44px] items-center justify-center gap-2 border-2 border-brand-orange bg-transparent px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-black transition-all hover:bg-brand-orange hover:text-white"
