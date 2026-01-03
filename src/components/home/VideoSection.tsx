@@ -1,24 +1,62 @@
+'use client';
+
+import { useState } from 'react';
+
 /**
  * VideoSection
  *
- * YouTube 影片展示區塊
+ * YouTube 影片輪播展示區塊
+ * 一次顯示一部影片，可左右滑動切換
  */
 export function VideoSection() {
-  // YouTube 影片 ID 列表（可以改成從 Sanity CMS 獲取）
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // YouTube 影片列表（支援完整 URL 或影片 ID）
   const videos = [
     {
-      id: 'VIDEO_ID_1', // 請替換為實際的 YouTube 影片 ID
+      url: 'https://www.youtube.com/watch?v=ZeJmz53T3tg', // 貼上完整 YouTube 連結
       title: '虎山林業服務介紹',
     },
     {
-      id: 'VIDEO_ID_2',
+      url: 'https://www.youtube.com/watch?v=VIDEO_ID_2', // 或直接貼影片 ID
       title: '專業林木修剪示範',
     },
     {
-      id: 'VIDEO_ID_3',
+      url: 'VIDEO_ID_3', // 也可以只貼影片 ID
       title: '林地管理經驗分享',
     },
   ];
+
+  // 從 URL 提取影片 ID
+  const getVideoId = (urlOrId: string): string => {
+    // 如果是完整 URL
+    if (urlOrId.includes('youtube.com') || urlOrId.includes('youtu.be')) {
+      const url = new URL(urlOrId);
+      // youtube.com/watch?v=VIDEO_ID
+      if (url.searchParams.has('v')) {
+        return url.searchParams.get('v') || '';
+      }
+      // youtu.be/VIDEO_ID
+      if (url.hostname === 'youtu.be') {
+        return url.pathname.slice(1);
+      }
+    }
+    // 如果已經是 ID
+    return urlOrId;
+  };
+
+  // 切換到上一部影片
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+  };
+
+  // 切換到下一部影片
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+  };
+
+  const currentVideo = videos[currentIndex];
+  const videoId = getVideoId(currentVideo.url);
 
   return (
     <section
@@ -52,32 +90,73 @@ export function VideoSection() {
           </p>
         </div>
 
-        {/* 影片網格 */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {videos.map((video) => (
-            <div
-              key={video.id}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-2xl"
-            >
-              {/* YouTube Embed */}
-              <div className="relative aspect-video w-full overflow-hidden">
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
+        {/* 影片輪播容器 */}
+        <div className="relative mx-auto max-w-6xl">
+          {/* 左側切換按鈕 */}
+          <button
+            onClick={handlePrevious}
+            className="absolute left-0 top-1/2 z-10 -translate-x-4 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:-translate-x-20"
+            aria-label="上一部影片"
+          >
+            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
 
-              {/* 影片標題 */}
-              <div className="p-5">
-                <h3 className="text-lg font-semibold tracking-wide transition-colors group-hover:text-brand-orange">
-                  {video.title}
-                </h3>
+          {/* 右側切換按鈕 */}
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-orange/90 text-white shadow-2xl backdrop-blur-sm transition-all hover:bg-brand-orange hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-black lg:translate-x-20"
+            aria-label="下一部影片"
+          >
+            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
+          {/* 影片播放器 - 放大尺寸 */}
+          <div className="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm shadow-2xl">
+            {/* YouTube Embed - 使用更大的 aspect ratio */}
+            <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={currentVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+
+            {/* 影片資訊 */}
+            <div className="bg-white/5 p-8">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-white">
+                    {currentVideo.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-white/60">
+                    {currentIndex + 1} / {videos.length}
+                  </p>
+                </div>
+
+                {/* 影片指示器 */}
+                <div className="flex gap-2">
+                  {videos.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`h-2 rounded-full transition-all ${
+                        index === currentIndex
+                          ? 'w-8 bg-brand-orange'
+                          : 'w-2 bg-white/30 hover:bg-white/50'
+                      }`}
+                      aria-label={`切換到影片 ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* 更多影片按鈕 */}
