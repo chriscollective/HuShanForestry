@@ -1,46 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState, useEffect } from 'react';
 import { services } from '@/config/services';
 import { Link } from '@/components/ui/Link';
 
 /**
  * ServicesSection
  *
- * 專業服務展示區塊 - 橫向滑動卡片展示
- * 四項並排，可左右拖曳瀏覽
+ * 專業服務展示區塊 - 2x2 網格布局
+ * 四項服務以兩列兩行的方式呈現
  */
 export function ServicesSection() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  // 檢查滾動位置
-  const checkScrollPosition = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
-
-  useEffect(() => {
-    checkScrollPosition();
-    window.addEventListener('resize', checkScrollPosition);
-    return () => window.removeEventListener('resize', checkScrollPosition);
-  }, []);
-
-  // 滾動函數
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   return (
     <section
@@ -78,50 +48,14 @@ export function ServicesSection() {
           </div>
         </div>
 
-        {/* 滑動容器 */}
-        <div className="relative">
-          {/* 左側滑動按鈕 */}
-          {canScrollLeft && (
-            <button
-              onClick={() => scroll('left')}
-              className="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-all hover:bg-white hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-              aria-label="向左滑動"
-            >
-              <svg className="h-6 w-6 text-brand-black" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-          )}
-
-          {/* 右側滑動按鈕 */}
-          {canScrollRight && (
-            <button
-              onClick={() => scroll('right')}
-              className="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-all hover:bg-white hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-              aria-label="向右滑動"
-            >
-              <svg className="h-6 w-6 text-brand-black" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          )}
-
-          {/* 服務卡片橫向滾動區域 */}
-          <div
-            ref={scrollContainerRef}
-            onScroll={checkScrollPosition}
-            className="overflow-x-auto scrollbar-hide px-4 sm:px-6 lg:px-8"
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
-          >
-            <div className="flex gap-12 pb-6" style={{ width: 'max-content' }}>
-              {services.map((service, index) => (
-                <article
-                  key={service.id}
-                  className="group relative w-[640px] flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
-                >
+        {/* 服務卡片網格 */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <article
+                key={service.id}
+                className="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              >
                   {/* 卡片頂部裝飾條 */}
                   <div className="absolute left-0 top-0 h-2 w-full bg-gradient-to-r from-brand-orange via-forest-green to-brand-orange opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -202,10 +136,9 @@ export function ServicesSection() {
                   </div>
 
                   {/* 底部裝飾線 */}
-                  <div className="absolute bottom-0 left-0 h-2 w-0 bg-gradient-to-r from-brand-orange to-forest-green transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-2 w-0 bg-green-400 transition-all duration-500 group-hover:w-full" />
                 </article>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
 
@@ -225,12 +158,6 @@ export function ServicesSection() {
           </Link>
         </div>
       </div>
-
-      <style jsx global>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }

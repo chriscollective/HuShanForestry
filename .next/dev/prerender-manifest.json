@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/news/2025":{},"/news/cms-test-sustainability-milestone":{},"/news/test-news-eco-equipment":{}},"dynamicRoutes":{"/news/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/news/[id]","routeRegex":"^\\/news\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"8e7e392bcc660276da458a4aa1f73597","previewModeSigningKey":"a017cf652c80dcd6e32779c76af7eb519ef1916986fa05f49c77eed505c65069","previewModeEncryptionKey":"b23e58a0852c46a483189fcc70aeb89c99a202f1d4c65c3c6cccd05b32850d36"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "ca80de4d52562b7d739dff29eb70dea2",
+    "previewModeSigningKey": "2fc21ea4bae1a7b7c087dc2e0dc19b07dcdcdbf610bd895f857f697657496f65",
+    "previewModeEncryptionKey": "8f467edb4efe022d8c76294cf7edada3eb9951f5a75a79ac4c73b08906cc6831"
+  }
+}

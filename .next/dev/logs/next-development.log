@@ -1,12 +1,93 @@
-[00:00:01.420] Server  LOG     ✓ Ready in 1104ms
-[01:49:49.558] Browser WARN    Building schema for synchronization took more than 1 second (2575.4000000059605ms)
-[01:53:26.781] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:01.363] Server  LOG     ✓ Ready in 1035ms
+[00:13:12.339] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:55:05.104] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:17:50.425] Server  LOG     ✓ Compiled in 280ms
+[00:17:51.059] Browser ERROR   uncaughtError: ReferenceError: canScrollLeft is not defined
+[00:18:08.044] Server  LOG     ✓ Compiled in 186ms
+[00:18:09.059] Browser ERROR   ./src/components/home/ServicesSection.tsx:163:7
+Parsing ecmascript source code failed
+  161 |       </div>
+  162 |
+> 163 |       <style jsx global>{`
+      |       ^
+  164 |         .scrollbar-hide::-webkit-scrollbar {
+  165 |           display: none;
+  166 |         }
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/home/ServicesSection.tsx
+    ./src/app/page.tsx
+[00:18:11.044] Browser ERROR   ./src/components/home/ServicesSection.tsx:163:7
+Parsing ecmascript source code failed
+  161 |       </div>
+  162 |
+> 163 |       <style jsx global>{`
+      |       ^
+  164 |         .scrollbar-hide::-webkit-scrollbar {
+  165 |           display: none;
+  166 |         }
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/home/ServicesSection.tsx
+    ./src/app/page.tsx
+[00:18:11.044] Browser ERROR   ./src/components/home/ServicesSection.tsx:163:7
+Parsing ecmascript source code failed
+  161 |       </div>
+  162 |
+> 163 |       <style jsx global>{`
+      |       ^
+  164 |         .scrollbar-hide::-webkit-scrollbar {
+  165 |           display: none;
+  166 |         }
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/home/ServicesSection.tsx
+    ./src/app/page.tsx
+[00:18:11.044] Browser ERROR   ./src/components/home/ServicesSection.tsx:163:7
+Parsing ecmascript source code failed
+  161 |       </div>
+  162 |
+> 163 |       <style jsx global>{`
+      |       ^
+  164 |         .scrollbar-hide::-webkit-scrollbar {
+  165 |           display: none;
+  166 |         }
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/home/ServicesSection.tsx
+    ./src/app/page.tsx
+[00:18:34.808] Server  LOG     ✓ Compiled in 282ms
+[00:18:35.054] Browser ERROR   ./src/components/home/ServicesSection.tsx:163:7
+Parsing ecmascript source code failed
+  161 |       </div>
+  162 |
+> 163 |       <style jsx global>{`
+      |       ^
+  164 |         .scrollbar-hide::-webkit-scrollbar {
+  165 |           display: none;
+  166 |         }
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/home/ServicesSection.tsx
+    ./src/app/page.tsx
+[00:18:43.804] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:51.446] Server  LOG     ✓ Compiled in 179ms
+[00:19:00.580] Browser WARN    Image with src "/images/hero/woods03.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:55:17.074] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:19:03.602] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:59:44.178] Server  LOG     ✓ Compiled in 272ms
-[05:49:21.560] Browser ERROR   {}
-[33:34:35.579] Browser ERROR   {}
-[43:35:35.188] Browser ERROR   Failed to fetch version for package (using tag=latest) sanity Error: {}
