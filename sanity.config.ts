@@ -2,6 +2,7 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schema } from './src/sanity/schemaTypes'
+import { StudioLogo } from './src/sanity/components/StudioLogo'
 
 export default defineConfig({
   name: 'default',
@@ -19,4 +20,7 @@ export default defineConfig({
   ],
 
   schema,
+
+  // 自訂 CMS 後台 Logo
+  icon: StudioLogo,
 })

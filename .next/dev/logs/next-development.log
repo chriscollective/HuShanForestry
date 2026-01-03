@@ -581,3 +581,4 @@ Import traces:
 [00:47:10.473] Server  LOG     ✓ Compiled in 50ms
 [00:47:33.290] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:52:54.428] Server  LOG     ✓ Compiled in 87ms
