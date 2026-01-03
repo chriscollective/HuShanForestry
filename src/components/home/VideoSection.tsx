@@ -63,13 +63,16 @@ export function VideoSection() {
       aria-labelledby="video-section-title"
       className="relative overflow-hidden bg-brand-black py-20 text-white"
     >
-      {/* 背景裝飾 */}
+      {/* 背景裝飾 - 灰白不規則幾何矩形 */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0 opacity-70"
         aria-hidden="true"
       >
-        <div className="absolute left-[-10%] top-[20%] h-[40%] w-[30%] rotate-12 bg-brand-orange/20 blur-3xl" />
-        <div className="absolute right-[-5%] bottom-[10%] h-[50%] w-[35%] -rotate-6 bg-brand-orange/15 blur-3xl" />
+        <div className="absolute left-0 top-0 h-1/2 w-1/3 bg-white/5" />
+        <div className="absolute right-[-5%] top-[10%] h-2/3 w-1/2 rotate-6 bg-white/8" />
+        <div className="absolute left-[20%] bottom-[-15%] h-[60%] w-[45%] -rotate-3 bg-white/12" />
+        <div className="absolute right-[20%] bottom-[5%] h-[35%] w-[25%] rotate-[8deg] bg-white/4" />
+        <div className="absolute left-[60%] top-[-10%] h-[55%] w-[22%] rotate-2 bg-white/10" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
