@@ -77,10 +77,14 @@ export function LanguageSwitcher({ variant = 'header', className }: LanguageSwit
   // 處理語言切換
   const handleLanguageChange = (newLocale: Locale) => {
     setIsOpen(false);
-    // 使用 next-intl 的 router 和當前路徑名稱切換語言
-    // pathname 已經不包含 locale 前綴，所以直接使用即可
-    router.replace(pathname, { locale: newLocale });
-    router.refresh();
+
+    // 使用 window.location.pathname 獲取完整路徑，然後移除當前語言代碼
+    const fullPath = window.location.pathname;
+    // 移除路徑開頭的語言代碼（例如 /zh-TW, /en, /ja）
+    const pathWithoutLocale = fullPath.replace(/^\/(zh-TW|en|ja)/, '') || '/';
+
+    // 導航到新語言的相同頁面
+    router.push(pathWithoutLocale, { locale: newLocale });
   };
 
   const currentLanguage = languageOptions[locale];

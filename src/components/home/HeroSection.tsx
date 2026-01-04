@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/components/ui/Link';
 import { siteConfig } from '@/config/site';
 
@@ -34,6 +35,7 @@ const heroImages = [
  * 首屏橫幅：展示品牌標語、核心價值與 CTA
  */
 export function HeroSection() {
+  const t = useTranslations('hero');
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -77,7 +79,7 @@ export function HeroSection() {
             type="button"
             onClick={() => goToSlide(currentIndex - 1)}
             className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
-            aria-label="上一張圖片"
+            aria-label={t('ariaPrev')}
           >
             <svg
               className="h-5 w-5"
@@ -96,7 +98,7 @@ export function HeroSection() {
             type="button"
             onClick={() => goToSlide(currentIndex + 1)}
             className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
-            aria-label="下一張圖片"
+            aria-label={t('ariaNext')}
           >
             <svg
               className="h-5 w-5"
@@ -121,7 +123,7 @@ export function HeroSection() {
                 type="button"
                 onClick={() => goToSlide(index)}
                 className={`h-2.5 rounded-full transition-all ${index === currentIndex ? 'bg-white w-6' : 'w-2.5 bg-white/50 hover:bg-white/70'}`}
-                aria-label={`查看第 ${index + 1} 張圖片`}
+                aria-label={t('ariaSlide', { index: index + 1 })}
                 aria-current={index === currentIndex ? 'true' : undefined}
               />
             ))}
@@ -132,25 +134,25 @@ export function HeroSection() {
       {/* 內容 */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-6 px-4 py-20 sm:gap-8 sm:px-6 lg:px-8 lg:py-32">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
-          Since {siteConfig.foundingYear}
+          {t('since')} {siteConfig.foundingYear}
         </p>
 
         <div className="space-y-6">
           <h1 className="text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-            虎山林業，接軌台灣林業新世代
+            {t('title')}
           </h1>
           <p className="max-w-2xl text-base text-gray-200 sm:text-lg">
-            來自台灣各地的六位林業青年，結合森林收穫、原木買賣、經營規劃與鏈鋸訓練，提供一條龍的專業服務，守護土地也創造產業價值。
+            {t('description')}
           </p>
         </div>
 
         <div className="flex flex-wrap gap-4">
           <Link
             href="/contact"
-            aria-label="前往聯絡我們，立即諮詢虎山林業服務"
+            aria-label={t('ariaConsult')}
             className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-brand-orange px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[#E55A2A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
           >
-            立即諮詢
+            {t('ctaConsult')}
           </Link>
 
           <Link
@@ -158,9 +160,9 @@ export function HeroSection() {
             variant="default"
             underline={false}
             className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/60 px-8 py-3 text-base font-semibold text-white transition hover:border-white hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
-            aria-label="了解虎山林業的服務項目"
+            aria-label={t('ariaServices')}
           >
-            了解服務
+            {t('ctaServices')}
           </Link>
         </div>
 

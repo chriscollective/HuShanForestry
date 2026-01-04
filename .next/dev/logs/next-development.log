@@ -3628,3 +3628,78 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:09:32.492] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.510] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:11:43.511] Browser ERROR   Cannot render <%s> outside the main document. Try moving it into the root <head> tag. noscript
+[00:13:10.303] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:14:36.666] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:14:45.366] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:15:20.400] Server  LOG     ✓ Compiled in 47ms
+[00:15:29.155] Server  LOG     ✓ Compiled in 45ms
+[00:15:39.547] Server  LOG     ✓ Compiled in 106ms
+[00:15:47.669] Server  LOG     ✓ Compiled in 47ms
+[00:15:58.131] Server  LOG     ✓ Compiled in 42ms
+[00:16:14.278] Server  LOG     ✓ Compiled in 46ms
+[00:16:28.325] Server  LOG     ✓ Compiled in 42ms
+[00:16:50.445] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:18:19.646] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:19:44.581] Server  LOG     ✓ Compiled in 49ms
+[00:20:01.308] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:21:27.948] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:21:39.976] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
