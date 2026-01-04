@@ -166,19 +166,19 @@ export function Header({ className }: HeaderProps) {
                 </div>
               ))}
 
-              {/* 分隔線（在語言切換和 CTA 前） */}
-              <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
-
-              {/* 語言切換器 */}
-              <LanguageSwitcher variant="header" />
-
-              {/* 分隔線 */}
+              {/* 分隔線（在 CTA 前） */}
               <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
 
               {/* CTA 按鈕 */}
               <Link href="/contact" variant="nav" aria-label={t('ariaContact')}>
                 {t('contact')}
               </Link>
+
+              {/* 分隔線（在語言切換器前） */}
+              <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
+
+              {/* 語言切換器 */}
+              <LanguageSwitcher variant="header" />
             </div>
 
             {/* 行動版漢堡選單按鈕 */}
