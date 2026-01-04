@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { services } from "@/config/services";
+import { getLocalizedServices } from "@/config/services";
 import { Link } from "@/components/ui/Link";
 import { MagazineImageReveal } from "@/components/services/MagazineImageReveal";
+import { getTranslations } from "next-intl/server";
 
 const spreadThemes = [
   {
@@ -25,7 +26,9 @@ export const metadata: Metadata = {
     "以雜誌排版呈現虎山林業四大服務項目，結合視覺與文字敘事的沉浸式體驗。",
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const t = await getTranslations('services');
+  const localizedServices = getLocalizedServices(t);
   return (
     <main className="bg-[#f6f2eb] text-brand-black">
       {/* Intro copy */}
@@ -41,7 +44,7 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      {services.map((service, index) => {
+      {localizedServices.map((service, index) => {
         const theme = spreadThemes[index % spreadThemes.length];
         const imageFirst = index % 2 === 0;
 
@@ -126,7 +129,7 @@ export default function ServicesPage() {
                       href={service.link}
                       className={`inline-flex items-center gap-3 rounded-full ${theme.accentBg} px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg transition hover:-translate-y-1`}
                     >
-                      深入專題
+                      {t('readMore')}
                       <svg
                         className="h-4 w-4"
                         viewBox="0 0 24 24"

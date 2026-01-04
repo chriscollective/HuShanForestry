@@ -59,6 +59,23 @@
     "viewAll": "View All",
     "ariaViewAll": "View all latest news"
   },
+  "newsPage": {
+    "tag": "News",
+    "title": "Latest Updates from Hushan",
+    "subtitle": "Find events, services, recruitment, and operations updates—stay in the loop with Hushan Forestry.",
+    "readMore": "Read more",
+    "emptyAll": "No news yet.",
+    "emptyCategory": "No {category} news yet.",
+    "categories": {
+      "all": "All",
+      "event": "Events",
+      "service": "Services",
+      "news": "News",
+      "recruit": "Recruitment",
+      "operation": "Operations",
+      "other": "Other"
+    }
+  },
   "services": {
     "tag": "Our Services",
     "title": "Professional Forestry Services",
@@ -67,6 +84,56 @@
     "ariaReadMore": "Learn more about {service}",
     "ctaQuestion": "Need customized forestry solutions?",
     "ctaButton": "Contact Us Now",
+    "items": {
+      "forestHarvest": {
+        "title": "Forest Harvesting",
+        "category": "Core Services",
+        "description": "Professional logging, cable yarding, and transport-and-piling services to ensure the sustainable use of forest resources. We leverage modern equipment and science-based management to balance efficiency and environmental protection.",
+        "imageAlt": "Forest harvest service - professional logging and yarding operations",
+        "features": [
+          "Professional logging operations",
+          "Cable yarding expertise",
+          "Transport and piling services",
+          "Safety operations management"
+        ]
+      },
+      "timberTrade": {
+        "title": "Timber Trading",
+        "category": "Trade Services",
+        "description": "Quality timber trading with multiple specifications to meet your needs. From procurement and strict quality control to delivery, our one-stop service keeps everything simple and reliable.",
+        "imageAlt": "Timber trading service - multiple timber specifications available",
+        "features": [
+          "Wide range of timber specs",
+          "Rigorous quality control",
+          "Transparent pricing",
+          "Reliable delivery service"
+        ]
+      },
+      "forestPlanning": {
+        "title": "Forest Management Planning",
+        "category": "Consulting Services",
+        "description": "Professional forest management and harvest planning to support the sustainable development of your forest. We integrate ecological conservation and economic results to craft the right operating strategy.",
+        "imageAlt": "Forest planning service - professional planning and consulting",
+        "features": [
+          "Forest resource surveys",
+          "Management planning and design",
+          "Harvest plan development",
+          "Ecological conservation assessments"
+        ]
+      },
+      "chainsawTraining": {
+        "title": "Chainsaw Training",
+        "category": "Training & Education",
+        "description": "Professional chainsaw operation courses focused on safety, practical skills, and certification. Experienced instructors balance theory and hands-on practice to develop skilled forestry professionals.",
+        "imageAlt": "Chainsaw training - professional safety operation courses",
+        "features": [
+          "Expert instructors",
+          "Hands-on operation training",
+          "Safety certification courses",
+          "Small-class teaching"
+        ]
+      }
+    },
     "forestHarvest": "Forest Harvesting",
     "timberTrade": "Timber Trading",
     "forestPlanning": "Forest Management Planning",
@@ -75,7 +142,9 @@
   "video": {
     "tag": "Behind the Scenes",
     "title": "A Day in Hushan Forestry",
-    "subtitle": "Discover the professionalism and passion behind forestry work"
+    "subtitle": "Discover the professionalism and passion behind forestry work",
+    "ctaLabel": "Watch more videos",
+    "ctaAria": "Go to the Hushan Forestry YouTube channel to watch more videos"
   },
   "common": {
     "readMore": "Read More",

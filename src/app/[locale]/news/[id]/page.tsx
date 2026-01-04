@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/components/ui/Link"
 import { ArrowLeft } from "lucide-react"
 import { client, urlFor } from "@/lib/sanity/client"
 import { newsDetailQuery, newsListQuery } from "@/lib/sanity/queries"

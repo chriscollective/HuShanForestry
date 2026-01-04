@@ -6,7 +6,7 @@ import { SocialLinks } from '@/components/ui/SocialLinks';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { siteConfig } from '@/config/site';
 import { navigationItems } from '@/config/navigation';
-import { services } from '@/config/services';
+import { getLocalizedServices } from '@/config/services';
 
 export interface FooterProps {
   /**
@@ -30,17 +30,7 @@ export function Footer({ className }: FooterProps) {
   const tn = useTranslations('nav');
   const ts = useTranslations('services');
   const currentYear = new Date().getFullYear();
-
-  // 服務項目 ID 對應翻譯鍵的映射
-  const getServiceTranslationKey = (serviceId: string): string => {
-    const keyMap: Record<string, string> = {
-      'forest-harvest': 'forestHarvest',
-      'timber-trade': 'timberTrade',
-      'forest-planning': 'forestPlanning',
-      'chainsaw-training': 'chainsawTraining',
-    };
-    return keyMap[serviceId] || serviceId;
-  };
+  const localizedServices = getLocalizedServices(ts);
 
   return (
     <footer className={`relative overflow-hidden bg-brand-black text-brand-white ${className || ''}`}>
@@ -108,14 +98,14 @@ export function Footer({ className }: FooterProps) {
           <div>
             <h3 className="mb-4 text-lg font-bold">{t('servicesTitle')}</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {localizedServices.map((service) => (
                 <li key={service.id}>
                   <Link
                     href={`/services#${service.id}`}
                     variant="footer"
                     className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
                   >
-                    {ts(getServiceTranslationKey(service.id))}
+                    {service.title}
                   </Link>
                 </li>
               ))}

@@ -42,11 +42,6 @@ export const navigationItems: NavigationItem[] = [
         href: "/services",
         ariaLabel: "ariaForestryServices",
       },
-      {
-        label: "education",
-        href: "/education",
-        ariaLabel: "ariaEducation",
-      },
     ],
   },
 ];

@@ -6,7 +6,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { locales } from '@/i18n';
-import "../globals.css";
 
 export const metadata: Metadata = {
   title: "虎山林業 | 台灣專業林業服務 | 森林收穫、原木買賣、經營規劃",
@@ -37,17 +36,13 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
-      <body className="antialiased flex flex-col min-h-screen">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <ScrollToTop />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+      <ScrollToTop />
+    </NextIntlClientProvider>
   );
 }

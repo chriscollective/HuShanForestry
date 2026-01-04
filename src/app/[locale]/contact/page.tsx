@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/components/ui/Link';
 
 export const metadata: Metadata = {
   title: '聯絡我們 | 虎山林業',
@@ -189,12 +189,14 @@ export default function ContactPage() {
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href="https://line.me/R/ti/p/@hushanforestry"
+              external
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white hover:border-brand-orange"
             >
               LINE@
             </Link>
             <Link
               href="tel:+886212345678"
+              external
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white hover:border-brand-orange"
             >
               立即來電

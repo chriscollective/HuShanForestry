@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///c:/Users/Chris/Desktop/HuShanForestry/src/app/page.tsx"],"sourcesContent":["export default function Home() {\n  return (\n    <main className=\"min-h-screen p-8\">\n      <h1 className=\"text-4xl font-bold text-brand-orange\">\n        虎山林業\n      </h1>\n      <p className=\"mt-4 text-lg\">\n        來自台灣各地集結了六位熱愛森林的青年，正在努力推廣台灣林業的發展。\n      </p>\n      <p className=\"mt-2 text-forest-dark\">\n        Since 2022, From Taiwan\n      </p>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;;0BACd,8OAAC;gBAAG,WAAU;0BAAuC;;;;;;0BAGrD,8OAAC;gBAAE,WAAU;0BAAe;;;;;;0BAG5B,8OAAC;gBAAE,WAAU;0BAAwB;;;;;;;;;;;;AAK3C"}}]
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Chris/Desktop/HuShanForestry/src/app/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation';\nimport { defaultLocale } from '@/i18n';\n\n/**\n * 將根路徑導向預設語系的首頁。\n */\nexport default function RootRedirect() {\n  redirect(`/${defaultLocale}`);\n}\n"],"names":[],"mappings":";;;;AAAA;AAAA;AACA;;;AAKe,SAAS;IACtB,IAAA,iMAAQ,EAAC,CAAC,CAAC,EAAE,4HAAa,EAAE;AAC9B"}}]
 }

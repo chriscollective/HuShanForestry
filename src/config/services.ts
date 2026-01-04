@@ -66,3 +66,34 @@ export const services: Service[] = [
     ]
   },
 ];
+
+type ServicesTranslator = ((key: string, values?: Record<string, unknown>) => string) & {
+  raw?: (key: string) => unknown;
+};
+
+const serviceTranslationKeyMap: Record<string, string> = {
+  "forest-harvest": "items.forestHarvest",
+  "timber-trade": "items.timberTrade",
+  "forest-planning": "items.forestPlanning",
+  "chainsaw-training": "items.chainsawTraining",
+};
+
+export const getLocalizedServices = (t: ServicesTranslator): Service[] =>
+  services.map((service) => {
+    const translationKey = serviceTranslationKeyMap[service.id];
+
+    if (!translationKey) {
+      return service;
+    }
+
+    const features = (t.raw?.(`${translationKey}.features`) as string[] | undefined) ?? service.features;
+
+    return {
+      ...service,
+      title: t(`${translationKey}.title`),
+      description: t(`${translationKey}.description`),
+      imageAlt: t(`${translationKey}.imageAlt`),
+      category: t(`${translationKey}.category`),
+      features,
+    };
+  });

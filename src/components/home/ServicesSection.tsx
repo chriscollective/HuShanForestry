@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { services } from "@/config/services";
+import { getLocalizedServices } from "@/config/services";
 import { Link } from "@/components/ui/Link";
 
 /**
@@ -13,6 +13,7 @@ import { Link } from "@/components/ui/Link";
  */
 export function ServicesSection() {
   const t = useTranslations('services');
+  const localizedServices = getLocalizedServices(t);
   return (
     <section
       id="services"
@@ -55,7 +56,7 @@ export function ServicesSection() {
         {/* 服務卡片網格 */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {localizedServices.map((service, index) => (
               <article
                 key={service.id}
                 className="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
@@ -136,9 +137,9 @@ export function ServicesSection() {
                     <Link
                       href={service.link}
                       className="group/link inline-flex items-center gap-3 text-base font-semibold text-brand-orange transition-gap duration-300 hover:gap-4"
-                      aria-label={`了解更多關於${service.title}`}
+                      aria-label={t('ariaReadMore', { service: service.title })}
                     >
-                      <span>了解更多</span>
+                      <span>{t('readMore')}</span>
                       <svg
                         className="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1"
                         fill="none"
