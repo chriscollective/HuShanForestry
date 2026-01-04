@@ -38,7 +38,9 @@
       "Bash(npm run dev:sanity:*)",
       "mcp__Sanity__patch_document",
       "Bash(timeout /t 10 /nobreak)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout /t 2 /nobreak)"
     ],
     "deny": [],
     "ask": []

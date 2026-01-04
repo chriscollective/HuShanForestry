@@ -1,5 +1,1 @@
-[00:00:01.753] Server  LOG     ✓ Ready in 1355ms
-[00:03:50.886] Browser WARN    Image with src "/images/hero/woods02.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:04:02.873] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:01.000] Server  LOG     ✓ Ready in 737ms
