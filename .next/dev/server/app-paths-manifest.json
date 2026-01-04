@@ -1,8 +1,6 @@
 {
-  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/equipment/page": "app/[locale]/equipment/page.js",
   "/[locale]/news/page": "app/[locale]/news/page.js",
   "/[locale]/page": "app/[locale]/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/admin/[[...tool]]/page": "app/admin/[[...tool]]/page.js",
   "/page": "app/page.js"
 }

@@ -28,7 +28,11 @@
       "Bash(powershell -Command:*)",
       "Bash(cd:*)",
       "Bash(node -e:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(for dir in */)",
+      "Bash(do echo -n \"$dir: \")",
+      "Bash(test:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

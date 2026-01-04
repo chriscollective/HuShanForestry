@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/navigation';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/components/ui/Link';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
