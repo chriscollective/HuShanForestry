@@ -16,8 +16,8 @@ export default async function Home() {
     <main className="flex flex-col">
       <HeroSection />
       <NewsTicker newsItems={latestNews} />
-      <ServicesSection />
       <VideoSection />
+      <ServicesSection />
     </main>
   );
 }
