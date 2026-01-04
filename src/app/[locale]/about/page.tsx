@@ -1,15 +1,115 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import { aboutConfig } from '@/config/about';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: '關於我們 | 虎山林業',
-  description: '虎山林業由六位熱愛森林的青年於 2022 年創立，致力於推動台灣林業的永續發展。了解我們的願景、目標與核心價值。',
-  keywords: '虎山林業, 關於我們, 公司願景, 林業目標, 永續經營, 台灣林業',
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'about.meta' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+  };
+}
+
 export default function AboutPage() {
-  const { introduction, vision, goals, values } = aboutConfig;
+  const t = useTranslations('about');
+
+  // 統計數據配置
+  const stats = [
+    {
+      value: t('introduction.stats.founded.value'),
+      label: t('introduction.stats.founded.label'),
+      description: t('introduction.stats.founded.description'),
+    },
+    {
+      value: t('introduction.stats.team.value'),
+      label: t('introduction.stats.team.label'),
+      description: t('introduction.stats.team.description'),
+    },
+    {
+      value: t('introduction.stats.projects.value'),
+      label: t('introduction.stats.projects.label'),
+      description: t('introduction.stats.projects.description'),
+    },
+    {
+      value: t('introduction.stats.area.value'),
+      label: t('introduction.stats.area.label'),
+      description: t('introduction.stats.area.description'),
+    },
+  ];
+
+  // 願景項目配置
+  const visionItems = [
+    {
+      icon: t('vision.items.sustainable.icon'),
+      title: t('vision.items.sustainable.title'),
+      description: t('vision.items.sustainable.description'),
+    },
+    {
+      icon: t('vision.items.professional.icon'),
+      title: t('vision.items.professional.title'),
+      description: t('vision.items.professional.description'),
+    },
+    {
+      icon: t('vision.items.innovation.icon'),
+      title: t('vision.items.innovation.title'),
+      description: t('vision.items.innovation.description'),
+    },
+    {
+      icon: t('vision.items.ecological.icon'),
+      title: t('vision.items.ecological.title'),
+      description: t('vision.items.ecological.description'),
+    },
+  ];
+
+  // 目標項目配置
+  const goalItems = [
+    {
+      number: t('goals.items.safety.number'),
+      title: t('goals.items.safety.title'),
+      description: t('goals.items.safety.description'),
+      highlights: t.raw('goals.items.safety.highlights') as string[],
+    },
+    {
+      number: t('goals.items.quality.number'),
+      title: t('goals.items.quality.title'),
+      description: t('goals.items.quality.description'),
+      highlights: t.raw('goals.items.quality.highlights') as string[],
+    },
+    {
+      number: t('goals.items.environmental.number'),
+      title: t('goals.items.environmental.title'),
+      description: t('goals.items.environmental.description'),
+      highlights: t.raw('goals.items.environmental.highlights') as string[],
+    },
+    {
+      number: t('goals.items.knowledge.number'),
+      title: t('goals.items.knowledge.title'),
+      description: t('goals.items.knowledge.description'),
+      highlights: t.raw('goals.items.knowledge.highlights') as string[],
+    },
+    {
+      number: t('goals.items.community.number'),
+      title: t('goals.items.community.title'),
+      description: t('goals.items.community.description'),
+      highlights: t.raw('goals.items.community.highlights') as string[],
+    },
+  ];
+
+  // 價值觀項目配置
+  const valueItems = t.raw('values.items') as Array<{
+    label: string;
+    description: string;
+  }>;
+
+  // 簡介描述段落
+  const descriptionParagraphs = t.raw('introduction.description') as string[];
 
   return (
     <div className="bg-brand-white">
@@ -24,10 +124,10 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              {introduction.title}
+              {t('introduction.title')}
             </h1>
             <p className="mt-6 text-xl text-gray-300 sm:text-2xl">
-              {introduction.subtitle}
+              {t('introduction.subtitle')}
             </p>
           </div>
         </div>
@@ -39,7 +139,7 @@ export default function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* 左側：文字內容 */}
             <div className="space-y-6">
-              {introduction.description.map((paragraph, index) => (
+              {descriptionParagraphs.map((paragraph, index) => (
                 <p
                   key={index}
                   className="text-lg leading-relaxed text-gray-700"
@@ -51,7 +151,7 @@ export default function AboutPage() {
 
             {/* 右側：數據統計 */}
             <div className="grid grid-cols-2 gap-6">
-              {introduction.stats.map((stat, index) => (
+              {stats.map((stat, index) => (
                 <div
                   key={index}
                   className="rounded-2xl border-2 border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
@@ -77,17 +177,17 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-              {vision.title}
+              {t('vision.title')}
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              {vision.subtitle}
+              {t('vision.subtitle')}
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {vision.items.map((item) => (
+            {visionItems.map((item, index) => (
               <div
-                key={item.id}
+                key={index}
                 className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="text-5xl">{item.icon}</div>
@@ -108,17 +208,17 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-              {goals.title}
+              {t('goals.title')}
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              {goals.subtitle}
+              {t('goals.subtitle')}
             </p>
           </div>
 
           <div className="mt-12 space-y-8">
-            {goals.items.map((goal, index) => (
+            {goalItems.map((goal, index) => (
               <div
-                key={goal.id}
+                key={index}
                 className={`rounded-2xl border-2 border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md ${
                   index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-12'
                 }`}
@@ -183,12 +283,12 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {values.title}
+              {t('values.title')}
             </h2>
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-            {values.items.map((value, index) => (
+            {valueItems.map((value, index) => (
               <div
                 key={index}
                 className="group flex flex-col items-center rounded-2xl border-2 border-white/20 bg-white/5 px-8 py-6 backdrop-blur-sm transition-all hover:border-brand-orange hover:bg-brand-orange/10"
@@ -214,23 +314,23 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <h2 className="text-3xl font-bold sm:text-4xl">
-                一起為台灣林業努力
+                {t('cta.title')}
               </h2>
               <p className="mt-4 text-lg text-gray-200">
-                如果您認同我們的理念，歡迎與我們聯繫，讓我們攜手守護台灣的森林資源
+                {t('cta.description')}
               </p>
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                 <a
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-xl bg-brand-orange px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[#E55A2A] hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
                 >
-                  立即聯絡我們
+                  {t('cta.contactButton')}
                 </a>
                 <a
                   href="/services"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-white bg-transparent px-8 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-brand-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
-                  了解我們的服務
+                  {t('cta.servicesButton')}
                 </a>
               </div>
             </div>

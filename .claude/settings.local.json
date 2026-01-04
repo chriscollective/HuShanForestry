@@ -36,7 +36,9 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(npm run dev:sanity:*)",
-      "mcp__Sanity__patch_document"
+      "mcp__Sanity__patch_document",
+      "Bash(timeout /t 10 /nobreak)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

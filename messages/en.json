@@ -153,5 +153,161 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "backToHome": "Back to Home"
+  },
+  "about": {
+    "meta": {
+      "title": "About Us | Hushan Forestry",
+      "description": "Hushan Forestry was founded in 2022 by six passionate forestry professionals dedicated to promoting sustainable forestry development in Taiwan. Learn about our vision, goals, and core values.",
+      "keywords": "Hushan Forestry, About Us, Company Vision, Forestry Goals, Sustainable Management, Taiwan Forestry"
+    },
+    "introduction": {
+      "title": "About Hushan Forestry",
+      "subtitle": "Six forestry professionals from across Taiwan",
+      "description": [
+        "Hushan Forestry was founded in 2022 by six passionate forestry professionals from across Taiwan. We firmly believe that Taiwan possesses abundant forest resources, and sustainable management is the core value of forestry development.",
+        "Our team members possess professional forestry knowledge and extensive practical experience. From forest harvesting and timber trading to forest management planning, we are committed to providing the most comprehensive forestry solutions. Through scientific management methods and modern equipment, we not only emphasize economic benefits but also focus on ecological conservation and environmental sustainability.",
+        "We believe that forestry is not just about harvesting timber, but an art of coexisting with nature. Every operation is a commitment to the forest; every decision is to leave better forests for the next generation."
+      ],
+      "stats": {
+        "founded": {
+          "value": "2022",
+          "label": "Founded",
+          "description": "Since 2022"
+        },
+        "team": {
+          "value": "6",
+          "label": "Core Team",
+          "description": "Passionate forestry professionals"
+        },
+        "projects": {
+          "value": "100+",
+          "label": "Completed Projects",
+          "description": "Cumulative service cases"
+        },
+        "area": {
+          "value": "1000+",
+          "label": "Service Area",
+          "description": "Hectares of forest management"
+        }
+      }
+    },
+    "vision": {
+      "title": "Our Vision",
+      "subtitle": "Building a sustainable future for Taiwan's forestry",
+      "items": {
+        "sustainable": {
+          "icon": "🌲",
+          "title": "Sustainable Forestry Management",
+          "description": "Promoting scientific forest management models, balancing economic development and ecological conservation, ensuring that forest resources can be passed down through generations, allowing Taiwan's forests to develop sustainably."
+        },
+        "professional": {
+          "icon": "⚡",
+          "title": "Professional Service Quality",
+          "description": "Continuously improving team professional capabilities, introducing advanced equipment and technology, providing customers with the highest quality forestry services, becoming a benchmark enterprise in the industry."
+        },
+        "innovation": {
+          "icon": "💡",
+          "title": "Industry Innovation Development",
+          "description": "Combining traditional wisdom with modern technology, promoting Taiwan's forestry transformation and upgrading, cultivating new generation forestry talent, injecting innovative vitality into the industry."
+        },
+        "ecological": {
+          "icon": "🌿",
+          "title": "Ecological Harmony",
+          "description": "Emphasizing biodiversity protection, integrating ecological considerations into forestry operations, achieving harmonious coexistence between humans and nature, protecting Taiwan's precious forest ecosystems."
+        }
+      }
+    },
+    "goals": {
+      "title": "Core Goals",
+      "subtitle": "The concrete actions we are committed to achieving",
+      "items": {
+        "safety": {
+          "number": "01",
+          "title": "Safety First",
+          "description": "Establishing comprehensive safety operation standards to ensure that every staff member can work in a safe environment. Regularly conducting safety education and training, reducing occupational hazards, achieving zero accident goals.",
+          "highlights": [
+            "Comprehensive safety operation SOPs",
+            "Regular safety education and training",
+            "Modern safety protection equipment",
+            "Real-time risk assessment mechanisms"
+          ]
+        },
+        "quality": {
+          "number": "02",
+          "title": "Quality Assurance",
+          "description": "Strictly controlling every operational aspect, from planning, execution to acceptance, ensuring service quality meets customer expectations. Using scientific management tools, continuously optimizing operational processes, providing the best solutions.",
+          "highlights": [
+            "Standardized operational processes",
+            "Quality inspection mechanisms",
+            "Customer satisfaction tracking",
+            "Continuous improvement plans"
+          ]
+        },
+        "environmental": {
+          "number": "03",
+          "title": "Environmental Responsibility",
+          "description": "Incorporating environmental impact assessments into all forestry operations, adopting low-impact operational methods, protecting water and soil resources and wildlife habitats, practicing corporate environmental social responsibility.",
+          "highlights": [
+            "Environmental impact assessments",
+            "Low-impact operation techniques",
+            "Ecological conservation measures",
+            "Carbon footprint management"
+          ]
+        },
+        "knowledge": {
+          "number": "04",
+          "title": "Knowledge Transfer",
+          "description": "Through chainsaw training courses and forestry knowledge sharing, cultivating new generation forestry talent. Recording and passing down traditional forestry wisdom, combining with modern technology, promoting industry knowledge upgrading.",
+          "highlights": [
+            "Professional education and training courses",
+            "Practical experience sharing",
+            "Industry-academia collaboration projects",
+            "Digital knowledge base construction"
+          ]
+        },
+        "community": {
+          "number": "05",
+          "title": "Community Partnership",
+          "description": "Establishing long-term cooperative relationships with local communities, creating local employment opportunities, promoting mountain village economic development. Respecting indigenous traditional territories, jointly protecting precious forest resources.",
+          "highlights": [
+            "Local employment priority",
+            "Community cooperation projects",
+            "Indigenous culture respect",
+            "Regional economic contribution"
+          ]
+        }
+      }
+    },
+    "values": {
+      "title": "Team Values",
+      "items": [
+        {
+          "label": "Professional",
+          "description": "Continuously improving professional capabilities"
+        },
+        {
+          "label": "Integrity",
+          "description": "Honestly facing every commitment"
+        },
+        {
+          "label": "Passion",
+          "description": "Loving forests and forestry work"
+        },
+        {
+          "label": "Innovation",
+          "description": "Courageously trying new methods"
+        },
+        {
+          "label": "Sustainability",
+          "description": "Protecting forests for the next generation"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Working Together for Taiwan's Forestry",
+      "description": "If you identify with our philosophy, please contact us and let's work together to protect Taiwan's forest resources",
+      "contactButton": "Contact Us Now",
+      "servicesButton": "Learn About Our Services"
+    }
   }
 }
