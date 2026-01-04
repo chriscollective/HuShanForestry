@@ -1,45 +1,51 @@
 import { NavigationItem } from "@/types/navigation";
 
+/**
+ * 導航項目配置
+ *
+ * 注意：label 和 ariaLabel 使用翻譯 key，需要在 messages/{locale}.json 中定義
+ * 實際顯示的文字會根據當前語言從 'nav' 命名空間中獲取
+ */
 export const navigationItems: NavigationItem[] = [
   {
-    label: "首頁",
+    label: "home",  // 使用翻譯 key
     href: "/",
-    ariaLabel: "前往首頁",
+    ariaLabel: "ariaHome",
   },
   {
-    label: "最新消息",
+    label: "news",
     href: "/news",
-    ariaLabel: "前往最新消息頁面",
+    ariaLabel: "ariaNews",
   },
   {
-    label: "關於我們",
-    ariaLabel: "關於虎山林業",
+    label: "about",
+    ariaLabel: "ariaAbout",
     subItems: [
       {
-        label: "公司情報",
+        label: "aboutCompany",
         href: "/about",
-        ariaLabel: "了解虎山林業公司情報",
+        ariaLabel: "ariaAboutCompany",
       },
       {
-        label: "機具展示",
+        label: "equipment",
         href: "/equipment",
-        ariaLabel: "查看林業機具設備",
+        ariaLabel: "ariaEquipment",
       },
     ],
   },
   {
-    label: "服務項目",
-    ariaLabel: "查看服務項目",
+    label: "services",
+    ariaLabel: "ariaServices",
     subItems: [
       {
-        label: "林業服務",
+        label: "forestryServices",
         href: "/services",
-        ariaLabel: "查看林業服務項目",
+        ariaLabel: "ariaForestryServices",
       },
       {
-        label: "教育活動",
+        label: "education",
         href: "/education",
-        ariaLabel: "查看教育活動與訓練課程",
+        ariaLabel: "ariaEducation",
       },
     ],
   },

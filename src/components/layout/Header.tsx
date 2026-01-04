@@ -110,10 +110,10 @@ export function Header({ className }: HeaderProps) {
                           'hover:text-brand-orange',
                           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-orange'
                         )}
-                        aria-label={item.ariaLabel}
+                        aria-label={t(item.ariaLabel!)}
                         aria-haspopup="true"
                       >
-                        <span>{item.label}</span>
+                        <span>{t(item.label)}</span>
                         <svg
                           className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
                           fill="none"
@@ -138,9 +138,9 @@ export function Header({ className }: HeaderProps) {
                                 'transition-colors duration-200',
                                 'focus-visible:outline-none focus-visible:bg-brand-orange/10'
                               )}
-                              aria-label={subItem.ariaLabel}
+                              aria-label={t(subItem.ariaLabel!)}
                             >
-                              {subItem.label}
+                              {t(subItem.label)}
                             </Link>
                           ))}
                         </div>
@@ -152,10 +152,10 @@ export function Header({ className }: HeaderProps) {
                       href={item.href!}
                       variant="nav"
                       className="hover:no-underline"
-                      aria-label={item.ariaLabel}
+                      aria-label={t(item.ariaLabel!)}
                       onClick={item.href === '/' ? handleHomeClick : undefined}
                     >
-                      {item.label}
+                      {t(item.label)}
                     </Link>
                   )}
 
@@ -265,9 +265,9 @@ export function Header({ className }: HeaderProps) {
                           isExpanded && 'bg-brand-orange/5 border-brand-orange/20'
                         )}
                         aria-expanded={isExpanded}
-                        aria-label={item.ariaLabel}
+                        aria-label={t(item.ariaLabel!)}
                       >
-                        <span className="text-brand-black">{item.label}</span>
+                        <span className="text-brand-black">{t(item.label)}</span>
                         <svg
                           className={cn(
                             'h-5 w-5 text-brand-black transition-transform duration-200',
@@ -294,10 +294,10 @@ export function Header({ className }: HeaderProps) {
                                 '!text-brand-black hover:bg-brand-orange/10 hover:border-brand-orange/20 hover:!text-brand-orange',
                                 'focus-visible:border-brand-orange/30 focus-visible:bg-brand-orange/10'
                               )}
-                              aria-label={subItem.ariaLabel}
+                              aria-label={t(subItem.ariaLabel!)}
                               onClick={closeMobileMenu}
                             >
-                              {subItem.label}
+                              {t(subItem.label)}
                             </Link>
                           ))}
                         </div>
@@ -317,7 +317,7 @@ export function Header({ className }: HeaderProps) {
                       'px-4 py-3 hover:bg-brand-orange/10 hover:border-brand-orange/30 hover:no-underline',
                       'focus-visible:border-brand-orange/40 focus-visible:bg-brand-orange/10'
                     )}
-                    aria-label={item.ariaLabel}
+                    aria-label={t(item.ariaLabel!)}
                     onClick={(e) => {
                       closeMobileMenu();
                       if (item.href === '/') {
@@ -325,7 +325,7 @@ export function Header({ className }: HeaderProps) {
                       }
                     }}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 );
               })}

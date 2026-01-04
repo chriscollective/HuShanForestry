@@ -52,6 +52,24 @@
     "ja": "日本語",
     "current": "Current language"
   },
+  "newsTicker": {
+    "title": "Newsroom",
+    "subtitle": "Latest Activities, Videos, and Media Coverage",
+    "viewAll": "View All",
+    "ariaViewAll": "View all latest news"
+  },
+  "services": {
+    "tag": "Our Services",
+    "title": "Professional Forestry Services",
+    "subtitle": "Comprehensive solutions from forest harvesting to education and training",
+    "readMore": "Read More",
+    "ariaReadMore": "Learn more about {service}"
+  },
+  "video": {
+    "tag": "Behind the Scenes",
+    "title": "A Day in Hushan Forestry",
+    "subtitle": "Discover the professionalism and passion behind forestry work"
+  },
   "common": {
     "readMore": "Read More",
     "contactUs": "Contact Us",

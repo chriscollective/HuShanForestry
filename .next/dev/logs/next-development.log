@@ -3703,3 +3703,21 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:21:39.976] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:29:27.237] Server  LOG     ✓ Compiled in 48ms
+[00:29:41.793] Server  LOG     ✓ Compiled in 52ms
+[00:29:54.050] Server  LOG     ✓ Compiled in 50ms
+[00:30:05.926] Server  LOG     ✓ Compiled in 43ms
+[00:30:19.697] Server  LOG     ✓ Compiled in 46ms
+[00:30:33.059] Server  LOG     ✓ Compiled in 48ms
+[00:30:49.068] Server  LOG     ✓ Compiled in 42ms
+[00:31:04.676] Server  LOG     ✓ Compiled in 44ms
+[00:31:17.920] Server  LOG     ✓ Compiled in 48ms
+[00:33:19.519] Server  LOG     ✓ Compiled in 48ms
+[00:33:33.668] Server  LOG     ✓ Compiled in 42ms
+[00:34:12.706] Server  LOG     ✓ Compiled in 121ms
+[00:34:30.252] Server  LOG     ✓ Compiled in 44ms
+[00:35:17.568] Server  LOG     ✓ Compiled in 54ms
+[00:35:32.753] Server  LOG     ✓ Compiled in 102ms
+[00:37:59.441] Server  LOG     ✓ Compiled in 50ms
+[00:38:08.255] Server  LOG     ✓ Compiled in 50ms
+[00:38:15.951] Server  LOG     ✓ Compiled in 49ms

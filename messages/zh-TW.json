@@ -52,6 +52,24 @@
     "ja": "日本語",
     "current": "目前語言"
   },
+  "newsTicker": {
+    "title": "虎山布告欄",
+    "subtitle": "最新活動、影片直擊、媒體報導",
+    "viewAll": "全部消息",
+    "ariaViewAll": "查看所有最新消息"
+  },
+  "services": {
+    "tag": "Our Services",
+    "title": "專業林業服務",
+    "subtitle": "從森林收穫到教育訓練，提供全方位解決方案",
+    "readMore": "了解更多",
+    "ariaReadMore": "了解更多關於 {service} 的資訊"
+  },
+  "video": {
+    "tag": "Behind the Scenes",
+    "title": "走入虎山林業的日常",
+    "subtitle": "一窺林業工作的專業與熱情"
+  },
   "common": {
     "readMore": "了解更多",
     "contactUs": "聯絡我們",

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { services } from "@/config/services";
 import { Link } from "@/components/ui/Link";
@@ -11,6 +12,7 @@ import { Link } from "@/components/ui/Link";
  * 四項服務以兩列兩行的方式呈現
  */
 export function ServicesSection() {
+  const t = useTranslations('services');
   return (
     <section
       id="services"
@@ -33,7 +35,7 @@ export function ServicesSection() {
             <div className="inline-flex items-center gap-3 rounded-full border border-brand-orange/20 bg-brand-orange/5 px-4 py-2">
               <div className="h-2 w-2 animate-pulse rounded-full bg-brand-orange" />
               <span className="text-sm font-semibold uppercase tracking-wider text-brand-orange">
-                Our Services
+                {t('tag')}
               </span>
             </div>
 
@@ -41,11 +43,11 @@ export function ServicesSection() {
               id="services-section-title"
               className="mt-6 text-4xl font-bold tracking-tight text-brand-black sm:text-5xl"
             >
-              專業林業服務
+              {t('title')}
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-600">
-              從森林收穫到教育訓練，提供全方位解決方案
+              {t('subtitle')}
             </p>
           </div>
         </div>

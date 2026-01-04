@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/lib/navigation';
 import { useState, useRef, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import { locales, type Locale } from '@/i18n';
 import { Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -51,7 +52,9 @@ export interface LanguageSwitcherProps {
  */
 export function LanguageSwitcher({ variant = 'header', className }: LanguageSwitcherProps) {
   const t = useTranslations('language');
-  const locale = useLocale() as Locale;
+  const params = useParams();
+  // 從 URL 參數獲取當前語言，確保與實際 URL 同步
+  const locale = (params?.locale || useLocale()) as Locale;
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);

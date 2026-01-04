@@ -52,6 +52,24 @@
     "ja": "日本語",
     "current": "現在の言語"
   },
+  "newsTicker": {
+    "title": "虎山掲示板",
+    "subtitle": "最新イベント、動画、メディア報道",
+    "viewAll": "すべてのニュース",
+    "ariaViewAll": "すべての最新ニュースを表示"
+  },
+  "services": {
+    "tag": "Our Services",
+    "title": "専門林業サービス",
+    "subtitle": "森林収穫から教育訓練まで、総合的なソリューションを提供",
+    "readMore": "もっと見る",
+    "ariaReadMore": "{service}について詳しく見る"
+  },
+  "video": {
+    "tag": "Behind the Scenes",
+    "title": "虎山林業の日常へ",
+    "subtitle": "林業作業の専門性と情熱を垣間見る"
+  },
   "common": {
     "readMore": "もっと見る",
     "contactUs": "お問い合わせ",

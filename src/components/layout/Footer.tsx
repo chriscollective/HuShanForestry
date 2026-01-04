@@ -27,6 +27,7 @@ export interface FooterProps {
  */
 export function Footer({ className }: FooterProps) {
   const t = useTranslations('footer');
+  const tn = useTranslations('nav');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -66,9 +67,9 @@ export function Footer({ className }: FooterProps) {
                         href={subItem.href}
                         variant="footer"
                         className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
-                        aria-label={subItem.ariaLabel}
+                        aria-label={tn(subItem.ariaLabel!)}
                       >
-                        {subItem.label}
+                        {tn(subItem.label)}
                       </Link>
                     </li>
                   ));
@@ -81,9 +82,9 @@ export function Footer({ className }: FooterProps) {
                       href={item.href!}
                       variant="footer"
                       className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
-                      aria-label={item.ariaLabel}
+                      aria-label={tn(item.ariaLabel!)}
                     >
-                      {item.label}
+                      {tn(item.label)}
                     </Link>
                   </li>
                 );

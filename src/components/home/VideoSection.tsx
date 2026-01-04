@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
 import { useState } from "react";
 
 /**
@@ -9,6 +10,7 @@ import { useState } from "react";
  * 一次顯示一部影片，可左右滑動切換
  */
 export function VideoSection() {
+  const t = useTranslations('video');
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // YouTube 影片列表（支援完整 URL 或影片 ID）
@@ -81,7 +83,7 @@ export function VideoSection() {
           <div className="flex items-center justify-center gap-3">
             <span className="h-10 w-1 rounded-full bg-brand-orange" />
             <p className="font-mono text-xs uppercase tracking-[0.5em] text-brand-black/60">
-              Video Gallery
+              {t('tag')}
             </p>
             <span className="h-10 w-1 rounded-full bg-brand-orange" />
           </div>
@@ -89,10 +91,10 @@ export function VideoSection() {
             id="video-section-title"
             className="text-4xl font-black uppercase tracking-[0.08em] text-brand-black sm:text-5xl"
           >
-            影音專區
+            {t('title')}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-brand-black/70">
-            透過影片深入了解虎山林業的專業服務與實際案例
+            {t('subtitle')}
           </p>
         </div>
 

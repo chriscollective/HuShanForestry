@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/components/ui/Link';
 import { News } from '@/types/sanity';
 
@@ -11,6 +14,7 @@ interface NewsTickerProps {
  * 最新消息布告欄（從 Sanity CMS 獲取資料）
  */
 export function NewsTicker({ newsItems }: NewsTickerProps) {
+  const t = useTranslations('newsTicker');
   return (
     <section
       aria-labelledby="news-ticker-title"
@@ -38,10 +42,10 @@ export function NewsTicker({ newsItems }: NewsTickerProps) {
                 id="news-ticker-title"
                 className="text-3xl font-black uppercase tracking-[0.08em]"
               >
-                虎山布告欄
+                {t('title')}
               </h3>
               <p className="text-sm text-brand-black/70">
-                精準掌握每一則林務資訊。硬派作風，直述重點。
+                {t('subtitle')}
               </p>
             </div>
 
@@ -49,9 +53,9 @@ export function NewsTicker({ newsItems }: NewsTickerProps) {
               href="/news"
               underline={false}
               className="inline-flex min-h-[44px] items-center justify-center border border-brand-black/40 px-6 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-black transition hover:border-brand-orange hover:text-brand-orange"
-              aria-label="檢視所有虎山林業的最新消息"
+              aria-label={t('ariaViewAll')}
             >
-              全部消息
+              {t('viewAll')}
             </Link>
           </div>
 
