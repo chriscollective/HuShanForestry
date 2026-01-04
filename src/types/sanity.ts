@@ -19,7 +19,7 @@ export interface News {
   }
   excerpt?: string
   image?: SanityImage
-  category?: '森林收穫' | '原木買賣' | '經營規劃' | '企業活動' | '人才招募' | '教育活動'
+  category?: 'event' | 'service' | 'news' | 'recruit' | 'operation' | 'other'
   content?: any[] // Block content
   author?: string
   date: string

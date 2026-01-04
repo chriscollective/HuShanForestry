@@ -47,12 +47,12 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: '森林收穫', value: '森林收穫' },
-          { title: '原木買賣', value: '原木買賣' },
-          { title: '經營規劃', value: '經營規劃' },
-          { title: '企業活動', value: '企業活動' },
-          { title: '人才招募', value: '人才招募' },
-          { title: '教育活動', value: '教育活動' },
+          { title: '活動', value: 'event' },
+          { title: '服務', value: 'service' },
+          { title: '時事', value: 'news' },
+          { title: '招募', value: 'recruit' },
+          { title: '營運', value: 'operation' },
+          { title: '其他', value: 'other' },
         ],
       },
       validation: (rule) => rule.required(),

@@ -211,3 +211,52 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [01:10:37.344] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `ja`."}
 [01:10:37.344] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `ja`."}
 [01:10:37.344] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `ja`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:25.733] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:13:39.265] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:14:10.752] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:15:26.146] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`.
+[01:15:26.157] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`.
+[01:15:26.170] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`.
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:15:26.491] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:39.825] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:42.726] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:42.726] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:42.727] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:42.727] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:42.727] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:42.727] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:57.238] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`.
+[01:19:57.252] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`.
+[01:19:57.262] Server  ERROR   Error: MISSING_MESSAGE: Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`.
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:19:57.640] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[01:21:40.329] Browser ERROR   uncaughtError: SyntaxError: Invalid or unexpected token

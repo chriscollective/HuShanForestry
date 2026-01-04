@@ -5,15 +5,7 @@ import { client, urlFor } from "@/lib/sanity/client"
 import { newsDetailQuery, newsListQuery } from "@/lib/sanity/queries"
 import { News } from "@/types/sanity"
 import { PortableText } from "@portabletext/react"
-
-const categoryLabelMap: Record<string, string> = {
-  "森林收穫": "森林收穫",
-  "原木買賣": "原木買賣",
-  "經營規劃": "經營規劃",
-  "企業活動": "企業活動",
-  "人才招募": "人才招募",
-  "教育活動": "教育活動",
-}
+import { getTranslations } from "next-intl/server"
 
 // 為靜態匯出生成所有新聞頁面
 export async function generateStaticParams() {
@@ -26,9 +18,10 @@ export async function generateStaticParams() {
 export default async function NewsDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string; locale: string }>
 }) {
-  const { id: slug } = await params
+  const { id: slug, locale } = await params
+  const t = await getTranslations({ locale, namespace: 'newsPage' })
 
   // 從 Sanity 取得新聞資料
   const newsItem: News = await client.fetch(newsDetailQuery, { slug })
@@ -74,11 +67,11 @@ export default async function NewsDetailPage({
           </h1>
           <div className="mt-4 flex items-center justify-center gap-4 text-white/80">
             <span className="font-mono text-sm tracking-wider">
-              {new Date(newsItem.date).toLocaleDateString('zh-TW')}
+              {new Date(newsItem.date).toLocaleDateString(locale)}
             </span>
             <span className="text-white/50">•</span>
             <span className="text-sm">
-              {newsItem.category ? categoryLabelMap[newsItem.category] || "消息" : "消息"}
+              {newsItem.category ? t(`categories.${newsItem.category}`) : t('tag')}
             </span>
           </div>
         </div>
@@ -116,11 +109,11 @@ export default async function NewsDetailPage({
             {/* 標籤與日期 */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="font-mono text-sm tracking-wider text-gray-500">
-                {new Date(newsItem.date).toLocaleDateString('zh-TW')}
+                {new Date(newsItem.date).toLocaleDateString(locale)}
               </span>
               <span className="text-gray-400">•</span>
               <span className="text-sm font-semibold text-brand-orange">
-                {newsItem.category ? categoryLabelMap[newsItem.category] || "消息" : "消息"}
+                {newsItem.category ? t(`categories.${newsItem.category}`) : t('tag')}
               </span>
             </div>
 
