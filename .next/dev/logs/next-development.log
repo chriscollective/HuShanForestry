@@ -93,3 +93,19 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
 [00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
 [00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:07.330] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:17.809] Server  LOG     ✓ Compiled in 13.6s
+[00:30:41.192] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:30:59.200] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:31:40.197] Server  LOG     ✓ Compiled in 81.8s

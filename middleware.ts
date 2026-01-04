@@ -9,10 +9,7 @@ export default createMiddleware({
   defaultLocale,
 
   // 總是顯示語言前綴（例如：/zh-TW, /en, /ja）
-  localePrefix: 'always',
-
-  // 禁用自動語言檢測，完全依賴 URL 路徑
-  localeDetection: false
+  localePrefix: 'always'
 });
 
 export const config = {
