@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "首頁",
+    "news": "最新消息",
+    "about": "關於我們",
+    "aboutCompany": "公司情報",
+    "equipment": "機具展示",
+    "services": "服務項目",
+    "forestryServices": "林業服務",
+    "education": "教育活動",
+    "contact": "立即聯絡",
+    "ariaHome": "前往首頁",
+    "ariaNews": "前往最新消息頁面",
+    "ariaAbout": "關於虎山林業",
+    "ariaAboutCompany": "了解虎山林業公司情報",
+    "ariaEquipment": "查看林業機具設備",
+    "ariaServices": "查看服務項目",
+    "ariaForestryServices": "查看林業服務項目",
+    "ariaEducation": "查看教育活動與訓練課程",
+    "ariaContact": "前往聯絡我們頁面",
+    "ariaLogo": "返回虎山林業首頁",
+    "ariaOpenMenu": "開啟主選單",
+    "ariaCloseMenu": "關閉主選單"
+  },
+  "hero": {
+    "since": "Since",
+    "title": "虎山林業，接軌台灣林業新世代",
+    "description": "來自台灣各地的六位林業青年，結合森林收穫、原木買賣、經營規劃與鏈鋸訓練，提供一條龍的專業服務，守護土地也創造產業價值。",
+    "ctaConsult": "立即諮詢",
+    "ctaServices": "了解服務",
+    "ariaPrev": "上一張圖片",
+    "ariaNext": "下一張圖片",
+    "ariaSlide": "查看第 {index} 張圖片",
+    "ariaConsult": "前往聯絡我們，立即諮詢虎山林業服務",
+    "ariaServices": "了解虎山林業的服務項目"
+  },
+  "footer": {
+    "companyName": "虎山林業",
+    "since": "Since",
+    "quickLinks": "快速連結",
+    "servicesTitle": "服務項目",
+    "contactUs": "聯絡我們",
+    "followUs": "追蹤我們的社群媒體，了解最新林業資訊",
+    "copyright": "© {year} {name}. All rights reserved.",
+    "privacy": "隱私權政策",
+    "terms": "服務條款"
+  },
+  "language": {
+    "select": "選擇語言",
+    "zhTW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "current": "目前語言"
+  },
+  "common": {
+    "readMore": "了解更多",
+    "contactUs": "聯絡我們",
+    "learnMore": "了解詳情",
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "backToHome": "返回首頁"
+  }
+}

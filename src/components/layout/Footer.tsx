@@ -1,5 +1,9 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/components/ui/Link';
 import { SocialLinks } from '@/components/ui/SocialLinks';
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { siteConfig } from '@/config/site';
 import { navigationItems } from '@/config/navigation';
 import { services } from '@/config/services';
@@ -22,6 +26,7 @@ export interface FooterProps {
  * - 行動版（<768px）：單欄堆疊
  */
 export function Footer({ className }: FooterProps) {
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -39,18 +44,18 @@ export function Footer({ className }: FooterProps) {
         <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
           {/* 公司資訊 */}
           <div>
-            <h3 className="mb-4 text-lg font-bold">虎山林業</h3>
+            <h3 className="mb-4 text-lg font-bold">{t('companyName')}</h3>
             <p className="mb-4 text-sm text-gray-300">
               {siteConfig.description}
             </p>
             <p className="text-sm text-gray-400">
-              Since {siteConfig.foundingYear}
+              {t('since')} {siteConfig.foundingYear}
             </p>
           </div>
 
           {/* 快速連結 */}
           <div>
-            <h3 className="mb-4 text-lg font-bold">快速連結</h3>
+            <h3 className="mb-4 text-lg font-bold">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               {navigationItems.map((item) => {
                 // 如果有子選單，顯示所有子項目
@@ -88,7 +93,7 @@ export function Footer({ className }: FooterProps) {
 
           {/* 服務項目 */}
           <div>
-            <h3 className="mb-4 text-lg font-bold">服務項目</h3>
+            <h3 className="mb-4 text-lg font-bold">{t('servicesTitle')}</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.id}>
@@ -106,10 +111,10 @@ export function Footer({ className }: FooterProps) {
 
           {/* 聯絡資訊與社群媒體 */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">聯絡我們</h3>
+            <h3 className="text-lg font-bold">{t('contactUs')}</h3>
             <div className="space-y-3">
               <p className="text-sm text-gray-300">
-                追蹤我們的社群媒體，了解最新林業資訊
+                {t('followUs')}
               </p>
             </div>
 
@@ -119,6 +124,11 @@ export function Footer({ className }: FooterProps) {
               size="md"
               theme="dark"
             />
+
+            {/* 語言切換器 */}
+            <div className="pt-2">
+              <LanguageSwitcher variant="footer" />
+            </div>
           </div>
         </div>
       </div>
@@ -128,7 +138,7 @@ export function Footer({ className }: FooterProps) {
         <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
             <p className="text-sm text-gray-400">
-              © {currentYear} {siteConfig.name}. All rights reserved.
+              {t('copyright', { year: currentYear, name: siteConfig.name })}
             </p>
 
             {/* 法律連結 */}
@@ -138,14 +148,14 @@ export function Footer({ className }: FooterProps) {
                 variant="footer"
                 className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
               >
-                隱私權政策
+                {t('privacy')}
               </Link>
               <Link
                 href="/terms"
                 variant="footer"
                 className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
               >
-                服務條款
+                {t('terms')}
               </Link>
             </div>
           </div>

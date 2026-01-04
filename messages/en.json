@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "about": "About Us",
+    "aboutCompany": "Company Info",
+    "equipment": "Equipment",
+    "services": "Services",
+    "forestryServices": "Forestry Services",
+    "education": "Education",
+    "contact": "Contact Us",
+    "ariaHome": "Go to home page",
+    "ariaNews": "Go to news page",
+    "ariaAbout": "About Hushan Forestry",
+    "ariaAboutCompany": "Learn about Hushan Forestry company information",
+    "ariaEquipment": "View forestry equipment",
+    "ariaServices": "View our services",
+    "ariaForestryServices": "View forestry service offerings",
+    "ariaEducation": "View educational activities and training courses",
+    "ariaContact": "Go to contact us page",
+    "ariaLogo": "Return to Hushan Forestry homepage",
+    "ariaOpenMenu": "Open main menu",
+    "ariaCloseMenu": "Close main menu"
+  },
+  "hero": {
+    "since": "Since",
+    "title": "Hushan Forestry, Connecting Taiwan's New Generation of Forestry",
+    "description": "Six forestry professionals from across Taiwan, combining forest harvesting, timber trading, management planning, and chainsaw training to provide comprehensive professional services, protecting the land while creating industry value.",
+    "ctaConsult": "Consult Now",
+    "ctaServices": "Our Services",
+    "ariaPrev": "Previous image",
+    "ariaNext": "Next image",
+    "ariaSlide": "View image {index}",
+    "ariaConsult": "Contact us now to consult Hushan Forestry services",
+    "ariaServices": "Learn about Hushan Forestry services"
+  },
+  "footer": {
+    "companyName": "Hushan Forestry",
+    "since": "Since",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "contactUs": "Contact Us",
+    "followUs": "Follow our social media for the latest forestry information",
+    "copyright": "© {year} {name}. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "language": {
+    "select": "Select Language",
+    "zhTW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "current": "Current language"
+  },
+  "common": {
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "backToHome": "Back to Home"
+  }
+}

@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import { Link as NextIntlLink } from 'next-intl/link';
 import { AnchorHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -97,16 +97,16 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       );
     }
 
-    // 內部連結（使用 Next.js Link）
+    // 內部連結（使用 next-intl Link，支援多語言路由）
     return (
-      <NextLink
+      <NextIntlLink
         ref={ref}
         href={href}
         className={linkClasses}
         {...props}
       >
         {children}
-      </NextLink>
+      </NextIntlLink>
     );
   }
 );

@@ -3,7 +3,9 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/components/ui/Link';
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { navigationItems } from '@/config/navigation';
 import { cn } from '@/lib/utils';
 
@@ -25,6 +27,7 @@ export interface HeaderProps {
  * - 行動版（<768px）：漢堡選單
  */
 export function Header({ className }: HeaderProps) {
+  const t = useTranslations('nav');
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
@@ -71,7 +74,7 @@ export function Header({ className }: HeaderProps) {
                 href="/"
                 variant="nav"
                 className="items-center gap-4 hover:no-underline"
-                aria-label="返回虎山林業首頁"
+                aria-label={t('ariaLogo')}
                 onClick={handleHomeClick}
               >
                 <Image
@@ -93,7 +96,7 @@ export function Header({ className }: HeaderProps) {
             </div>
 
             {/* 桌面版導航選單 */}
-            <div className="hidden md:flex md:items-center md:gap-6 lg:gap-10">
+            <div className="hidden md:flex md:items-center md:gap-6 lg:gap-8">
               {navigationItems.map((item, index) => (
                 <div key={item.href || item.label} className="flex items-center gap-6 lg:gap-10">
                   {/* 導航項目 */}
@@ -163,12 +166,18 @@ export function Header({ className }: HeaderProps) {
                 </div>
               ))}
 
-              {/* 分隔線（在 CTA 前） */}
+              {/* 分隔線（在語言切換和 CTA 前） */}
+              <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
+
+              {/* 語言切換器 */}
+              <LanguageSwitcher variant="header" />
+
+              {/* 分隔線 */}
               <div className="h-6 w-[2px] bg-brand-black" aria-hidden="true" />
 
               {/* CTA 按鈕 */}
-              <Link href="/contact" variant="nav" aria-label="前往聯絡我們頁面">
-                立即聯絡
+              <Link href="/contact" variant="nav" aria-label={t('ariaContact')}>
+                {t('contact')}
               </Link>
             </div>
 
@@ -184,10 +193,10 @@ export function Header({ className }: HeaderProps) {
                 )}
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-panel"
-                aria-label={mobileMenuOpen ? '關閉主選單' : '開啟主選單'}
+                aria-label={mobileMenuOpen ? t('ariaCloseMenu') : t('ariaOpenMenu')}
               >
                 <span className="sr-only">
-                  {mobileMenuOpen ? '關閉主選單' : '開啟主選單'}
+                  {mobileMenuOpen ? t('ariaCloseMenu') : t('ariaOpenMenu')}
                 </span>
                 {/* 漢堡圖示 */}
                 {!mobileMenuOpen ? (
@@ -321,16 +330,21 @@ export function Header({ className }: HeaderProps) {
                 );
               })}
 
+              {/* 語言切換器（行動版） */}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <LanguageSwitcher variant="header" className="justify-center" />
+              </div>
+
               <Link
                 href="/contact"
                 className={cn(
                   'mt-4 w-full rounded-2xl bg-brand-orange px-6 py-3 text-center text-base font-semibold text-white',
                   'shadow-lg transition hover:bg-[#E55A2A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange'
                 )}
-                aria-label="前往聯絡我們頁面"
+                aria-label={t('ariaContact')}
                 onClick={closeMobileMenu}
               >
-                立即聯絡
+                {t('contact')}
               </Link>
             </div>
           </div>

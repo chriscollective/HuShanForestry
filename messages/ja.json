@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "news": "最新ニュース",
+    "about": "会社概要",
+    "aboutCompany": "会社情報",
+    "equipment": "設備紹介",
+    "services": "サービス",
+    "forestryServices": "林業サービス",
+    "education": "教育活動",
+    "contact": "お問い合わせ",
+    "ariaHome": "ホームページへ",
+    "ariaNews": "最新ニュースページへ",
+    "ariaAbout": "虎山林業について",
+    "ariaAboutCompany": "虎山林業の会社情報を確認",
+    "ariaEquipment": "林業機械設備を確認",
+    "ariaServices": "サービス項目を確認",
+    "ariaForestryServices": "林業サービス項目を確認",
+    "ariaEducation": "教育活動とトレーニングコースを確認",
+    "ariaContact": "お問い合わせページへ",
+    "ariaLogo": "虎山林業ホームページに戻る",
+    "ariaOpenMenu": "メインメニューを開く",
+    "ariaCloseMenu": "メインメニューを閉じる"
+  },
+  "hero": {
+    "since": "Since",
+    "title": "虎山林業、台湾林業の新世代へ",
+    "description": "台湾各地から集まった6人の林業青年が、森林収穫、原木売買、経営計画、チェーンソートレーニングを組み合わせ、ワンストップの専門サービスを提供し、土地を守りながら産業価値を創造します。",
+    "ctaConsult": "今すぐ相談",
+    "ctaServices": "サービスを見る",
+    "ariaPrev": "前の画像",
+    "ariaNext": "次の画像",
+    "ariaSlide": "{index}枚目の画像を表示",
+    "ariaConsult": "お問い合わせ、虎山林業のサービスについて今すぐ相談",
+    "ariaServices": "虎山林業のサービス項目について"
+  },
+  "footer": {
+    "companyName": "虎山林業",
+    "since": "Since",
+    "quickLinks": "クイックリンク",
+    "servicesTitle": "サービス",
+    "contactUs": "お問い合わせ",
+    "followUs": "ソーシャルメディアをフォローして、最新の林業情報を入手",
+    "copyright": "© {year} {name}. All rights reserved.",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "language": {
+    "select": "言語を選択",
+    "zhTW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "current": "現在の言語"
+  },
+  "common": {
+    "readMore": "もっと見る",
+    "contactUs": "お問い合わせ",
+    "learnMore": "詳細を見る",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "backToHome": "ホームに戻る"
+  }
+}
