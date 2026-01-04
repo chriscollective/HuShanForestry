@@ -55,3 +55,41 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:11:31.195] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
 [00:11:31.195] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
 [00:11:31.195] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:13:47.574] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:07.197] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:57.299] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:14:59.221] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:15:07.576] Server  LOG     ✓ Compiled in 100.4s
+[00:15:29.473] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:15:48.199] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:16:46.879] Server  LOG     ✓ Compiled in 12.5s
+[00:17:09.580] Browser WARN    Image with src "/images/hero/woods04.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.企業活動` in messages for locale `zh-TW`."}
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
+[00:17:28.206] Browser ERROR   {"code":"MISSING_MESSAGE","originalMessage":"Could not resolve `newsPage.categories.經營規劃` in messages for locale `zh-TW`."}
