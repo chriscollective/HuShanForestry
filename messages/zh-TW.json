@@ -36,6 +36,7 @@
   },
   "footer": {
     "companyName": "虎山林業",
+    "description": "來自台灣各地集結了六位熱愛森林的青年，正在努力推廣台灣林業的發展。Since 2022, From Taiwan",
     "since": "Since",
     "quickLinks": "快速連結",
     "servicesTitle": "服務項目",
@@ -63,7 +64,13 @@
     "title": "專業林業服務",
     "subtitle": "從森林收穫到教育訓練，提供全方位解決方案",
     "readMore": "了解更多",
-    "ariaReadMore": "了解更多關於 {service} 的資訊"
+    "ariaReadMore": "了解更多關於 {service} 的資訊",
+    "ctaQuestion": "需要客製化的林業解決方案？",
+    "ctaButton": "立即聯絡我們",
+    "forestHarvest": "森林收穫",
+    "timberTrade": "原木買賣",
+    "forestPlanning": "森林經營規劃",
+    "chainsawTraining": "鏈鋸教育訓練"
   },
   "video": {
     "tag": "Behind the Scenes",

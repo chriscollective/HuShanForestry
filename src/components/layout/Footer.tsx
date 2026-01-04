@@ -28,7 +28,19 @@ export interface FooterProps {
 export function Footer({ className }: FooterProps) {
   const t = useTranslations('footer');
   const tn = useTranslations('nav');
+  const ts = useTranslations('services');
   const currentYear = new Date().getFullYear();
+
+  // 服務項目 ID 對應翻譯鍵的映射
+  const getServiceTranslationKey = (serviceId: string): string => {
+    const keyMap: Record<string, string> = {
+      'forest-harvest': 'forestHarvest',
+      'timber-trade': 'timberTrade',
+      'forest-planning': 'forestPlanning',
+      'chainsaw-training': 'chainsawTraining',
+    };
+    return keyMap[serviceId] || serviceId;
+  };
 
   return (
     <footer className={`relative overflow-hidden bg-brand-black text-brand-white ${className || ''}`}>
@@ -47,7 +59,7 @@ export function Footer({ className }: FooterProps) {
           <div>
             <h3 className="mb-4 text-lg font-bold">{t('companyName')}</h3>
             <p className="mb-4 text-sm text-gray-300">
-              {siteConfig.description}
+              {t('description')}
             </p>
             <p className="text-sm text-gray-400">
               {t('since')} {siteConfig.foundingYear}
@@ -103,7 +115,7 @@ export function Footer({ className }: FooterProps) {
                     variant="footer"
                     className="inline-flex min-h-[44px] items-center text-sm hover:no-underline"
                   >
-                    {service.title}
+                    {ts(getServiceTranslationKey(service.id))}
                   </Link>
                 </li>
               ))}

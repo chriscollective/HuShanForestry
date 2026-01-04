@@ -36,6 +36,7 @@
   },
   "footer": {
     "companyName": "虎山林業",
+    "description": "台湾各地から集まった6人の林業青年が、森林収穫・原木売買・経営計画・チェーンソートレーニングを組み合わせ、ワンストップの専門サービスを提供し、土地を守りながら産業価値を創造します。Since 2022, From Taiwan",
     "since": "Since",
     "quickLinks": "クイックリンク",
     "servicesTitle": "サービス",
@@ -63,7 +64,13 @@
     "title": "専門林業サービス",
     "subtitle": "森林収穫から教育訓練まで、総合的なソリューションを提供",
     "readMore": "もっと見る",
-    "ariaReadMore": "{service}について詳しく見る"
+    "ariaReadMore": "{service}について詳しく見る",
+    "ctaQuestion": "カスタマイズされた林業ソリューションが必要ですか？",
+    "ctaButton": "今すぐお問い合わせ",
+    "forestHarvest": "森林収穫",
+    "timberTrade": "原木売買",
+    "forestPlanning": "森林経営計画",
+    "chainsawTraining": "チェーンソー教育訓練"
   },
   "video": {
     "tag": "Behind the Scenes",

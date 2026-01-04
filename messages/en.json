@@ -36,6 +36,7 @@
   },
   "footer": {
     "companyName": "Hushan Forestry",
+    "description": "Six forestry professionals from across Taiwan, combining forest harvesting, timber trading, management planning, and chainsaw training to provide comprehensive professional services, protecting the land while creating industry value. Since 2022, From Taiwan",
     "since": "Since",
     "quickLinks": "Quick Links",
     "servicesTitle": "Services",
@@ -63,7 +64,13 @@
     "title": "Professional Forestry Services",
     "subtitle": "Comprehensive solutions from forest harvesting to education and training",
     "readMore": "Read More",
-    "ariaReadMore": "Learn more about {service}"
+    "ariaReadMore": "Learn more about {service}",
+    "ctaQuestion": "Need customized forestry solutions?",
+    "ctaButton": "Contact Us Now",
+    "forestHarvest": "Forest Harvesting",
+    "timberTrade": "Timber Trading",
+    "forestPlanning": "Forest Management Planning",
+    "chainsawTraining": "Chainsaw Training"
   },
   "video": {
     "tag": "Behind the Scenes",

@@ -166,13 +166,13 @@ export function ServicesSection() {
         {/* 底部 CTA */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16 text-center">
           <p className="mb-6 text-lg text-gray-600">
-            需要客製化的林業解決方案？
+            {t('ctaQuestion')}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-3 rounded-full bg-brand-orange px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#E55A2A] hover:shadow-xl hover:scale-105"
           >
-            <span>立即聯絡我們</span>
+            <span>{t('ctaButton')}</span>
             <svg
               className="h-5 w-5"
               fill="none"
