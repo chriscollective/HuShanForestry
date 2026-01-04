@@ -1,4 +1,4 @@
-import { Link as NextIntlLink } from 'next-intl/link';
+import { Link as NextIntlLink } from '@/lib/navigation';
 import { AnchorHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 

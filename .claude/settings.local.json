@@ -25,7 +25,8 @@
       "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\Chris\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Chris-Desktop-HuShanForestry\\\\tasks\\\\b80e8b2.output'' -Tail 20\")",
       "Bash(powershell -Command \"Test-Path $PROFILE\")",
       "Bash(powershell -Command \"if \\(!\\(Test-Path -Path $PROFILE\\)\\) { New-Item -ItemType File -Path $PROFILE -Force | Out-Null }; echo $PROFILE\")",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(cd:*)"
     ],
     "deny": [],
     "ask": []

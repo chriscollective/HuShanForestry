@@ -23,10 +23,10 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  // 解析 params
-  const { locale } = await Promise.resolve(params);
+  // 在 Next.js 15+，params 是一個 Promise
+  const { locale } = await params;
 
   // 確保傳入的 locale 是有效的
   if (!locales.includes(locale as any)) {
@@ -34,7 +34,7 @@ export default async function LocaleLayout({
   }
 
   // 獲取對應語言的翻譯訊息
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>

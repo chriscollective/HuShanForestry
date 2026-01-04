@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '@/lib/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { locales, type Locale } from '@/i18n';
 import { Globe } from 'lucide-react';
@@ -76,13 +76,11 @@ export function LanguageSwitcher({ variant = 'header', className }: LanguageSwit
 
   // 處理語言切換
   const handleLanguageChange = (newLocale: Locale) => {
-    // 移除當前的 locale 前綴
-    const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(-[A-Z]{2})?/, '');
-    // 建立新的路徑
-    const newPath = `/${newLocale}${pathnameWithoutLocale || ''}`;
-
     setIsOpen(false);
-    router.push(newPath);
+    // 使用 next-intl 的 router 和當前路徑名稱切換語言
+    // pathname 已經不包含 locale 前綴，所以直接使用即可
+    router.replace(pathname, { locale: newLocale });
+    router.refresh();
   };
 
   const currentLanguage = languageOptions[locale];
