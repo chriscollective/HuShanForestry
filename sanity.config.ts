@@ -3,6 +3,7 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schema } from './src/sanity/schemaTypes'
 import { StudioLogo } from './src/sanity/components/StudioLogo'
+import { StudioNavbar } from './src/sanity/components/StudioNavbar'
 
 export default defineConfig({
   name: 'default',
@@ -23,4 +24,11 @@ export default defineConfig({
 
   // 自訂 CMS 後台 Logo
   icon: StudioLogo,
+
+  // 自訂導航欄，添加返回首頁按鈕
+  studio: {
+    components: {
+      navbar: StudioNavbar,
+    },
+  },
 })

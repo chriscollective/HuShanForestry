@@ -1,2 +1,4 @@
 [00:00:01.350] Server  LOG     ✓ Ready in 981ms
 [00:01:05.498] Server  LOG     ✓ Compiled in 75ms
+[00:11:18.473] Server  LOG     ○ Compiling /admin/[[...tool]] ...
+[00:13:02.324] Server  LOG     ✓ Compiled in 118ms
