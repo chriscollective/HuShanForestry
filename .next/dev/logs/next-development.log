@@ -4,3 +4,8 @@
 [00:13:02.324] Server  LOG     ✓ Compiled in 118ms
 [00:15:28.575] Server  LOG     ✓ Compiled in 47ms
 [00:15:46.172] Browser WARN    Building schema for synchronization took more than 1 second (3277.2999999523163ms)
+[00:18:29.171] Browser WARN    Building schema for synchronization took more than 1 second (3782.5ms)
+[00:19:42.169] Browser WARN    Building schema for synchronization took more than 1 second (3802.7000000476837ms)
+[00:20:23.482] Server  LOG     ✓ Compiled in 53ms
+[00:20:26.169] Browser WARN    Building schema for synchronization took more than 1 second (1394.4000000953674ms)
+[00:20:51.230] Browser WARN    Building schema for synchronization took more than 1 second (7339ms)

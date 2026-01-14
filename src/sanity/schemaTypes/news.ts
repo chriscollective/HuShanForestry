@@ -12,6 +12,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'date',
+      title: '發布日期',
+      type: 'datetime',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'slug',
       title: '網址代稱',
       type: 'slug',
@@ -34,12 +40,6 @@ export default defineType({
       title: '作者',
       type: 'string',
       initialValue: '虎山林業',
-    }),
-    defineField({
-      name: 'date',
-      title: '發布日期',
-      type: 'datetime',
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'category',

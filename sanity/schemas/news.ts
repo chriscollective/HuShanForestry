@@ -12,6 +12,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'publishedAt',
+      title: '發布日期',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'slug',
       title: '網址名稱',
       type: 'slug',
@@ -122,13 +129,6 @@ export default defineType({
       title: '作者',
       type: 'string',
       initialValue: '虎山林業',
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: '發布日期',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString(),
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'featured',
