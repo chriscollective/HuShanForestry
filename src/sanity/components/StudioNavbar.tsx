@@ -16,7 +16,7 @@ export function StudioNavbar(props: NavbarProps) {
       <Flex paddingRight={3}>
         <Button
           as="a"
-          href="/"
+          href="/zh-TW"
           target="_blank"
           mode="bleed"
           tone="primary"

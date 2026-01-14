@@ -2,3 +2,5 @@
 [00:01:05.498] Server  LOG     ✓ Compiled in 75ms
 [00:11:18.473] Server  LOG     ○ Compiling /admin/[[...tool]] ...
 [00:13:02.324] Server  LOG     ✓ Compiled in 118ms
+[00:15:28.575] Server  LOG     ✓ Compiled in 47ms
+[00:15:46.172] Browser WARN    Building schema for synchronization took more than 1 second (3277.2999999523163ms)

@@ -4,5 +4,6 @@
   "/[locale]/news/page": "app/[locale]/news/page.js",
   "/[locale]/page": "app/[locale]/page.js",
   "/[locale]/services/page": "app/[locale]/services/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/admin/[[...tool]]/page": "app/admin/[[...tool]]/page.js"
 }
