@@ -8,8 +8,9 @@ export default createMiddleware({
   // 預設語言
   defaultLocale,
 
-  // 總是顯示語言前綴（例如：/zh-TW, /en, /ja）
-  localePrefix: 'always'
+  // 當訪問根路徑時，使用 'as-needed' 讓預設語言可以不帶前綴
+  // 或使用 'always' 但會自動重定向到 /zh-TW
+  localePrefix: 'as-needed'
 });
 
 export const config = {
