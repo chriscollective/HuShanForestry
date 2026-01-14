@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "5dbf87a41e74c428128fa328d42db532",
-    "previewModeSigningKey": "e48cbf3ea774b7b568d1f573447ddce02bd4d35296994df0808a8f4882569a02",
-    "previewModeEncryptionKey": "1d6761c44ac94dc91f1d2c8cd3f58760d4ceba9374f8c60318dee5a63a80f385"
-  }
-}
+{"version":4,"routes":{"/zh-TW/news":{},"/en/news":{},"/ja/news":{}},"dynamicRoutes":{"/[locale]/news":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[locale]/news","routeRegex":"^\\/([^/]+?)\\/news(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"689cdd53ee2733c3b9456f634f2bf2a1","previewModeSigningKey":"f48ba97b47b7b7e2de096d2025cda301b9391b5571901a4d1d0c82d74175687d","previewModeEncryptionKey":"6f7c36c706da72e43301b48d9d1727b51700d781d52bb2716223d3f0947886bf"}}

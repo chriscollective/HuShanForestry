@@ -81,8 +81,8 @@ export default function NewsClient({ newsItems }: NewsClientProps) {
             </div>
           ) : (
             filteredNews.map((item) => (
-              <Link key={item._id} href={`/news/${item.slug.current}`}>
-                <article className="flex flex-col gap-5 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:p-6">
+              <Link key={item._id} href={`/news/${item.slug.current}`} className="block w-full">
+                <article className="flex w-full flex-col gap-5 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:p-6">
                   {item.image && (
                     <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-xl sm:h-32 sm:w-48">
                       <Image
