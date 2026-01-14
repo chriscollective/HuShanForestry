@@ -78,12 +78,6 @@ export default defineType({
         hotspot: true,
       },
     }),
-    defineField({
-      name: 'featured',
-      title: '精選文章',
-      type: 'boolean',
-      initialValue: false,
-    }),
   ],
   preview: {
     select: {

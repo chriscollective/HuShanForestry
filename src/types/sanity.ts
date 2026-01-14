@@ -23,7 +23,6 @@ export interface News {
   content?: any[] // Block content
   author?: string
   date: string
-  featured?: boolean
 }
 
 export interface HomeGalleryItem {

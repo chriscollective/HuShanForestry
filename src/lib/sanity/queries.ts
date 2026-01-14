@@ -9,8 +9,7 @@ export const newsListQuery = groq`
     excerpt,
     date,
     image,
-    category,
-    featured
+    category
   }
 `
 
@@ -25,8 +24,7 @@ export const newsDetailQuery = groq`
     date,
     image,
     category,
-    author,
-    featured
+    author
   }
 `
 
