@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
-import { locales } from '@/i18n';
+import { locales } from '@/locales';
 
 export const metadata: Metadata = {
   title: "虎山林業 | 台灣專業林業服務 | 森林收穫、原木買賣、經營規劃",

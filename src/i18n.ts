@@ -1,12 +1,9 @@
 import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { locales, defaultLocale, type Locale } from './locales';
 
-// 支援的語言列表
-export const locales = ['zh-TW', 'en', 'ja'] as const;
-export type Locale = (typeof locales)[number];
-
-// 預設語言
-export const defaultLocale: Locale = 'zh-TW';
+// 注意：本檔案含 server-only 相依（next-intl/server），
+// 僅供 next-intl plugin 於伺服器端載入。
+// middleware 與客戶端元件請改引入 src/locales.ts 取得語系常數。
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // 在 Next.js 15+，需要等待 requestLocale

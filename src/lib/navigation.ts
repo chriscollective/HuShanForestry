@@ -1,5 +1,5 @@
 import { createNavigation } from 'next-intl/navigation';
-import { locales, defaultLocale } from '@/i18n';
+import { locales, defaultLocale } from '@/locales';
 
 /**
  * next-intl 導航工具：內建語系前綴

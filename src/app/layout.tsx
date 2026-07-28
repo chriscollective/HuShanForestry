@@ -1,4 +1,4 @@
-import { defaultLocale } from '@/i18n';
+import { defaultLocale } from '@/locales';
 import './globals.css';
 
 /**

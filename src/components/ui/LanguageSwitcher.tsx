@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/lib/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { locales, type Locale } from '@/i18n';
+import { locales, type Locale } from '@/locales';
 import { Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
