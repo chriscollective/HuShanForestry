@@ -1,0 +1,26 @@
+# 相依套件
+node_modules
+
+# Next.js 建置產物
+.next
+/out
+
+# Sanity Studio 建置產物
+dist
+
+# 環境變數
+.env.local
+.env*.local
+
+# 部署
+.vercel
+
+# Claude Code 本機設定（個人專屬，不進版控）
+.claude/settings.local.json
+
+# TypeScript
+*.tsbuildinfo
+
+# 系統檔案
+.DS_Store
+Thumbs.db

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* 虎山林業品牌色彩 */
+  --color-brand-orange: #FF6B35;
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+
+  /* 森林系輔色 */
+  --color-forest-dark: #2D5016;
+  --color-forest-green: #7CB342;
+  --color-forest-brown: #8D6E63;
+  --color-forest-sky: #4FC3F7;
+}
+
+@layer base {
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .magazine-image {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-80px) scale(0.96);
+    filter: blur(8px);
+    transition:
+      opacity 1s cubic-bezier(0.19, 1, 0.22, 1),
+      transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+      filter 1s cubic-bezier(0.19, 1, 0.22, 1),
+      box-shadow 1s ease;
+    transition-delay: var(--magazine-delay, 0s);
+  }
+
+  .magazine-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent 35%);
+    transform: translateY(-100%);
+    transition:
+      transform 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 0.9s ease;
+    transition-delay: calc(var(--magazine-delay, 0s) + 0.1s);
+    pointer-events: none;
+    opacity: 0.85;
+  }
+
+  .magazine-image-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18);
+  }
+
+  .magazine-image-visible::after {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}

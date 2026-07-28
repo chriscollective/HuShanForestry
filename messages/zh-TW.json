@@ -1,0 +1,332 @@
+{
+  "nav": {
+    "home": "首頁",
+    "news": "最新消息",
+    "about": "關於我們",
+    "aboutCompany": "公司情報",
+    "blog": "BLOG專欄",
+    "equipment": "機具展示",
+    "services": "服務項目",
+    "forestryServices": "林業服務",
+    "education": "教育活動",
+    "contact": "立即聯絡",
+    "ariaHome": "前往首頁",
+    "ariaNews": "前往最新消息頁面",
+    "ariaAbout": "關於虎山林業",
+    "ariaAboutCompany": "了解虎山林業公司情報",
+    "ariaBlog": "前往BLOG專欄",
+    "ariaEquipment": "查看林業機具設備",
+    "ariaServices": "查看服務項目",
+    "ariaForestryServices": "查看林業服務項目",
+    "ariaEducation": "查看教育活動與訓練課程",
+    "ariaContact": "前往聯絡我們頁面",
+    "ariaLogo": "返回虎山林業首頁",
+    "ariaOpenMenu": "開啟主選單",
+    "ariaCloseMenu": "關閉主選單"
+  },
+  "hero": {
+    "since": "Since",
+    "title": "虎山林業，接軌台灣林業新世代",
+    "description": "來自台灣各地的六位林業青年，結合森林收穫、原木買賣、經營規劃與鏈鋸訓練，提供一條龍的專業服務，守護土地也創造產業價值。",
+    "ctaConsult": "立即諮詢",
+    "ctaServices": "了解服務",
+    "ariaPrev": "上一張圖片",
+    "ariaNext": "下一張圖片",
+    "ariaSlide": "查看第 {index} 張圖片",
+    "ariaConsult": "前往聯絡我們，立即諮詢虎山林業服務",
+    "ariaServices": "了解虎山林業的服務項目"
+  },
+  "footer": {
+    "companyName": "虎山林業",
+    "description": "來自台灣各地集結了六位熱愛森林的青年，正在努力推廣台灣林業的發展。Since 2022, From Taiwan",
+    "since": "Since",
+    "quickLinks": "快速連結",
+    "servicesTitle": "服務項目",
+    "contactUs": "聯絡我們",
+    "followUs": "追蹤我們的社群媒體，了解最新林業資訊",
+    "copyright": "© {year} {name}. All rights reserved.",
+    "privacy": "隱私權政策",
+    "terms": "服務條款"
+  },
+  "language": {
+    "select": "選擇語言",
+    "zhTW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "current": "目前語言"
+  },
+  "newsTicker": {
+    "title": "虎山布告欄",
+    "subtitle": "最新活動、影片直擊、媒體報導",
+    "viewAll": "全部消息",
+    "ariaViewAll": "查看所有最新消息"
+  },
+  "newsPage": {
+    "tag": "News",
+    "title": "最新消息與虎山動態",
+    "subtitle": "查看活動、服務、招募與營運公告，掌握虎山林業最新動態。",
+    "readMore": "閱讀更多",
+    "emptyAll": "目前還沒有消息。",
+    "emptyCategory": "目前還沒有{category}的消息。",
+    "categories": {
+      "all": "全部",
+      "event": "活動",
+      "service": "服務",
+      "news": "新聞",
+      "recruit": "招募",
+      "operation": "營運",
+      "other": "其他"
+    }
+  },
+  "blogPage": {
+    "tag": "Blog",
+    "title": "虎山專欄",
+    "subtitle": "分享森林知識、林業法規與永續經營理念，深入了解台灣林業。",
+    "readMore": "閱讀全文",
+    "emptyAll": "目前還沒有專欄文章。",
+    "emptyCategory": "目前還沒有{category}的文章。",
+    "categories": {
+      "all": "全部",
+      "forest-knowledge": "森林知識",
+      "tree-introduction": "樹木介紹",
+      "forestry-regulations": "林業法規",
+      "sustainability": "永續經營",
+      "case-study": "案例分享",
+      "other": "其他"
+    }
+  },
+  "services": {
+    "tag": "Our Services",
+    "title": "專業林業服務",
+    "subtitle": "從森林收穫到教育訓練，提供全方位解決方案",
+    "readMore": "了解更多",
+    "ariaReadMore": "了解更多關於 {service} 的資訊",
+    "ctaQuestion": "需要客製化的林業解決方案？",
+    "ctaButton": "立即聯絡我們",
+    "items": {
+      "forestHarvest": {
+        "title": "森林收穫",
+        "category": "核心服務",
+        "description": "專業伐木、架線集材、運輸整堆服務，確保森林資源永續利用。採用現代化設備與科學化管理，兼顧作業效率與環境保護。",
+        "imageAlt": "森林收穫服務 - 專業伐木與集材作業",
+        "features": [
+          "專業伐木作業",
+          "架線集材技術",
+          "運輸整堆服務",
+          "安全作業管理"
+        ]
+      },
+      "timberTrade": {
+        "title": "原木買賣",
+        "category": "交易服務",
+        "description": "提供優質原木買賣服務，多種木材規格滿足您的需求。從採購、品質把關到配送，一站式服務讓您省心省力。",
+        "imageAlt": "原木買賣服務 - 多種木材規格供應",
+        "features": [
+          "多種木材規格",
+          "品質嚴格把關",
+          "價格公開透明",
+          "配送服務完善"
+        ]
+      },
+      "forestPlanning": {
+        "title": "森林經營規劃",
+        "category": "顧問服務",
+        "description": "專業森林經營與伐採收穫規劃，協助您的森林永續發展。結合生態保育與經濟效益，打造最適合的經營策略。",
+        "imageAlt": "森林經營規劃服務 - 專業規劃與諮詢",
+        "features": [
+          "森林資源調查",
+          "經營規劃設計",
+          "伐採計畫擬定",
+          "生態保育評估"
+        ]
+      },
+      "chainsawTraining": {
+        "title": "鏈鋸教育訓練",
+        "category": "教育訓練",
+        "description": "專業鏈鋸操作訓練課程，安全、實用、取得證照。由經驗豐富的講師授課，理論與實務並重，培養專業林業人才。",
+        "imageAlt": "鏈鋸教育訓練 - 專業安全操作課程",
+        "features": [
+          "專業講師授課",
+          "實務操作訓練",
+          "安全認證課程",
+          "小班制教學"
+        ]
+      }
+    },
+    "forestHarvest": "森林收穫",
+    "timberTrade": "原木買賣",
+    "forestPlanning": "森林經營規劃",
+    "chainsawTraining": "鏈鋸教育訓練"
+  },
+  "video": {
+    "tag": "Behind the Scenes",
+    "title": "走入虎山林業的日常",
+    "subtitle": "一窺林業工作的專業與熱情",
+    "ctaLabel": "觀看更多影片",
+    "ctaAria": "前往虎山林業 YouTube 頻道，觀看更多影片"
+  },
+  "common": {
+    "readMore": "了解更多",
+    "contactUs": "聯絡我們",
+    "learnMore": "了解詳情",
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "backToHome": "返回首頁"
+  },
+  "about": {
+    "meta": {
+      "title": "關於我們 | 虎山林業",
+      "description": "虎山林業由六位熱愛森林的青年於 2022 年創立，致力於推動台灣林業的永續發展。了解我們的願景、目標與核心價值。",
+      "keywords": "虎山林業, 關於我們, 公司願景, 林業目標, 永續經營, 台灣林業"
+    },
+    "introduction": {
+      "title": "關於虎山林業",
+      "subtitle": "來自台灣各地的六位熱愛森林的青年",
+      "description": [
+        "虎山林業成立於 2022 年，由六位來自台灣各地、熱愛森林的青年所創立。我們深信台灣擁有豐富的森林資源，而永續經營是林業發展的核心價值。",
+        "團隊成員具備專業的林業知識與豐富的實務經驗，從森林收穫、原木買賣到森林經營規劃，我們致力於提供最完整的林業解決方案。透過科學化的管理方法與現代化的設備，我們不僅重視經濟效益，更關注生態保育與環境永續。",
+        "我們相信，林業不只是砍伐木材，更是與自然共生的藝術。每一次的作業，都是對森林的承諾；每一個決策，都是為下一代留下更好的山林。"
+      ],
+      "stats": {
+        "founded": {
+          "value": "2022",
+          "label": "創立年份",
+          "description": "Since 2022"
+        },
+        "team": {
+          "value": "6",
+          "label": "核心團隊",
+          "description": "位熱愛森林的青年"
+        },
+        "projects": {
+          "value": "100+",
+          "label": "完成專案",
+          "description": "累積服務案例"
+        },
+        "area": {
+          "value": "1000+",
+          "label": "服務面積",
+          "description": "公頃森林經營"
+        }
+      }
+    },
+    "vision": {
+      "title": "我們的願景",
+      "subtitle": "打造台灣林業的永續未來",
+      "items": {
+        "sustainable": {
+          "icon": "🌲",
+          "title": "永續林業經營",
+          "description": "推動科學化的森林經營模式，平衡經濟發展與生態保育，確保森林資源能夠世代相傳，讓台灣的山林永續發展。"
+        },
+        "professional": {
+          "icon": "⚡",
+          "title": "專業服務品質",
+          "description": "持續提升團隊專業能力，引進先進設備與技術，為客戶提供最高品質的林業服務，成為業界的標竿企業。"
+        },
+        "innovation": {
+          "icon": "💡",
+          "title": "產業創新發展",
+          "description": "結合傳統智慧與現代科技，推動台灣林業轉型升級，培育新世代林業人才，為產業注入創新活力。"
+        },
+        "ecological": {
+          "icon": "🌿",
+          "title": "生態和諧共生",
+          "description": "重視生物多樣性保護，在林業作業中融入生態考量，實現人與自然的和諧共存，守護台灣珍貴的森林生態系統。"
+        }
+      }
+    },
+    "goals": {
+      "title": "核心目標",
+      "subtitle": "我們致力實現的具體行動",
+      "items": {
+        "safety": {
+          "number": "01",
+          "title": "安全第一",
+          "description": "建立完善的安全作業標準，確保每位工作人員都能在安全的環境下作業。定期舉辦安全教育訓練，降低職業災害發生率，實現零事故目標。",
+          "highlights": [
+            "完善的安全作業 SOP",
+            "定期安全教育訓練",
+            "現代化安全防護裝備",
+            "即時風險評估機制"
+          ]
+        },
+        "quality": {
+          "number": "02",
+          "title": "品質保證",
+          "description": "嚴格把關每個作業環節，從規劃、執行到驗收，確保服務品質符合客戶期待。運用科學化管理工具，持續優化作業流程，提供最佳解決方案。",
+          "highlights": [
+            "標準化作業流程",
+            "品質檢核機制",
+            "客戶滿意度追蹤",
+            "持續改善計畫"
+          ]
+        },
+        "environmental": {
+          "number": "03",
+          "title": "環境責任",
+          "description": "在所有林業作業中納入環境影響評估，採用低衝擊的作業方式，保護水土資源與野生動植物棲地，實踐企業的環境社會責任。",
+          "highlights": [
+            "環境影響評估",
+            "低衝擊作業技術",
+            "生態保育措施",
+            "碳足跡管理"
+          ]
+        },
+        "knowledge": {
+          "number": "04",
+          "title": "知識傳承",
+          "description": "透過鏈鋸教育訓練課程與林業知識分享，培育新世代林業人才。記錄並傳承傳統林業智慧，結合現代科技，推動產業知識升級。",
+          "highlights": [
+            "專業教育訓練課程",
+            "實務經驗分享",
+            "產學合作計畫",
+            "數位知識庫建置"
+          ]
+        },
+        "community": {
+          "number": "05",
+          "title": "社區夥伴",
+          "description": "與在地社區建立長期合作關係，創造在地就業機會，促進山村經濟發展。尊重原住民族傳統領域，共同守護珍貴的森林資源。",
+          "highlights": [
+            "在地雇用優先",
+            "社區合作計畫",
+            "原民文化尊重",
+            "區域經濟貢獻"
+          ]
+        }
+      }
+    },
+    "values": {
+      "title": "團隊價值觀",
+      "items": [
+        {
+          "label": "專業",
+          "description": "持續精進專業能力"
+        },
+        {
+          "label": "誠信",
+          "description": "誠實面對每個承諾"
+        },
+        {
+          "label": "熱情",
+          "description": "熱愛森林與林業工作"
+        },
+        {
+          "label": "創新",
+          "description": "勇於嘗試新方法"
+        },
+        {
+          "label": "永續",
+          "description": "為下一代守護山林"
+        }
+      ]
+    },
+    "cta": {
+      "title": "一起為台灣林業努力",
+      "description": "如果您認同我們的理念，歡迎與我們聯繫，讓我們攜手守護台灣的森林資源",
+      "contactButton": "立即聯絡我們",
+      "servicesButton": "了解我們的服務"
+    }
+  }
+}
