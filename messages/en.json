@@ -78,6 +78,23 @@
       "other": "Other"
     }
   },
+  "blogPage": {
+    "tag": "Blog",
+    "title": "The Hushan Journal",
+    "subtitle": "Forest knowledge, forestry regulations, and sustainable management—a closer look at Taiwan's forestry.",
+    "readMore": "Read more",
+    "emptyAll": "No articles yet.",
+    "emptyCategory": "No articles in {category} yet.",
+    "categories": {
+      "all": "All",
+      "forest-knowledge": "Forest Knowledge",
+      "tree-introduction": "Tree Species",
+      "forestry-regulations": "Forestry Regulations",
+      "sustainability": "Sustainability",
+      "case-study": "Case Studies",
+      "other": "Other"
+    }
+  },
   "services": {
     "tag": "Our Services",
     "title": "Professional Forestry Services",

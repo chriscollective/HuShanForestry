@@ -67,7 +67,10 @@ export const services: Service[] = [
   },
 ];
 
-type ServicesTranslator = ((key: string, values?: Record<string, unknown>) => string) & {
+// 僅宣告本檔實際用到的簽章：t(key) 取字串、t.raw(key) 取原始值。
+// 不可加上 values 參數 —— 其型別會比 next-intl 的 Translator 更寬，
+// 在函式參數逆變下導致 useTranslations / getTranslations 無法傳入。
+type ServicesTranslator = ((key: string) => string) & {
   raw?: (key: string) => unknown;
 };
 

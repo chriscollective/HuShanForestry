@@ -78,6 +78,23 @@
       "other": "その他"
     }
   },
+  "blogPage": {
+    "tag": "Blog",
+    "title": "虎山コラム",
+    "subtitle": "森林の知識、林業法規、持続可能な経営理念を紹介し、台湾の林業を深く掘り下げます。",
+    "readMore": "続きを読む",
+    "emptyAll": "現在コラム記事はありません。",
+    "emptyCategory": "現在{category}の記事はありません。",
+    "categories": {
+      "all": "すべて",
+      "forest-knowledge": "森林の知識",
+      "tree-introduction": "樹木紹介",
+      "forestry-regulations": "林業法規",
+      "sustainability": "持続可能な経営",
+      "case-study": "事例紹介",
+      "other": "その他"
+    }
+  },
   "services": {
     "tag": "Our Services",
     "title": "専門林業サービス",
