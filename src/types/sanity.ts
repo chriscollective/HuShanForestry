@@ -36,3 +36,19 @@ export interface HomeGalleryItem {
   order: number
   enabled: boolean
 }
+
+export interface Blog {
+  _id: string
+  _type: 'blog'
+  title: string
+  slug: {
+    current: string
+  }
+  publishedAt: string
+  author?: string
+  category?: 'forest-knowledge' | 'tree-introduction' | 'forestry-regulations' | 'sustainability' | 'case-study' | 'other'
+  excerpt?: string
+  coverImage?: SanityImage
+  content?: any[] // Block content
+  tags?: string[]
+}

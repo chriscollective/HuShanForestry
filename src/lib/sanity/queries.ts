@@ -53,3 +53,34 @@ export const latestNewsQuery = groq`
     category
   }
 `
+
+// Blog 專欄查詢
+export const blogListQuery = groq`
+  *[_type == "blog"] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    excerpt,
+    publishedAt,
+    coverImage,
+    category,
+    author,
+    tags
+  }
+`
+
+// 取得單篇 Blog 文章
+export const blogDetailQuery = groq`
+  *[_type == "blog" && slug.current == $slug][0] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    content,
+    publishedAt,
+    coverImage,
+    category,
+    author,
+    tags
+  }
+`

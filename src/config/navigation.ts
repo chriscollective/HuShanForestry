@@ -27,6 +27,11 @@ export const navigationItems: NavigationItem[] = [
         ariaLabel: "ariaAboutCompany",
       },
       {
+        label: "blog",
+        href: "/blog",
+        ariaLabel: "ariaBlog",
+      },
+      {
         label: "equipment",
         href: "/equipment",
         ariaLabel: "ariaEquipment",

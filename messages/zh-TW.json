@@ -4,6 +4,7 @@
     "news": "最新消息",
     "about": "關於我們",
     "aboutCompany": "公司情報",
+    "blog": "BLOG專欄",
     "equipment": "機具展示",
     "services": "服務項目",
     "forestryServices": "林業服務",
@@ -13,6 +14,7 @@
     "ariaNews": "前往最新消息頁面",
     "ariaAbout": "關於虎山林業",
     "ariaAboutCompany": "了解虎山林業公司情報",
+    "ariaBlog": "前往BLOG專欄",
     "ariaEquipment": "查看林業機具設備",
     "ariaServices": "查看服務項目",
     "ariaForestryServices": "查看林業服務項目",
@@ -73,6 +75,23 @@
       "news": "新聞",
       "recruit": "招募",
       "operation": "營運",
+      "other": "其他"
+    }
+  },
+  "blogPage": {
+    "tag": "Blog",
+    "title": "虎山專欄",
+    "subtitle": "分享森林知識、林業法規與永續經營理念，深入了解台灣林業。",
+    "readMore": "閱讀全文",
+    "emptyAll": "目前還沒有專欄文章。",
+    "emptyCategory": "目前還沒有{category}的文章。",
+    "categories": {
+      "all": "全部",
+      "forest-knowledge": "森林知識",
+      "tree-introduction": "樹木介紹",
+      "forestry-regulations": "林業法規",
+      "sustainability": "永續經營",
+      "case-study": "案例分享",
       "other": "其他"
     }
   },
