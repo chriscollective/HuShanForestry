@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Chris/Desktop/HuShanForestry/src/app/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\nimport { cookies } from \"next/headers\";\nimport { defaultLocale } from \"@/i18n\";\n\n/**\n * 將根路徑導向預設語系的首頁。\n * 嘗試從 Cookie 讀取使用者偏好的語系，若無則使用預設語系。\n */\nexport default async function RootRedirect() {\n  const cookieStore = await cookies();\n  const savedLocale = cookieStore.get(\"NEXT_LOCALE\")?.value;\n\n  redirect(`/${savedLocale || defaultLocale}`);\n}\n"],"names":[],"mappings":";;;;AAAA;AAAA;AACA;AACA;;;;AAMe,eAAe;IAC5B,MAAM,cAAc,MAAM,IAAA,0IAAO;IACjC,MAAM,cAAc,YAAY,GAAG,CAAC,gBAAgB;IAEpD,IAAA,iMAAQ,EAAC,CAAC,CAAC,EAAE,eAAe,4HAAa,EAAE;AAC7C"}}]
-}
